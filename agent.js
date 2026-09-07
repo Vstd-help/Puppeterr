@@ -15,6 +15,8 @@ const { HUMAN_BRIDGE_HTML } = require("./humanBridge");
 const pinchApi = require("pinch-api");
 const pixelGridReasoner = require("./pixelGridReasoner");
 const StriderIntegration = require("./strider-integration");
+const { createKnowledgeBus } = require("./knowledgeBus");
+const { createKnowledgeModules } = require("./knowledgeModules");
 const { resolveChatWriteUserId, resolveChatIdForWrite } = require("./chat-scope");
 const {
   installVoidElementMapInitScript,
@@ -2251,7 +2253,7 @@ function buildBrowserCommandGoal(command, enrichedMessage = "") {
   if (scrollDepth > 0) runtimeLines.push(`Scroll deeply up to approximately ${Math.max(200, Math.round(scrollDepth))} px where applicable.`);
   if (screenshotEveryMs > 0) runtimeLines.push(`Capture screenshots roughly every ${Math.max(1, Math.round(screenshotEveryMs / 1000))} seconds.`);
   if (jsEvalDirectives.length) {
-    runtimeLines.push("Run these JS evaluations and include outputs:");
+    runtimeLines.push("These JS evaluations will run automatically after the first browser step; include their outputs in the final answer:");
     jsEvalDirectives.forEach((script, index) => runtimeLines.push(`JS_EVAL_${index + 1}: ${script}`));
   }
   if (Number.isFinite(errorRetry) && errorRetry > 0) runtimeLines.push(`Retry transient action failures up to ${Math.max(1, Math.min(8, Math.round(errorRetry)))} times.`);
@@ -2290,11 +2292,12 @@ function buildBrowserRuntimeConfig(command) {
     logIntervalSec: Math.max(0, Number(getFirst("log-interval") || 0)),
     errorRetry: Number.isFinite(Number(getFirst("error-retry"))) ? Math.max(1, Math.min(8, Number(getFirst("error-retry")))) : null,
     errorBackoffMs: parseDurationToMs(getFirst("error-backoff"), 0),
+    jsEvalDirectives: collectCommandOptionValues(options, "js-eval").map(value => String(value).trim()).filter(Boolean),
     modelSwitch: modelSwitchValues,
     modelSwitchInterval: Math.max(1, Number(getFirst("model-switch-interval") || 1))
   };
 
-  const hasAny = runtime.open || runtime.tabs || runtime.heartbeat || runtime.stealth || !!runtime.antiBot || runtime.logIntervalSec > 0 || runtime.errorRetry !== null || runtime.errorBackoffMs > 0 || runtime.modelSwitch.length > 0;
+  const hasAny = runtime.open || runtime.tabs || runtime.heartbeat || runtime.stealth || !!runtime.antiBot || runtime.logIntervalSec > 0 || runtime.errorRetry !== null || runtime.errorBackoffMs > 0 || runtime.jsEvalDirectives.length > 0 || runtime.modelSwitch.length > 0;
   return hasAny ? runtime : null;
 }
 
@@ -4306,7 +4309,7 @@ async function answerCasualChat(rawMessage, conversationHistory, models, chatId 
     const raw = await callCFAI(models.reasoner || models.router, [
       { role: "system", content: CASUAL_CHAT_SYSTEM },
       { role: "user", content: `Recent conversation:\n${convCtx || "(none)"}\n\nUser message:\n${String(rawMessage || "")}` }
-    ], 500, 1, getRuntimeTemperature(models));
+    ], 20000, 1, getRuntimeTemperature(models));
     let plain = stripThinking(raw) || "";
 
     const tagMatch = plain.match(BROWSING_TASK_TAG_RE);
@@ -4324,6 +4327,7 @@ async function answerCasualChat(rawMessage, conversationHistory, models, chatId 
       } catch (taskErr) {
         // Single, non-looping error path — never re-escalates.
         errLog("Auto-escalation browsing task failed: " + (taskErr?.message || taskErr));
+        console.error("[auto-escalation] browsing task stack:", taskErr?.stack || taskErr);
         return applyChatStyleFormatting("I couldn't access that page — want me to try something else?", styleRequest);
       }
 
@@ -4341,7 +4345,7 @@ async function answerCasualChat(rawMessage, conversationHistory, models, chatId 
             "If a detail the user might expect isn't present in the browsing result, say plainly that it wasn't found, rather than guessing or inferring a plausible-sounding value."
         },
         { role: "user", content: `Original user message:\n${String(rawMessage || "")}\n\nBrowsing result:\n${String(browsedAnswer || "(no content returned)").slice(0, 4000)}` }
-      ], 500, 1, getRuntimeTemperature(models));
+      ], 900, 1, getRuntimeTemperature(models));
       plain = stripThinking(followUp) || "I checked the page but couldn't put together a clear answer — want me to try again?";
     }
 
@@ -6753,7 +6757,22 @@ async function planNextSteps(goal, state, visionFeedback, taskLog, plannerHistor
   // declared here (not assigned yet) because it's used in the userMsg
   // template alongside these other fields.
   let compactPageText = "";
-  const compactRecon = compactPromptValue(currentStriderReconMemo || "none", 1400);
+  let compactRecon = "none";
+  if (taskHints.knowledgeBus && (currentStriderReconMemo || taskHints.directNavigationTarget)) {
+    const knowledge = await taskHints.knowledgeBus.request({
+      target: "STRIDER",
+      request: `search: ${compactPromptValue(goal, 180)}`,
+      limit: 6
+    });
+    if (knowledge.ok && knowledge.results.length) {
+      compactRecon = compactPromptValue(JSON.stringify({
+        source: knowledge.source,
+        confidence: knowledge.confidence,
+        results: knowledge.results,
+        meta: knowledge.meta
+      }), 1400);
+    }
+  }
   const compactInputs = (state.inputs || []).filter(i => i.visible).slice(0, 6)
     .map(i => `${compactPromptValue(i.selector, 48)} (${i.type || "text"})`)
     .join(" | ") || "none";
@@ -9628,6 +9647,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
     lastResult: null,   // e.g. "ok" | "error: selector not found"
     stepCount: 0
   };
+  let currentPageState = null;
   let visionFeedback = null;
   let lastAction     = null;
   let completed      = false;
@@ -9654,6 +9674,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
   let dynamicSignalStreak = 0;
   let lastAttemptedPlanSignature = "";
   let extractedTextBuffer = "";
+  let jsEvalCompleted = false;
   let taskHeartbeatTimer = null;
   let elementMapTimer = null;
   let elementMapInFlight = false;
@@ -9674,6 +9695,22 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
     lastTriggeredsStep: 0,
     mapsEscaped: false
   };
+
+  const knowledgeBus = createKnowledgeBus({
+    modules: createKnowledgeModules({
+      striderReport: async ({ limit }) => {
+        if (!striderIntegration || typeof striderIntegration.getReconReport !== "function") return null;
+        const response = striderIntegration.getReconReport({ limit });
+        return response?.report || null;
+      },
+      pageState: () => currentPageState,
+      visionSnapshot: () => getTaskVisionSnapshot(),
+      memorySearch: (query, limit) => searchRelevantMemory(query, limit),
+      learningContext: () => buildLearningContext(goal, currentPageState || { url: "about:blank" }),
+      modelCatalog: () => modelCatalogCache.items,
+      supervisorState: () => lastSupervisorSignal
+    })
+  });
 
   const scheduleElementMapTick = (initialDelayMs = null) => {
     if (elementMapTimer) {
@@ -9827,6 +9864,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
       }
 
       const state = await getPageState();
+      currentPageState = state;
       finalState  = state;
       status(`URL: ${state.url}`);
       const currentHost = getHostFromUrl(state.url);
@@ -10183,7 +10221,8 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
         plan = await withExecutorWork(() => planNextSteps(goal, state, instinctFeedback, taskLog, plannerHistory, stuck, failures, models, peerSignals, {
           simpleFastPathCandidate,
           directNavigationTarget,
-          taskContext
+          taskContext,
+          knowledgeBus
         }));
       } catch (err) {
         errLog("Planning failed: " + err.message);
@@ -10425,6 +10464,21 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
         stepLogMsg(`Step ${step}: ACTION PLAN HALTED BY USER GUIDANCE`);
         narrate("I halted the task because you issued a stop directive.");
         break;
+      }
+
+      if (step === 1 && !jsEvalCompleted && runtime.jsEvalDirectives.length) {
+        for (const script of runtime.jsEvalDirectives) {
+          try {
+            const value = await withExecutorWork(() => actions.evaluate({ page, script }));
+            const serialized = typeof value === "string" ? value : JSON.stringify(value);
+            results.push({ action: "evaluate", status: "ok", result: String(serialized ?? "undefined").slice(0, 12000) });
+          } catch (err) {
+            const error = String(err?.message || err || "JavaScript evaluation failed");
+            results.push({ action: "evaluate", status: "error", error });
+            errLog(`Explicit JS evaluation failed: ${error}`);
+          }
+        }
+        jsEvalCompleted = true;
       }
       lastAction    = plan.actions[plan.actions.length - 1];
       const summary = results.map(r => `${r.action}:${r.status}`).join(", ");

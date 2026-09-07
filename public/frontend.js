@@ -3353,15 +3353,15 @@ const FRONTEND_HTML = String.raw`
 
       function renderRichText(value) {
         const source = applyEmojiShortcodes(String(value || ""));
-        const mathRegex = new RegExp("\\$\\$([\\\\s\\\\S]+?)\\$\\$|\\$([^\\n$]+?)\\$", "g");
+        const mathRegex = /\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)|\$([^\n$]+?)\$/g;
         let html = "";
         let lastIndex = 0;
         let match;
 
         while ((match = mathRegex.exec(source)) !== null) {
           html += renderMarkdownBlock(source.slice(lastIndex, match.index));
-          const expression = match[1] || match[2] || "";
-          const isDisplay = !!match[1];
+          const expression = match[1] || match[2] || match[3] || match[4] || "";
+          const isDisplay = !!(match[1] || match[2]);
           if (window.katex && expression.trim()) {
             try {
               html += window.katex.renderToString(expression, {

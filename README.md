@@ -35,7 +35,7 @@ rather than hidden.
 **Scope of these numbers:** not a comparison to WebVoyager, WebArena, or
 any named competitor system — Puppeterr has not been run on a public
 benchmark, so no head-to-head claim is made here. Not a final result;
-this project is under one month old and changes weekly.
+this project is under one year old and changes frequently.
 
 ---
 
