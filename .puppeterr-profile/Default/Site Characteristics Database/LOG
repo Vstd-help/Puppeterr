@@ -1,3 +1,9 @@
-2026/09/09-22:27:59.605 cba1 Reusing MANIFEST /workspaces/Puppeterr/.puppeterr-profile/Default/Site Characteristics Database/MANIFEST-000001
-2026/09/09-22:27:59.607 cba1 Recovering log #9
-2026/09/09-22:27:59.609 cba1 Reusing old log /workspaces/Puppeterr/.puppeterr-profile/Default/Site Characteristics Database/000009.log 
+2026/09/16-22:06:34.678 16044 Reusing MANIFEST /workspaces/Puppeterr/.puppeterr-profile/Default/Site Characteristics Database/MANIFEST-000001
+2026/09/16-22:06:34.679 16044 Compacting 4@0 + 0@1 files
+2026/09/16-22:06:34.695 16044 Generated table #38@0: 17 keys, 901 bytes
+2026/09/16-22:06:34.695 16044 Compacted 4@0 + 0@1 files => 901 bytes
+2026/09/16-22:06:34.698 16044 compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/09/16-22:06:34.698 16044 Delete type=2 #29
+2026/09/16-22:06:34.699 16044 Delete type=2 #32
+2026/09/16-22:06:34.699 16044 Delete type=2 #26
+2026/09/16-22:06:34.699 16044 Delete type=2 #35

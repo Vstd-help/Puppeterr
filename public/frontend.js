@@ -43,7 +43,7 @@ const FRONTEND_HTML = String.raw`
         --mono:         'Geist Mono', ui-monospace, 'SFMono-Regular', monospace;
 
         /* ── backgrounds ────────────────────────────────────── */
-        --bg:         #080e16;
+        --bg:         #191f29cc;
         --sidebar-bg: #0b1320cc;
         --panel-bg:   #0f1926e6;
         --card-bg:    #111b29;
@@ -1569,6 +1569,44 @@ const FRONTEND_HTML = String.raw`
         margin: 8px 0; padding: 8px 12px; border-left: 3px solid var(--accent); border-radius: 8px;
         background: rgba(255,255,255,0.04); color: var(--muted);
       }
+      .message-card a, .runtime-entry a {
+        color: var(--accent-2);
+        text-decoration: none;
+        border-bottom: 1px dotted rgba(96,184,255,0.5);
+        transition: border-color .12s, color .12s;
+      }
+      .message-card a:hover, .runtime-entry a:hover {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+      .message-card del, .runtime-entry del {
+        color: var(--text-muted);
+        text-decoration-color: var(--danger);
+      }
+      .message-card mark, .runtime-entry mark {
+        background: rgba(255, 215, 0, 0.22);
+        color: var(--text-strong);
+        padding: 1px 4px;
+        border-radius: 4px;
+      }
+      [data-theme="light"] .message-card mark, [data-theme="light"] .runtime-entry mark {
+        background: rgba(255, 200, 0, 0.32);
+      }
+      .message-card table, .runtime-entry table {
+        border-collapse: collapse;
+        margin: 8px 0;
+        width: 100%;
+        font-size: 13px;
+      }
+      .message-card th, .message-card td, .runtime-entry th, .runtime-entry td {
+        border: 1px solid var(--border);
+        padding: 6px 10px;
+        text-align: left;
+      }
+      .message-card th, .runtime-entry th {
+        background: rgba(255,255,255,0.04);
+        font-weight: 600;
+      }
       .message-card code,
       .runtime-entry code {
         background: rgba(255,255,255,0.08); padding: 2px 5px; border-radius: 6px; font-family: var(--mono);
@@ -1580,120 +1618,6 @@ const FRONTEND_HTML = String.raw`
       .message-card hr,
       .runtime-entry hr {
         border: 0; border-top: 1px solid var(--border); margin: 10px 0;
-      }
-
-      .msg-avatar {
-        width: 28px; height: 28px; border-radius: 50%;
-        display: grid; place-items: center;
-        font-size: 13px; font-weight: 700;
-        flex-shrink: 0; margin-top: 2px;
-      }
-      .msg-avatar.user { background: linear-gradient(135deg, var(--accent-2), #488ae77b); color: #fff; }
-      .msg-avatar.assistant {
-        background: linear-gradient(135deg, var(--accent-dim), rgba(126,231,135,.22));
-        border: 1px solid rgba(126,231,135,.22); color: var(--accent); font-size: 14px;
-      }
-
-      .msg-body { flex: 1; min-width: 0; max-width: 680px; }
-      .msg-meta { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
-      .msg-role { font-size: 13px; font-weight: 600; }
-      .msg-role.user { color: var(--accent-2); }
-      .msg-role.assistant { color: var(--accent); }
-      .message-meta { font-size: 11px; color: var(--muted); }
-
-      .message-content {
-        font-size: 14px; line-height: 1.7;
-        color: var(--text);
-        white-space: pre-wrap; word-break: break-word;
-        padding: 20px 26px;
-        border-radius: var(--radius);
-        border: 1px solid rgba(255,255,255,0.07);
-        background: rgba(255,255,255,0.03);
-        max-width: min(680px, 100%);
-        overflow-x: hidden;
-        overflow-wrap: anywhere;
-      }
-      [data-theme="light"] .message-content {
-        background: var(--surface-elevated);
-        border-color: var(--border);
-      }
-      .message-actions {
-        display: flex; justify-content: flex-end; margin-top: 8px;
-      }
-      .message-copy-btn {
-        border: 1px solid var(--button-border);
-        background: var(--surface-muted);
-        color: var(--text-muted);
-        padding: 6px 10px;
-        border-radius: 999px;
-        cursor: pointer;
-        font-size: 12px;
-        transition: background .16s, color .16s, border-color .16s;
-      }
-      .message-copy-btn:hover {
-        background: var(--surface-strong);
-        color: var(--text);
-        border-color: var(--border);
-      }
-
-      .chat-break-line {
-        display: block;
-        margin: 8px 0;
-        color: rgba(232,239,247,0.65);
-        font-family: var(--mono);
-        font-size: 12px;
-        line-height: 1;
-        white-space: nowrap;
-        overflow: hidden;
-      }
-
-      .message-content .katex-display { margin: 10px 0; overflow-x: auto; }
-
-      .typing-caret {
-        display: inline-block; width: 9px; height: 9px;
-        margin-left: 4px; border-radius: 50%;
-        border: 2px solid var(--accent);
-        border-top-color: transparent;
-        vertical-align: middle;
-        animation: spinCaret 0.45s linear infinite;
-      }
-      @keyframes spinCaret { to { transform: rotate(360deg); } }
-
-      .typing-fade-in {
-        color: rgba(255, 255, 255, 1);
-        opacity: 0.2;
-        animation: typingFadeIn 0.2s steps(100, end) forwards;
-      }
-      @keyframes typingFadeIn {
-         from { opacity: 0.2; }
-         to   { opacity: 1; }
-      }
-
-      /* runtime dropdown */
-      .runtime-dropdown {
-        background: var(--bg);
-        border: 0px solid var(--input-border);
-        border-radius: var(--radius);
-        overflow: hidden; margin-top: 8px;
-      }
-      .runtime-dropdown summary {
-        list-style: none; cursor: pointer;
-        padding: 9px 14px;
-        display: flex; align-items: center; justify-content: space-between;
-        font-size: 12px; font-weight: 500; color: var(--muted);
-      }
-      .runtime-dropdown summary::-webkit-details-marker { display: none; }
-      .runtime-chevron { font-size: 11px; color: var(--muted); }
-      .runtime-log { max-height: 280px; overflow-y: auto; padding: 8px; display: flex; flex-direction: column; gap: 4px; }
-
-      .runtime-controls {
-        display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
-        padding: 8px; border-bottom: 1px solid var(--border);
-      }
-      .runtime-filter-btn {
-        padding: 3px 9px; border-radius: 99px; font-size: 11px;
-        border: 1px solid var(--button-border); color: var(--text-muted);
-        transition: background .12s, color .12s;
       }
       .runtime-filter-btn:hover { background: var(--surface-muted); color: var(--text); }
       .runtime-filter-btn.off { opacity: .4; }
@@ -3214,7 +3138,11 @@ const FRONTEND_HTML = String.raw`
           .replace(/\`([^\`\n]+)\`/g, "<code>$1</code>")
           .replace(/\*\*_(.+?)_\*\*/g, "<strong><em>$1</em></strong>")
           .replace(/\*\*\*(.+?)\*\*\*/g, "<strong><em>$1</em></strong>")
+          .replace(/\[([^\]\n]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
           .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+          .replace(/__(.+?)__/g, "<strong>$1</strong>")
+          .replace(/~~(.+?)~~/g, "<del>$1</del>")
+          .replace(/==(.+?)==/g, "<mark>$1</mark>")
           .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>")
           .replace(/(^|[^_])_([^_\n]+)_(?!_)/g, "$1<em>$2</em>")
           .replace(new RegExp(dividerMarker, "g"), "<span class='chat-break-line' aria-hidden='true'>____________________________________________________________________________________________________</span>")
@@ -3343,7 +3271,7 @@ const FRONTEND_HTML = String.raw`
 
         if (typeof DOMPurify !== "undefined") {
           html = DOMPurify.sanitize(html, {
-            ALLOWED_TAGS: ["h1", "h2", "h3", "h4", "h5", "h6", "p", "ul", "ol", "li", "blockquote", "code", "pre", "strong", "em", "br", "hr", "span", "a"],
+            ALLOWED_TAGS: ["h1", "h2", "h3", "h4", "h5", "h6", "p", "ul", "ol", "li", "blockquote", "code", "pre", "strong", "em", "br", "hr", "span", "a", "del", "mark", "table", "thead", "tbody", "tr", "th", "td"],
             ALLOWED_ATTR: ["class", "href", "target", "rel", "title"]
           });
         }
@@ -3884,8 +3812,8 @@ const FRONTEND_HTML = String.raw`
           '</article>';
         });
         const runtimeEvents = currentRuntime();
-        // Sort newest-first so latest activity appears at top
-        const sortedRuntimeEvents = runtimeEvents.slice().sort(function(a, b) {
+        const recentRuntimeEvents = runtimeEvents.slice(-18);
+        const sortedRuntimeEvents = recentRuntimeEvents.slice().sort(function(a, b) {
           return (b.ts || "") < (a.ts || "") ? -1 : (b.ts || "") > (a.ts || "") ? 1 : 0;
         });
         const filteredRuntimeEvents = sortedRuntimeEvents.filter(function(event) {
@@ -3904,13 +3832,13 @@ const FRONTEND_HTML = String.raw`
           }).join("") +
         '</div>';
         const runtimeDropdownOpen = typeof state.runtimeDropdownOpen === "boolean" ? state.runtimeDropdownOpen : !!state.sending;
-        const runtimeCard = runtimeEvents.length
-          ? '<details class="runtime-dropdown" ' + (runtimeDropdownOpen ? "open" : "") + '><summary><strong>Agent activity</strong><span class="tag">' + escapeHtml(String(runtimeEvents.length)) + ' events</span><span class="runtime-chevron">' + (runtimeDropdownOpen ? "Hide" : "Show") + '</span></summary><div class="runtime-log">' +
+        const runtimeCard = recentRuntimeEvents.length
+          ? '<details class="runtime-dropdown" ' + (runtimeDropdownOpen ? "open" : "") + '><summary><strong>Task activity</strong><span class="tag">' + escapeHtml(String(recentRuntimeEvents.length)) + ' recent</span><span class="runtime-chevron">' + (runtimeDropdownOpen ? "Hide" : "Show") + '</span></summary><div class="runtime-log">' +
               runtimeControls +
               filteredRuntimeEvents.map(function(event) {
-                return '<article class="runtime-entry ' + escapeHtml(event.type) + '"><div class="runtime-head"><span>' + escapeHtml(event.type || "status") + '</span><span>' + escapeHtml(prettyTime(event.ts)) + '</span></div><div class="runtime-body">' + renderRichText(event.message) + '</div></article>';
+                return '<article class="runtime-entry ' + escapeHtml(event.type) + '"><div class="runtime-head"><span><em>' + escapeHtml(event.type || "status") + '</em></span><span>' + escapeHtml(prettyTime(event.ts)) + '</span></div><div class="runtime-body">' + renderRichText(event.message) + '</div></article>';
               }).join("") +
-              (filteredRuntimeEvents.length ? "" : '<div class="empty-state">No activity matches current filters.</div>') +
+              (filteredRuntimeEvents.length ? "" : '<div class="empty-state">No recent activity matches current filters.</div>') +
             '</div></details>'
           : "";
         timeline.innerHTML = messageCards.concat(runtimeCard).join("") || '<div class="empty-state"><div class="empty-state-icon">' + iconMarkup("chat") + '</div>This chat is empty. Send a message to start.</div>';

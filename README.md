@@ -353,7 +353,7 @@ If you hit a missing-browser or missing-library error on first run:
    ```
 2. **If not found, install Chromium via Playwright:**
    ```
-   npx playwright install chromium
+   npx playwright install chromium && npx playwright install chrome
    ```
    For real Chrome specifically (preferred — see Known Issues on
    fingerprinting), use `npx playwright install chrome` instead.
@@ -370,6 +370,9 @@ If you hit a missing-browser or missing-library error on first run:
      libasound2t64 \
      xvfb
    ```
+
+
+
 4. **Run the program:**
    ```
    npm start
@@ -383,15 +386,17 @@ If a previous run didn't shut down cleanly (stale browser/agent processes
 holding port 3000 or the profile lock):
 
 ```
-pkill -9 node || true
+# ONLY run this when you are intentionally resetting a stale local session.
+# Do not kill all Node processes blindly; that can disrupt an already-running app.
+
+pkill -f "node agent.js" || true
+pkill -f "vite.*3000" || true
+pkill -f "webpack.*3000" || true
+PID=$(ss -ltnp '( sport = :3000 )' | awk 'NR>1 {match($NF,/pid=([0-9]+)/,a); if (a[1]) print a[1]}')
+[ -n "$PID" ] && kill -TERM "$PID" || true
 pkill -9 chrome || true
 pkill -9 chromium || true
 pkill -9 Xvfb || true
-PID=$(ss -ltnp | awk '/:3000/{match($NF,/pid=([0-9]+)/,a); print a[1]}')
-[ -n "$PID" ] && kill -9 "$PID" || true
-pkill -f agent.js || true
-pkill -f vite || true
-pkill -f webpack || true
 rm -f .puppeterr-profile/SingletonLock .puppeterr-profile/SingletonSocket 2>/dev/null || true
 ```
 

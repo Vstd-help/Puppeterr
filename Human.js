@@ -319,9 +319,9 @@ function generateTypingPlan(text, options = {}) {
  */
 function decisionPauseMs(kind = "postNavigation") {
   if (kind === "postRead") {
-    return Math.round(500 + Math.random() * 1400);
+    return Math.round(150 + Math.random() * 300);
   }
-  return Math.round(350 + Math.random() * 900); // postNavigation
+  return Math.round(80 + Math.random() * 180); // postNavigation
 }
 
 module.exports = {

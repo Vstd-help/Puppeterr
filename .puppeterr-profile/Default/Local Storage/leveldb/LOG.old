@@ -1,5 +1,0 @@
-2026/09/09-22:23:42.026 c1a0 Reusing MANIFEST /workspaces/Puppeterr/.puppeterr-profile/Default/Local Storage/leveldb/MANIFEST-000001
-2026/09/09-22:23:42.032 c1a0 Recovering log #10
-2026/09/09-22:23:42.033 c1a0 Level-0 table #13: started
-2026/09/09-22:23:42.045 c1a0 Level-0 table #13: 49404 bytes OK
-2026/09/09-22:23:42.049 c1a0 Delete type=0 #10
