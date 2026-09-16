@@ -1,60 +1,60 @@
 {
-  "generatedAt": "2026-08-21T21:39:19.228Z",
+  "generatedAt": "2026-09-14T22:44:05.526Z",
   "promptSource": "bank",
-  "totalRuns": 113,
+  "totalRuns": 221,
   "completedRuns": 5,
-  "incompleteRuns": 108,
-  "successRate": 0.0442,
+  "incompleteRuns": 216,
+  "successRate": 0.0226,
   "tierBreakdown": [
     {
       "tier": "A",
-      "total": 15,
+      "total": 27,
       "completed": 4,
-      "successRate": 0.2667
+      "successRate": 0.1481
     },
     {
       "tier": "B",
-      "total": 38,
+      "total": 74,
       "completed": 1,
-      "successRate": 0.0263
+      "successRate": 0.0135
     },
     {
       "tier": "C",
-      "total": 36,
+      "total": 72,
       "completed": 0,
       "successRate": 0
     },
     {
       "tier": "D",
-      "total": 24,
+      "total": 48,
       "completed": 0,
       "successRate": 0
     }
   ],
   "diagnosticsCoverage": {
-    "structuredSelfDiagnosisRuns": 96,
-    "missingOrUnparsableRuns": 17
+    "structuredSelfDiagnosisRuns": 166,
+    "missingOrUnparsableRuns": 55
   },
   "recurringProblems": [
     {
       "type": "other",
-      "count": 94
+      "count": 164
     },
     {
       "type": "uncertainty_or_fallback",
-      "count": 5
+      "count": 41
     },
     {
       "type": "timing_drift",
-      "count": 3
+      "count": 5
     },
     {
       "type": "selector_error",
-      "count": 3
+      "count": 5
     },
     {
       "type": "retry_loop",
-      "count": 2
+      "count": 4
     },
     {
       "type": "navigation_failure",
@@ -67,7 +67,7 @@
       "title": "Infrastructure or uncategorized failure",
       "whyLikely": "Likely service/session/concurrency issue outside standard browser action categories.",
       "category": "other",
-      "count": 94,
+      "count": 164,
       "sampleRuns": [
         {
           "cycle": 2,
@@ -91,7 +91,7 @@
       "title": "Self-diagnosis block missing or unparsable",
       "whyLikely": "Prompt requested structured diagnosis markers, but final response did not emit valid JSON in expected tags.",
       "category": "other",
-      "count": 17,
+      "count": 55,
       "sampleRuns": [
         {
           "cycle": 1,
@@ -115,7 +115,7 @@
       "title": "Fallback/uncertainty path triggered",
       "whyLikely": "Likely primary strategy failed and fallback engaged; quality depends on fallback relevance.",
       "category": "uncertainty_or_fallback",
-      "count": 5,
+      "count": 41,
       "sampleRuns": [
         {
           "cycle": 1,
@@ -135,11 +135,35 @@
       ]
     },
     {
+      "id": "captcha_false_positive_non_challenge_page",
+      "title": "CAPTCHA detector fires on normal content pages",
+      "whyLikely": "Challenge heuristics likely over-weight text/weak signals and trigger solve flow without a real gate.",
+      "category": "navigation_failure",
+      "count": 6,
+      "sampleRuns": [
+        {
+          "cycle": 1,
+          "timestamp": "2026-08-21T21:18:41.745Z",
+          "evidence": "challenge detected on non-challenge host"
+        },
+        {
+          "cycle": 5,
+          "timestamp": "2026-09-14T22:09:52.007Z",
+          "evidence": "challenge detected on non-challenge host"
+        },
+        {
+          "cycle": 16,
+          "timestamp": "2026-09-14T22:11:32.160Z",
+          "evidence": "challenge detected on non-challenge host"
+        }
+      ]
+    },
+    {
       "id": "issue_timing_drift",
       "title": "Timeout/wait sequencing mismatch",
       "whyLikely": "Likely waits tied to wrong condition (e.g., URL change) or async state settling slower than thresholds.",
       "category": "timing_drift",
-      "count": 3,
+      "count": 5,
       "sampleRuns": [
         {
           "cycle": 2,
@@ -163,7 +187,7 @@
       "title": "Selector resolution errors during actions",
       "whyLikely": "Likely stale selectors, hidden elements, or page state changed before interaction completed.",
       "category": "selector_error",
-      "count": 3,
+      "count": 5,
       "sampleRuns": [
         {
           "cycle": 2,
@@ -187,7 +211,7 @@
       "title": "Agent repeats same action without progress",
       "whyLikely": "Likely loop detection too weak or recovery policy re-issuing equivalent steps.",
       "category": "retry_loop",
-      "count": 2,
+      "count": 4,
       "sampleRuns": [
         {
           "cycle": 3,
@@ -198,6 +222,11 @@
           "cycle": 2,
           "timestamp": "2026-08-21T20:43:11.212Z",
           "evidence": "Repeated action signature goto| x3"
+        },
+        {
+          "cycle": 1,
+          "timestamp": "2026-09-14T22:42:18.402Z",
+          "evidence": "Repeated action signature waitForTimeout| x6"
         }
       ]
     },
@@ -233,20 +262,6 @@
           "evidence": "waitForURLChange errors without navigation"
         }
       ]
-    },
-    {
-      "id": "captcha_false_positive_non_challenge_page",
-      "title": "CAPTCHA detector fires on normal content pages",
-      "whyLikely": "Challenge heuristics likely over-weight text/weak signals and trigger solve flow without a real gate.",
-      "category": "navigation_failure",
-      "count": 1,
-      "sampleRuns": [
-        {
-          "cycle": 1,
-          "timestamp": "2026-08-21T21:18:41.745Z",
-          "evidence": "challenge detected on non-challenge host"
-        }
-      ]
     }
   ],
   "insights": {
@@ -255,7 +270,7 @@
       "title": "Infrastructure or uncategorized failure",
       "whyLikely": "Likely service/session/concurrency issue outside standard browser action categories.",
       "category": "other",
-      "count": 94,
+      "count": 164,
       "sampleRuns": [
         {
           "cycle": 2,
@@ -274,8 +289,8 @@
         }
       ]
     },
-    "infraFailureSignals": 111,
+    "infraFailureSignals": 219,
     "recommendation": "Address top bugFinding entries first; they include likely causes and sample evidence to reproduce."
   },
-  "latestRunTimestamp": "2026-08-21T21:39:19.208Z"
+  "latestRunTimestamp": "2026-09-14T22:44:05.513Z"
 }

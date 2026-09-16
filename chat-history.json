@@ -1,6 +1,2501 @@
 {
-  "selectedChatId": "1fe3a0cc-cead-4efd-81ba-a1851f15023b",
+  "selectedChatId": "f10fee03-55e5-4453-9ed9-63c47082052f",
   "chats": [
+    {
+      "id": "c93e180e-b28d-4171-a35c-71f614a472fe",
+      "title": "Stress Tester 2026-09-14T22:44:05.485Z",
+      "createdAt": "2026-09-14T22:44:05.491Z",
+      "updatedAt": "2026-09-14T22:44:05.491Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "3da13666-0c96-423f-a913-b2e72c3fd4e6",
+      "title": "Stress Tester 2026-09-14T22:44:02.434Z",
+      "createdAt": "2026-09-14T22:44:02.442Z",
+      "updatedAt": "2026-09-14T22:44:02.442Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "a0eb5b44-d761-4416-95ec-00cd925e48d4",
+      "title": "Stress Tester 2026-09-14T22:43:59.395Z",
+      "createdAt": "2026-09-14T22:43:59.400Z",
+      "updatedAt": "2026-09-14T22:43:59.400Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "ae08313d-af52-4065-9e45-8a9c8660fb76",
+      "title": "Stress Tester 2026-09-14T22:43:56.346Z",
+      "createdAt": "2026-09-14T22:43:56.354Z",
+      "updatedAt": "2026-09-14T22:43:56.354Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "535a37f7-3670-497d-bc03-c2d4ff218a91",
+      "title": "Stress Tester 2026-09-14T22:43:53.309Z",
+      "createdAt": "2026-09-14T22:43:53.314Z",
+      "updatedAt": "2026-09-14T22:43:53.314Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "45871686-f22b-4be4-b26d-1f79eef6f48d",
+      "title": "Stress Tester 2026-09-14T22:43:50.252Z",
+      "createdAt": "2026-09-14T22:43:50.264Z",
+      "updatedAt": "2026-09-14T22:43:50.264Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "5bc5544d-8523-4c6b-961f-f32cdd1fbf93",
+      "title": "Stress Tester 2026-09-14T22:43:47.199Z",
+      "createdAt": "2026-09-14T22:43:47.209Z",
+      "updatedAt": "2026-09-14T22:43:47.209Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "ec2d362c-5062-446b-97b0-c138aa160c2a",
+      "title": "Stress Tester 2026-09-14T22:43:44.132Z",
+      "createdAt": "2026-09-14T22:43:44.144Z",
+      "updatedAt": "2026-09-14T22:43:44.144Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "ff9817f5-25d3-4607-ac8f-a30d807b1e9b",
+      "title": "Stress Tester 2026-09-14T22:43:41.091Z",
+      "createdAt": "2026-09-14T22:43:41.099Z",
+      "updatedAt": "2026-09-14T22:43:41.099Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "522d198c-a7b8-4640-acc7-3816dfd4eb2c",
+      "title": "Stress Tester 2026-09-14T22:43:38.049Z",
+      "createdAt": "2026-09-14T22:43:38.058Z",
+      "updatedAt": "2026-09-14T22:43:38.058Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "80b446a2-a479-49f5-ac81-fd2ea175338b",
+      "title": "Stress Tester 2026-09-14T22:43:34.974Z",
+      "createdAt": "2026-09-14T22:43:34.983Z",
+      "updatedAt": "2026-09-14T22:43:34.983Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "286f1d4a-e80b-4533-8aba-d14cfa4f3752",
+      "title": "Stress Tester 2026-09-14T22:43:31.832Z",
+      "createdAt": "2026-09-14T22:43:31.849Z",
+      "updatedAt": "2026-09-14T22:43:31.849Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "3425eada-a649-44a7-b705-e6086e97cc96",
+      "title": "Stress Tester 2026-09-14T22:43:28.795Z",
+      "createdAt": "2026-09-14T22:43:28.800Z",
+      "updatedAt": "2026-09-14T22:43:28.800Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "55da9407-d391-4c74-b4c3-3f9f68f74ade",
+      "title": "Stress Tester 2026-09-14T22:43:25.736Z",
+      "createdAt": "2026-09-14T22:43:25.745Z",
+      "updatedAt": "2026-09-14T22:43:25.745Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "7c86fdb8-f248-4caa-88e8-4915fb0b2564",
+      "title": "Stress Tester 2026-09-14T22:43:22.699Z",
+      "createdAt": "2026-09-14T22:43:22.704Z",
+      "updatedAt": "2026-09-14T22:43:22.704Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "f5d7e52d-4723-429b-a26c-a2548648019a",
+      "title": "Stress Tester 2026-09-14T22:43:19.663Z",
+      "createdAt": "2026-09-14T22:43:19.669Z",
+      "updatedAt": "2026-09-14T22:43:19.669Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "ae5687f9-4a19-430b-89fe-12bb102a41b9",
+      "title": "Stress Tester 2026-09-14T22:43:16.597Z",
+      "createdAt": "2026-09-14T22:43:16.607Z",
+      "updatedAt": "2026-09-14T22:43:16.607Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "965b8ef1-dda9-44d4-8da0-974de9942e5e",
+      "title": "Stress Tester 2026-09-14T22:43:13.559Z",
+      "createdAt": "2026-09-14T22:43:13.566Z",
+      "updatedAt": "2026-09-14T22:43:13.566Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "e498a2db-66b7-4ff1-8e52-dd4b418fc8af",
+      "title": "Stress Tester 2026-09-14T22:43:10.515Z",
+      "createdAt": "2026-09-14T22:43:10.521Z",
+      "updatedAt": "2026-09-14T22:43:10.521Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "01d3b9df-365b-41dc-9f38-5a742af762c5",
+      "title": "Stress Tester 2026-09-14T22:43:07.480Z",
+      "createdAt": "2026-09-14T22:43:07.484Z",
+      "updatedAt": "2026-09-14T22:43:07.484Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "91fa8fa8-9207-4d32-9218-50bb1f5b7f2d",
+      "title": "Stress Tester 2026-09-14T22:43:04.415Z",
+      "createdAt": "2026-09-14T22:43:04.420Z",
+      "updatedAt": "2026-09-14T22:43:04.420Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "0228b817-564f-4528-83ff-25d2bebcdfc0",
+      "title": "Stress Tester 2026-09-14T22:43:01.329Z",
+      "createdAt": "2026-09-14T22:43:01.339Z",
+      "updatedAt": "2026-09-14T22:43:01.339Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "ae68a61b-aa9a-4034-ad38-84e54e5cd197",
+      "title": "Stress Tester 2026-09-14T22:42:58.182Z",
+      "createdAt": "2026-09-14T22:42:58.289Z",
+      "updatedAt": "2026-09-14T22:42:58.289Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "35e2cb8b-b0fd-4b79-b314-2750f60cb932",
+      "title": "Stress Tester 2026-09-14T22:42:55.107Z",
+      "createdAt": "2026-09-14T22:42:55.116Z",
+      "updatedAt": "2026-09-14T22:42:55.116Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "96d3c354-2211-4201-b71d-f8ec56cb5848",
+      "title": "Stress Tester 2026-09-14T22:42:52.054Z",
+      "createdAt": "2026-09-14T22:42:52.068Z",
+      "updatedAt": "2026-09-14T22:42:52.068Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "f3183ba6-f352-4296-8b20-4112b693fdd1",
+      "title": "Stress Tester 2026-09-14T22:42:49.012Z",
+      "createdAt": "2026-09-14T22:42:49.017Z",
+      "updatedAt": "2026-09-14T22:42:49.017Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "27399ffa-6460-46ba-b16d-63683cbad30b",
+      "title": "Stress Tester 2026-09-14T22:42:45.971Z",
+      "createdAt": "2026-09-14T22:42:45.979Z",
+      "updatedAt": "2026-09-14T22:42:45.979Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "d62b0c3d-f81b-4c64-9385-ec9a798ba463",
+      "title": "Stress Tester 2026-09-14T22:42:42.819Z",
+      "createdAt": "2026-09-14T22:42:42.837Z",
+      "updatedAt": "2026-09-14T22:42:42.837Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "ab1ebad8-d734-48a6-bec8-a46c16b95766",
+      "title": "Stress Tester 2026-09-14T22:42:39.780Z",
+      "createdAt": "2026-09-14T22:42:39.787Z",
+      "updatedAt": "2026-09-14T22:42:39.787Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "b6dd3942-7ee1-4fda-b64d-aa74b417814b",
+      "title": "Stress Tester 2026-09-14T22:42:36.725Z",
+      "createdAt": "2026-09-14T22:42:36.730Z",
+      "updatedAt": "2026-09-14T22:42:36.730Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "e4486bb4-7df1-4729-b144-3c230aad8ef5",
+      "title": "Stress Tester 2026-09-14T22:42:33.688Z",
+      "createdAt": "2026-09-14T22:42:33.695Z",
+      "updatedAt": "2026-09-14T22:42:33.695Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "e38d8adb-9ba0-4428-97c5-41527d759427",
+      "title": "Stress Tester 2026-09-14T22:42:30.578Z",
+      "createdAt": "2026-09-14T22:42:30.591Z",
+      "updatedAt": "2026-09-14T22:42:30.591Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "f6519862-5cd3-4a09-82d5-b6eafc932cde",
+      "title": "Stress Tester 2026-09-14T22:42:27.515Z",
+      "createdAt": "2026-09-14T22:42:27.521Z",
+      "updatedAt": "2026-09-14T22:42:27.521Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "9436d186-8295-4e4e-a9af-a05e9b08b010",
+      "title": "Stress Tester 2026-09-14T22:42:24.477Z",
+      "createdAt": "2026-09-14T22:42:24.483Z",
+      "updatedAt": "2026-09-14T22:42:24.483Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "5bc58152-b331-4fbf-859d-9288b0812790",
+      "title": "Stress Tester 2026-09-14T22:42:21.424Z",
+      "createdAt": "2026-09-14T22:42:21.431Z",
+      "updatedAt": "2026-09-14T22:42:21.431Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "f10fee03-55e5-4453-9ed9-63c47082052f",
+      "title": "Stress Tester 2026-09-14T22:34:16.060Z",
+      "createdAt": "2026-09-14T22:34:16.093Z",
+      "updatedAt": "2026-09-14T22:45:28.883Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to archive.org and search for \"public domain images\"\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"A\",\n  \"bankIndex\": 0\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:34:16.169Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "⚠️ The browser crashed mid-task and is restarting. Please retry your request once it's back.",
+          "ts": "2026-09-14T22:45:28.883Z",
+          "completed": false,
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "c6561daa-7969-48d4-9a97-e18b87a38151",
+      "title": "Stress Tester 2026-09-14T22:14:11.382Z",
+      "createdAt": "2026-09-14T22:14:11.389Z",
+      "updatedAt": "2026-09-14T22:14:15.966Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser look up what a \"false positive completion\" means in the context of AI agent evaluation, using any source you find\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"D\",\n  \"bankIndex\": 35\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:14:11.423Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:14:15.966Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "1b75d624-868b-4fa1-b2f9-c353f8d26831",
+      "title": "Stress Tester 2026-09-14T22:14:02.935Z",
+      "createdAt": "2026-09-14T22:14:02.940Z",
+      "updatedAt": "2026-09-14T22:14:06.517Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser find the GitHub repo for \"requests\" (python library), check its last commit date, and report if it's still actively maintained\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"D\",\n  \"bankIndex\": 34\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:14:02.986Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:14:06.517Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "a4802ab5-1d7e-4211-a15f-da59139245fb",
+      "title": "Stress Tester 2026-09-14T22:13:50.754Z",
+      "createdAt": "2026-09-14T22:13:50.777Z",
+      "updatedAt": "2026-09-14T22:13:56.959Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser find a recent article about browser AI agents and tell me one criticism it raises\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"D\",\n  \"bankIndex\": 33\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:13:50.968Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:13:56.959Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "c24bb039-ee4c-4913-9413-8105018cc51a",
+      "title": "Stress Tester 2026-09-14T22:13:41.655Z",
+      "createdAt": "2026-09-14T22:13:41.671Z",
+      "updatedAt": "2026-09-14T22:13:46.071Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser look up the difference between npm and yarn and summarize it in 3 bullet points\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"D\",\n  \"bankIndex\": 32\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:13:41.719Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:13:46.071Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "51796253-26ac-4ac6-8adf-3c94b69e921e",
+      "title": "Stress Tester 2026-09-14T22:13:32.477Z",
+      "createdAt": "2026-09-14T22:13:32.502Z",
+      "updatedAt": "2026-09-14T22:13:37.162Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser find out who currently holds the record for WebArena benchmark performance\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"D\",\n  \"bankIndex\": 31\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:13:32.563Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:13:37.162Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "7b9ea9d6-0c8d-4673-8218-b5cdbd7951d6",
+      "title": "Stress Tester 2026-09-14T22:13:23.226Z",
+      "createdAt": "2026-09-14T22:13:23.249Z",
+      "updatedAt": "2026-09-14T22:13:29.305Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser check if there's a Python package for parsing PDFs and tell me the most popular one\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"D\",\n  \"bankIndex\": 30\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:13:23.373Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:13:29.305Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "d68f4215-470f-4d2a-abf7-8b53140970ce",
+      "title": "Stress Tester 2026-09-14T22:13:11.701Z",
+      "createdAt": "2026-09-14T22:13:11.719Z",
+      "updatedAt": "2026-09-14T22:13:19.109Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser find a highly-rated budget mechanical keyboard and tell me its price\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"D\",\n  \"bankIndex\": 29\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:13:11.952Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:13:19.109Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "f0cdc007-c3e8-42a3-8eaf-ee4e2783e4df",
+      "title": "Stress Tester 2026-09-14T22:13:03.655Z",
+      "createdAt": "2026-09-14T22:13:03.662Z",
+      "updatedAt": "2026-09-14T22:13:07.587Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser find out what the current stable version of Node.js is and where to download it\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"D\",\n  \"bankIndex\": 28\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:13:03.695Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:13:07.587Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "3bec77c9-19fd-47de-a203-9bc14d3750b9",
+      "title": "Stress Tester 2026-09-14T22:12:58.334Z",
+      "createdAt": "2026-09-14T22:12:58.351Z",
+      "updatedAt": "2026-09-14T22:13:00.384Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to github trending, pick the top Python repo, open its issues tab, and report the oldest open issue title\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 27\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:12:58.400Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:13:00.384Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "fb5ac874-cecb-4bd6-a71b-f6ff827913cf",
+      "title": "Stress Tester 2026-09-14T22:12:52.292Z",
+      "createdAt": "2026-09-14T22:12:52.297Z",
+      "updatedAt": "2026-09-14T22:12:54.780Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to nytimes.com, find a tech article, open it, then find a second article on the same topic elsewhere\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 26\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:12:52.321Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:12:54.780Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "72449226-f235-42e6-8d78-513d22a813a3",
+      "title": "Stress Tester 2026-09-14T22:12:46.261Z",
+      "createdAt": "2026-09-14T22:12:46.266Z",
+      "updatedAt": "2026-09-14T22:12:48.415Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to britannica.com, search \"Mars rover Perseverance\", then verify one fact from it using Wikipedia\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 25\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:12:46.289Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:12:48.415Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "e2fb862f-f3d4-419f-b828-04288c9de307",
+      "title": "Stress Tester 2026-09-14T22:12:40.221Z",
+      "createdAt": "2026-09-14T22:12:40.226Z",
+      "updatedAt": "2026-09-14T22:12:42.512Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to reddit.com/r/webdev, find a thread about frameworks, open it, and list the two most-upvoted opinions\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 24\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:12:40.254Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:12:42.512Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "3204159b-01ba-4f76-a7a9-b1ee1e035b5b",
+      "title": "Stress Tester 2026-09-14T22:12:34.135Z",
+      "createdAt": "2026-09-14T22:12:34.140Z",
+      "updatedAt": "2026-09-14T22:12:36.182Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to imdb.com, find \"Inception\", then search for its director on the same site and list 2 other films they made\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 23\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:12:34.171Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:12:36.182Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "e725ce82-18d0-49e7-8600-45bcdbcae240",
+      "title": "Stress Tester 2026-09-14T22:12:26.032Z",
+      "createdAt": "2026-09-14T22:12:26.037Z",
+      "updatedAt": "2026-09-14T22:12:28.518Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to docs.python.org, find the \"set\" type page, then compare it with a definition from a second source\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 22\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:12:26.068Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:12:28.518Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "48f6f9a5-6b1b-4a02-a6d2-0f6353ca80ae",
+      "title": "Stress Tester 2026-09-14T22:12:17.934Z",
+      "createdAt": "2026-09-14T22:12:17.940Z",
+      "updatedAt": "2026-09-14T22:12:20.476Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to wikipedia, look up \"Saturn V\", follow a link to \"Apollo 11\", and find the moon landing date\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 21\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:12:17.973Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:12:20.476Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "e14a67a1-d3a0-41a4-924d-2afdacb06352",
+      "title": "Stress Tester 2026-09-14T22:12:09.839Z",
+      "createdAt": "2026-09-14T22:12:09.855Z",
+      "updatedAt": "2026-09-14T22:12:12.519Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to hacker news, find a story about AI, open it, then find a related article via search\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 20\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:12:09.922Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:12:12.519Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "65fd4e2b-63dc-4af1-a440-b3343c065557",
+      "title": "Stress Tester 2026-09-14T22:12:01.741Z",
+      "createdAt": "2026-09-14T22:12:01.747Z",
+      "updatedAt": "2026-09-14T22:12:05.223Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to github.com, find the vitejs/vite repo, open the README, and summarize the install steps\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 19\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:12:01.770Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:12:05.223Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "9b10329c-2e2b-4295-a1b1-0114e93e3ed8",
+      "title": "Stress Tester 2026-09-14T22:11:53.665Z",
+      "createdAt": "2026-09-14T22:11:53.676Z",
+      "updatedAt": "2026-09-14T22:11:56.032Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to npmjs.com, search \"axios\", check the latest version, then go to its GitHub repo and check open issue count\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 18\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:11:53.716Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:11:56.032Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "43db6a6a-9c05-4404-a0aa-c3d193905b88",
+      "title": "Stress Tester 2026-09-14T22:11:45.536Z",
+      "createdAt": "2026-09-14T22:11:45.544Z",
+      "updatedAt": "2026-09-14T22:11:47.935Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to pypi.org, search \"vite\", open the package page, then check if there's a GitHub link and follow it\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 17\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:11:45.580Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:11:47.935Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "b1563899-3945-4932-8f90-713c0cd856c1",
+      "title": "Stress Tester 2026-09-14T22:11:37.430Z",
+      "createdAt": "2026-09-14T22:11:37.438Z",
+      "updatedAt": "2026-09-14T22:11:39.790Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to wikipedia, search \"Ada Lovelace\", follow a link to Charles Babbage, and compare their birth years\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"C\",\n  \"bankIndex\": 16\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:11:37.470Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:11:39.790Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "ded6332b-e370-4eb5-91d0-f2e4096cf834",
+      "title": "Stress Tester 2026-09-14T22:11:29.341Z",
+      "createdAt": "2026-09-14T22:11:29.348Z",
+      "updatedAt": "2026-09-14T22:11:32.160Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to wikipedia.org, search \"transformer architecture\", and find who introduced it\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 15\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:11:29.388Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:11:32.160Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "f5ca492f-d244-493e-b671-af5c3a649a10",
+      "title": "Stress Tester 2026-09-14T22:11:21.244Z",
+      "createdAt": "2026-09-14T22:11:21.283Z",
+      "updatedAt": "2026-09-14T22:11:24.679Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to github trending, find the #1 repo today, and report its description\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 14\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:11:21.374Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:11:24.679Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "ddee8f37-2e4f-4900-a708-157b4058ad21",
+      "title": "Stress Tester 2026-09-14T22:11:13.179Z",
+      "createdAt": "2026-09-14T22:11:13.186Z",
+      "updatedAt": "2026-09-14T22:11:16.387Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to npmjs.com, search \"react\", and list 3 alternative packages shown\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 13\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:11:13.228Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:11:16.387Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "cc7eeaf3-6749-4853-bda6-94f5dbfde21c",
+      "title": "Stress Tester 2026-09-14T22:11:05.057Z",
+      "createdAt": "2026-09-14T22:11:05.077Z",
+      "updatedAt": "2026-09-14T22:11:08.111Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to britannica.com, search \"black hole\", and extract the definition\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 12\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:11:05.169Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:11:08.111Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "94fbfb44-be39-4823-86cf-9f03ef43258c",
+      "title": "Stress Tester 2026-09-14T22:10:56.821Z",
+      "createdAt": "2026-09-14T22:10:56.829Z",
+      "updatedAt": "2026-09-14T22:10:59.371Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to stackoverflow.com, find a question about \"async await javascript\", and summarize the top answer\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 11\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:10:56.867Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:10:59.371Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "718e068b-e2d7-4b8f-bf23-e099e6ad491c",
+      "title": "Stress Tester 2026-09-14T22:10:31.224Z",
+      "createdAt": "2026-09-14T22:10:31.240Z",
+      "updatedAt": "2026-09-14T22:10:52.943Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to weather.com, check Chicago's forecast, and tell me if I need an umbrella tomorrow\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 10\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:10:31.445Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:10:52.943Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "b3dd77d5-d550-4063-9a3b-6592331dd6d3",
+      "title": "Stress Tester 2026-09-14T22:10:24.826Z",
+      "createdAt": "2026-09-14T22:10:24.838Z",
+      "updatedAt": "2026-09-14T22:10:27.536Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to imdb.com, find \"Inception\", and report its release year and rating\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 9\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:10:25.121Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:10:27.536Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "3d40d1dd-487b-4711-8538-ae1a90074867",
+      "title": "Stress Tester 2026-09-14T22:10:18.633Z",
+      "createdAt": "2026-09-14T22:10:18.642Z",
+      "updatedAt": "2026-09-14T22:10:21.559Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to reddit.com, search \"best budget headphones\", and report the top comment\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 8\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:10:18.690Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:10:21.559Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "02360fbb-a7b2-49e3-8117-10612d229647",
+      "title": "Stress Tester 2026-09-14T22:10:09.372Z",
+      "createdAt": "2026-09-14T22:10:09.377Z",
+      "updatedAt": "2026-09-14T22:10:13.127Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to docs.python.org, find the asyncio page, and extract one code example\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 7\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:10:09.427Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:10:13.127Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "a2bfe9a5-8b16-4fea-a1fa-4743753facf4",
+      "title": "Stress Tester 2026-09-14T22:10:03.340Z",
+      "createdAt": "2026-09-14T22:10:03.345Z",
+      "updatedAt": "2026-09-14T22:10:05.211Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to github.com, search \"playwright\", open the top repo, and report the star count\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 6\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:10:03.368Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:10:05.211Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "f9812bfe-bd61-42e8-aeac-e853d138f162",
+      "title": "Stress Tester 2026-09-14T22:09:57.218Z",
+      "createdAt": "2026-09-14T22:09:57.231Z",
+      "updatedAt": "2026-09-14T22:09:59.633Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to npmjs.com, search \"express\", click the top result, and report the latest version\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 5\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:09:57.315Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:09:59.633Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "895b95cf-eb4f-4da3-91fd-4817c86a5d27",
+      "title": "Stress Tester 2026-09-14T22:09:48.883Z",
+      "createdAt": "2026-09-14T22:09:48.904Z",
+      "updatedAt": "2026-09-14T22:09:52.007Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to wikipedia.org, search \"Saturn V\", and extract the launch date\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"B\",\n  \"bankIndex\": 4\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:09:48.987Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:09:52.007Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "e3f03549-53ac-4245-8e95-437348365d56",
+      "title": "Stress Tester 2026-09-14T22:09:42.816Z",
+      "createdAt": "2026-09-14T22:09:42.824Z",
+      "updatedAt": "2026-09-14T22:09:45.347Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to britannica.com and search for \"Ada Lovelace\"\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"A\",\n  \"bankIndex\": 3\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:09:42.872Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:09:45.347Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "a990d3f3-9618-414b-83e0-4ab919a2e54e",
+      "title": "Stress Tester 2026-09-14T22:09:36.733Z",
+      "createdAt": "2026-09-14T22:09:36.747Z",
+      "updatedAt": "2026-09-14T22:09:39.295Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to reddit.com/r/programming and get the top post title\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"A\",\n  \"bankIndex\": 2\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:09:36.791Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:09:39.295Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "8bcbafd0-22d8-48f0-bd35-f63f582c4b53",
+      "title": "Stress Tester 2026-09-14T22:09:30.576Z",
+      "createdAt": "2026-09-14T22:09:30.589Z",
+      "updatedAt": "2026-09-14T22:09:33.186Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to docs.python.org and find the page for the \"list\" type\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"A\",\n  \"bankIndex\": 1\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:09:30.623Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:09:33.186Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "5fd8181e-c85e-406e-9ba2-9a84e77b9ed9",
+      "title": "Stress Tester 2026-09-14T22:09:21.519Z",
+      "createdAt": "2026-09-14T22:09:21.525Z",
+      "updatedAt": "2026-09-14T22:09:24.684Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to archive.org and search for \"public domain images\"\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"A\",\n  \"bankIndex\": 0\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:09:21.553Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "Task failed: Cannot access 'plan' before initialization",
+          "ts": "2026-09-14T22:09:24.684Z",
+          "completed": false,
+          "command": "browser",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "fc394092-1faa-4a44-ae61-19dd1969ce00",
+      "title": "Stress Tester 2026-09-14T22:08:25.301Z",
+      "createdAt": "2026-09-14T22:08:25.310Z",
+      "updatedAt": "2026-09-14T22:09:06.224Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to archive.org and search for \"public domain images\"\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"A\",\n  \"bankIndex\": 0\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T22:08:25.347Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "⚠️ The browser crashed mid-task and is restarting. Please retry your request once it's back.",
+          "ts": "2026-09-14T22:09:06.224Z",
+          "completed": false,
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "0c9f7aed-93f4-41d3-82b1-cef6f9eec3f7",
+      "title": "Stress Tester 2026-09-14T21:58:13.608Z",
+      "createdAt": "2026-09-14T21:58:13.615Z",
+      "updatedAt": "2026-09-14T21:58:13.615Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "53e15ad7-0a73-494b-bed0-1ef29eeab7b7",
+      "title": "Stress Tester 2026-09-14T21:58:10.577Z",
+      "createdAt": "2026-09-14T21:58:10.582Z",
+      "updatedAt": "2026-09-14T21:58:10.582Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "2101b8b8-6254-4698-8a71-410e6215f6da",
+      "title": "Stress Tester 2026-09-14T21:58:07.532Z",
+      "createdAt": "2026-09-14T21:58:07.549Z",
+      "updatedAt": "2026-09-14T21:58:07.549Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "c86f2ca5-52f9-4750-a200-ee79200ac1e9",
+      "title": "Stress Tester 2026-09-14T21:58:04.504Z",
+      "createdAt": "2026-09-14T21:58:04.508Z",
+      "updatedAt": "2026-09-14T21:58:04.508Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "aa8d4d68-6393-41ed-a52b-de9da19f5dfa",
+      "title": "Stress Tester 2026-09-14T21:58:01.477Z",
+      "createdAt": "2026-09-14T21:58:01.481Z",
+      "updatedAt": "2026-09-14T21:58:01.481Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "9671459a-75f6-4ba1-b182-1000c1e11aab",
+      "title": "Stress Tester 2026-09-14T21:57:58.391Z",
+      "createdAt": "2026-09-14T21:57:58.408Z",
+      "updatedAt": "2026-09-14T21:57:58.408Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "a6c62d9b-039a-436f-b7f6-c174f6ff6ea4",
+      "title": "Stress Tester 2026-09-14T21:57:55.363Z",
+      "createdAt": "2026-09-14T21:57:55.368Z",
+      "updatedAt": "2026-09-14T21:57:55.368Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "1c968073-02fc-41c2-b659-134b66f0303e",
+      "title": "Stress Tester 2026-09-14T21:57:50.013Z",
+      "createdAt": "2026-09-14T21:57:50.017Z",
+      "updatedAt": "2026-09-14T21:57:50.017Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "ae5864a8-384a-49b6-9d7a-9cc263a35ebd",
+      "title": "Stress Tester 2026-09-14T21:57:46.984Z",
+      "createdAt": "2026-09-14T21:57:46.990Z",
+      "updatedAt": "2026-09-14T21:57:46.990Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "921fd4c3-2a4f-47e6-9ae2-06acce56511c",
+      "title": "Stress Tester 2026-09-14T21:57:43.955Z",
+      "createdAt": "2026-09-14T21:57:43.959Z",
+      "updatedAt": "2026-09-14T21:57:43.959Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "486e70d2-534f-45c1-96a9-3bd8c0686cc3",
+      "title": "Stress Tester 2026-09-14T21:57:40.925Z",
+      "createdAt": "2026-09-14T21:57:40.929Z",
+      "updatedAt": "2026-09-14T21:57:40.929Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "50b84f9f-b0fa-4d09-9ac2-4defc44e079d",
+      "title": "Stress Tester 2026-09-14T21:57:37.885Z",
+      "createdAt": "2026-09-14T21:57:37.896Z",
+      "updatedAt": "2026-09-14T21:57:37.896Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "47b1c967-47e4-481c-93d5-5ef8fcb359e1",
+      "title": "Stress Tester 2026-09-14T21:57:34.856Z",
+      "createdAt": "2026-09-14T21:57:34.861Z",
+      "updatedAt": "2026-09-14T21:57:34.861Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "06c278bf-e9ed-4daf-8c6c-2601349ae1d7",
+      "title": "Stress Tester 2026-09-14T21:57:31.801Z",
+      "createdAt": "2026-09-14T21:57:31.816Z",
+      "updatedAt": "2026-09-14T21:57:31.816Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "951e9542-0eea-4d4e-8aa1-ef98b2f9e800",
+      "title": "Stress Tester 2026-09-14T21:57:28.771Z",
+      "createdAt": "2026-09-14T21:57:28.775Z",
+      "updatedAt": "2026-09-14T21:57:28.775Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "52c079f5-b5ce-4d04-b43a-e15bb242adda",
+      "title": "Stress Tester 2026-09-14T21:57:25.744Z",
+      "createdAt": "2026-09-14T21:57:25.749Z",
+      "updatedAt": "2026-09-14T21:57:25.749Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "0d36da39-986a-4b40-b7df-41f0501c3954",
+      "title": "Stress Tester 2026-09-14T21:57:22.718Z",
+      "createdAt": "2026-09-14T21:57:22.723Z",
+      "updatedAt": "2026-09-14T21:57:22.723Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "97f08640-9b8b-490d-9445-0ceb60827c6f",
+      "title": "Stress Tester 2026-09-14T21:57:19.692Z",
+      "createdAt": "2026-09-14T21:57:19.696Z",
+      "updatedAt": "2026-09-14T21:57:19.696Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "8895694d-aeaa-47da-9960-a15009bdae86",
+      "title": "Stress Tester 2026-09-14T21:57:16.648Z",
+      "createdAt": "2026-09-14T21:57:16.655Z",
+      "updatedAt": "2026-09-14T21:57:16.655Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "746dad55-f1ca-441d-b6d1-c6359e36454a",
+      "title": "Stress Tester 2026-09-14T21:57:13.617Z",
+      "createdAt": "2026-09-14T21:57:13.621Z",
+      "updatedAt": "2026-09-14T21:57:13.621Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "6020945e-8632-4d7a-bb4b-386ebd7b74c2",
+      "title": "Stress Tester 2026-09-14T21:57:10.591Z",
+      "createdAt": "2026-09-14T21:57:10.595Z",
+      "updatedAt": "2026-09-14T21:57:10.595Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "4cd63627-597e-4845-9989-5bb19b0a52f6",
+      "title": "Stress Tester 2026-09-14T21:57:07.565Z",
+      "createdAt": "2026-09-14T21:57:07.569Z",
+      "updatedAt": "2026-09-14T21:57:07.569Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "16c98ee8-a640-47fe-a7fd-f2766c6d9ba9",
+      "title": "Stress Tester 2026-09-14T21:57:04.537Z",
+      "createdAt": "2026-09-14T21:57:04.542Z",
+      "updatedAt": "2026-09-14T21:57:04.542Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "0597bb34-54c7-407f-847c-a24d2d8e6454",
+      "title": "Stress Tester 2026-09-14T21:57:01.508Z",
+      "createdAt": "2026-09-14T21:57:01.514Z",
+      "updatedAt": "2026-09-14T21:57:01.514Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "1e5a64b5-abbe-4844-acf5-4e81ff06c85d",
+      "title": "Stress Tester 2026-09-14T21:56:58.463Z",
+      "createdAt": "2026-09-14T21:56:58.471Z",
+      "updatedAt": "2026-09-14T21:56:58.471Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "87adac3c-fb2d-45ab-9025-3cae92211941",
+      "title": "Stress Tester 2026-09-14T21:56:55.434Z",
+      "createdAt": "2026-09-14T21:56:55.439Z",
+      "updatedAt": "2026-09-14T21:56:55.439Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "7ee69d0c-2889-41d3-bdab-016f7909ea3b",
+      "title": "Stress Tester 2026-09-14T21:56:52.385Z",
+      "createdAt": "2026-09-14T21:56:52.393Z",
+      "updatedAt": "2026-09-14T21:56:52.393Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "bfd83f46-5364-4db3-8bd1-07e3897328e4",
+      "title": "Stress Tester 2026-09-14T21:56:49.349Z",
+      "createdAt": "2026-09-14T21:56:49.354Z",
+      "updatedAt": "2026-09-14T21:56:49.354Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "1b25b874-da9c-4828-89c5-05f49432301d",
+      "title": "Stress Tester 2026-09-14T21:56:46.301Z",
+      "createdAt": "2026-09-14T21:56:46.311Z",
+      "updatedAt": "2026-09-14T21:56:46.311Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "b77359cd-53f2-4c04-ae8a-1bbeabbe29ac",
+      "title": "Stress Tester 2026-09-14T21:56:43.275Z",
+      "createdAt": "2026-09-14T21:56:43.280Z",
+      "updatedAt": "2026-09-14T21:56:43.280Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "47b3d74f-619a-489c-b0ca-f32e21e03e32",
+      "title": "Stress Tester 2026-09-14T21:56:40.244Z",
+      "createdAt": "2026-09-14T21:56:40.249Z",
+      "updatedAt": "2026-09-14T21:56:40.249Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "6221933e-9a4d-4a8b-a967-687532479bb4",
+      "title": "Stress Tester 2026-09-14T21:56:37.216Z",
+      "createdAt": "2026-09-14T21:56:37.220Z",
+      "updatedAt": "2026-09-14T21:56:37.220Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "aa36177b-5538-4601-801f-8c2b2fcc24c0",
+      "title": "Stress Tester 2026-09-14T21:56:34.186Z",
+      "createdAt": "2026-09-14T21:56:34.191Z",
+      "updatedAt": "2026-09-14T21:56:34.191Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "9913c4ed-e1aa-4564-add6-f7c1561b5e4d",
+      "title": "Stress Tester 2026-09-14T21:56:31.160Z",
+      "createdAt": "2026-09-14T21:56:31.164Z",
+      "updatedAt": "2026-09-14T21:56:31.164Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "f53338e9-c26e-4df4-9e85-ce6b222d00bd",
+      "title": "Stress Tester 2026-09-14T21:56:28.125Z",
+      "createdAt": "2026-09-14T21:56:28.131Z",
+      "updatedAt": "2026-09-14T21:56:28.131Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": []
+    },
+    {
+      "id": "87b0f4a7-76ea-47e6-a893-e49a070ffa39",
+      "title": "Stress Tester 2026-09-14T21:51:36.340Z",
+      "createdAt": "2026-09-14T21:51:41.795Z",
+      "updatedAt": "2026-09-14T22:07:13.655Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to archive.org and search for \"public domain images\"\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"A\",\n  \"bankIndex\": 0\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T21:51:41.981Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "The agent timed out while attempting to locate the search input field on the page.\nVerify that the search bar is currently visible on the page and retry the action.",
+          "ts": "2026-09-14T21:56:24.545Z",
+          "log_summary": true,
+          "completed": false
+        },
+        {
+          "role": "assistant",
+          "content": "Reasoner summary (step 5):\nFocus on the current page state.\nFocus: current page\nRisk: medium\nCaution: keep the next step small",
+          "ts": "2026-09-14T21:57:14.599Z",
+          "reasoner_summary": true,
+          "step": 5,
+          "completed": false
+        },
+        {
+          "role": "assistant",
+          "content": "The agent was unable to enter text into a search field because the field remained hidden or did not load properly.\nVerify the page loads correctly in a browser or provide an alternative starting URL.",
+          "ts": "2026-09-14T22:01:27.048Z",
+          "log_summary": true,
+          "completed": false
+        },
+        {
+          "role": "assistant",
+          "content": "The system was unable to type into the URL input field because the field remained hidden on the page.\nEnsure the target input field is visible and interactable before attempting to fill it.",
+          "ts": "2026-09-14T22:05:33.197Z",
+          "log_summary": true,
+          "completed": false
+        },
+        {
+          "role": "assistant",
+          "content": "⚠️ The browser crashed mid-task and is restarting. Please retry your request once it's back.",
+          "ts": "2026-09-14T22:07:13.655Z",
+          "completed": false,
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "d57608e3-fd38-4a3e-a9ea-e3b240e24b2a",
+      "title": "Stress Tester 2026-09-14T21:50:22.799Z",
+      "createdAt": "2026-09-14T21:50:22.807Z",
+      "updatedAt": "2026-09-14T21:51:21.049Z",
+      "models": {
+        "router": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "planner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "reasoner": "@cf/qwen/qwen2.5-coder-32b-instruct",
+        "vision": "@cf/meta/llama-3.2-11b-vision-instruct"
+      },
+      "modelParams": {
+        "temperature": 0.3,
+        "routerThinking": true
+      },
+      "messages": [
+        {
+          "role": "user",
+          "content": "/browser go to archive.org and search for \"public domain images\"\n\nAt the very end of your final message, include these exact markers and a machine-readable diagnosis:\n\n<<PUPPETERR_FINAL_ANSWER>>\n\nYour normal final answer here.\n\n<<END_PUPPETERR_FINAL_ANSWER>>\n\n<<PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\n{\n  \"summary\": \"short summary of what happened\",\n  \"completed\": true,\n  \"issues\": [\n    {\n      \"type\": \"navigation_failure\",\n      \"evidence\": \"optional evidence\"\n    }\n  ],\n  \"uncertainty\": \"what remained uncertain, if anything\",\n  \"fallbacks\": [\n    \"fallbacks or workarounds you used\"\n  ],\n  \"notes\": \"any planner/vision/selector/supervisor observations\",\n  \"tier\": \"A\",\n  \"bankIndex\": 0\n}\n\n<<END_PUPPETERR_SELF_DIAGNOSIS_JSON>>\n\nUse an empty issues array if nothing went wrong.",
+          "ts": "2026-09-14T21:50:22.839Z",
+          "command": "browser"
+        },
+        {
+          "role": "assistant",
+          "content": "⚠️ The browser crashed mid-task and is restarting. Please retry your request once it's back.",
+          "ts": "2026-09-14T21:51:21.049Z",
+          "completed": false,
+          "error": true
+        }
+      ]
+    },
     {
       "id": "12b74225-cdaf-4461-8216-14372eccf535",
       "title": "Stress Tester 2026-08-21T21:39:19.146Z",

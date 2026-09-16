@@ -1,3 +1,788 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a6da87e817446c977509da815b83150ec8a4694a22dcc1e484da5d8deebd5e3e
-size 61920
+{
+  "queue": [
+    {
+      "url": "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
+      "domain": "accounts.google.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1",
+      "domain": "www.google.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1",
+      "domain": "www.google.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://google.com/search/howsearchworks/?fg=1",
+      "domain": "google.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://ai.google/helpful-tools/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer",
+      "domain": "ai.google",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://policies.google.com/privacy?hl=en&fg=1",
+      "domain": "policies.google.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://policies.google.com/terms?hl=en&fg=1",
+      "domain": "policies.google.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://www.google.com/preferences?hl=en&fg=1",
+      "domain": "www.google.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://desmos.com/advanced_search?hl=en&fg=1",
+      "domain": "desmos.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://desmos.com/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1&cctld=com",
+      "domain": "desmos.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://desmos.com/history/optout?hl=en&fg=1",
+      "domain": "desmos.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://support.google.com/websearch/?p=ws_results_help&hl=en&fg=1",
+      "domain": "support.google.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://www.gstatic.com/og/_/ss/k=og.asy.rgE7U-O-MoE.L.W.O/m=ll_tdm,adcgm3,ll_fw,abld/excm=/d=1/ed=1/ct=zgms/rs=AA2YrTs8gbyCCJLiqdTVQgamLKyE7-tmqA",
+      "domain": "www.gstatic.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy1aa,sy1a6,sy1a7,syjq,syg0,syjp,syiu,sy1a5,sy19y,sy19t,syj0,syhn,syfy,syc6,syc3,sybw,sy19u,SMquOb,sy94,sy93,syjh,syjg,syjd,syje,syjc,syks,sykq,sykn,sykm,sykl,syke,syjz,sykg,sykh,syjx,sybs,sybx,sybi,sybl,syjt,syju,syk7,sykc,syk1,syja,syk8,syjv,sybt,syc0,sybq,syjw,syfu,syjk,syjs,syjb,syj4,syj5,syj3,syck,syho,syif,syid,syic,syib,sy9i,sy9l,syi0,syie,syia,sydj,sydp,syc9,sycs,sycr,sycq,sycp,syce,sycn,syco,sydm,syde,sycw,sycx,sydd,syd8,syd7,syd4,sycm,sydc,sycv,syd9,sycg,sych,syci,sycf,sycy,sycj,sydw,syca,syc5,sybz,syc4,sycd,syda,syi8,syi2,sye6,syis,syi9,syij,syik,syi7,syfv,syi1,sye8,sye9,syea,sye1,sye0,sydg,sye3,sydy,sye4,sycc,syd3,sydz,sye7,syi5,syhw,syht,syj2,syj1,syiz,syiw,syiv,syhm,syhk,sy9q,uxMpU,syhb,syet,syeu,syes,syer,syaa,sya7,sya6,sya5,sya4,sya3,Mlhmy,QGR0gd,PoEs9b,Pjplud,OTA3Ae,sy9z,sy9u,A1yn5d,YIZmRd,sy9d,sy9b,sy9a,sy98,sy97,byfTOb,lsjVmc,LEikZe,sy95,kWgXee,ovKuLd,sgY6Zb,qafBPd,ebZ3mb,dowIGb,sy2cj,sy1af,syg2,d5EhJe,sy2da,fCxEDd,sy2cw,sy2cx,sy2d4,sy2cy,syg1,syfz,syfx,sybv,sybu,sybj,syb9,syb7,syfw,syft,sy2d0,sy2cu,syfr,sy2d3,sy2d2,sy1um?cb=121509378&xjs=s4",
+      "domain": "desmos.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2cs,sy1dl,sy1tf,sy1ai,sy1ad,sy1aj,sy1a1,sy1a0,sy1ak,T1HOxc,LFk59d,sy2cp,sy2co,sy2cm,sy2cn,sy2cl,sysb,zx30Y,sy2dc,sy2db,sy19w,sy11d,Wo3n8,ZgGg9b,dIoSBb,sy2qc,b6knsb,sy2q9,sy2q8,sy2k2,sy2ka,sy117,sy2h4,syu9,sysu,syqo,sy19d,sy2k9,sy2dz,sy19b,sygh,syek,syei,syb1,syem,JKoKVe,pXdRYb,sy35n,syb2,syaz,sy9o,O1Gjze,TtcOte,wR5FRb,sygf,sygc,syg8,syg7,sydb,syg6,syed,syg5,syg4,syg3,syfq,syfp,syfd,syfn,syf0,syep,syeq,syfm,syd2,syfb,syfk,syfa,syfi,syf9,syfh,syev,syex,syen,syf8,syff,syf7,syfe,syf6,syf5,syf4,syf2,syf1,syez,syey,syfc,syeo,syeh,syec,syb6,sy8z,zbML3c,gskBEc,sy2bo,s980lf,sy1ar,sy1ap,zGLm3b,sy4dq,sy4do,sy4dn,sy3v8,sy1tj,sy1tk,DhPYme,sy4dz,sy3ur,sy3up,syku,sy3uw,sy3uq,sy3uy,sy3um,sy4dy,KHourd,sy4f8,sy18p,sy11v,oQfbDd,dZKngb,xaJoqe,HLchQe,sy4fi,sy2g8,sy2g6,sy267,sy2g4,sy26j,sy1te,sy26h,sy26e,sy26f,sy26g,sygx,sy26d,sy269,sy26c,sy1wj,sy1i4,sy1i3,sy11o,sy11m,sy11n,sy11l,sy20z,sy210,sy1w9,sy1w8,sy2g7,qmjr3?cb=121509378&xjs=s4",
+      "domain": "desmos.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=qTnoBf,syaj,sOXFj,oGtAuc,NJ1rfe,syas,q0xTif,y05UD,PPhKqf,vECdaf,sy1j1,sy1fj,sy1i7,sy1df,sy1i1,sy1i0,sy1i2,sy1hz,syr0,sysx,sy2c5,sy217,sy1ig,sy1fp,sy1di,sy1dh,sy1dg,sy1de,sy1dc,syh6,sy1if,sy1id,sy1ie,sy1ic,sy1i8,sy1ih,sy1ib,sy2c6,sy2a7,sy2a8,sy1hx,sy1hw,sy1is,sy1i9,sy1i6,sy1g6,sy1it,sy1da,sy1hc,sy1he,sy1hg,sy1hh,epYOx?cb=121509378&xjs=s4",
+      "domain": "desmos.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2eo,P10Owf,sy1ab,gSZvdb,sy19m,sy19k,syp5,sys6,CnSW2d,sy19h,sy199,sy19e,sy198,sy19g,nRwWne,sy19j,fXO0xe?cb=121509378&xjs=s4",
+      "domain": "desmos.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=lOO0Vd,sya0,P6sQOc?cb=121509378&xjs=s4",
+      "domain": "desmos.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://about.google/xjs/_/ss/k=xjs.hd.MfEbEy0l1YM.L.B1.O/am=AAAEAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAQFAAgAAAAAAABACAqEEEAEAAAAAAAADCAQAAAAMAAAAAAAAAAAAQAAAAAAAQAAASAAAAAAAAAAAgAAAAAAAAAIAAAAAAgAAQAAUAABAAAAAAAAAAAEAAAAAAAAAAEAICAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgMAAgAAAAQDAAAAAAAAAAAAAAAAAAAAAAAAAIBIABIAAAEAAAAAQAAAAAAAQAAQQhAACFAAAQsCAAAAAAAWAAAAAAAAgAIDQAAAAAAAAAQAAABAABAEQgABAAAACAAAAAIAAgACAAEEABhBAQCQ6AABAIBAAAAAACAAAAAAAAgAAAAAAAAAAABABAAAAAAAAAAAAEsAwAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ/d=1/ed=1/br=1/rs=ACT90oGuRjZ4ts8WXZY2i7ixoOlAgPdXxA/m=cdos,hsm,jsa,mb4ZUb,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl,YV5bee,d,csi?cb=121509378",
+      "domain": "about.google",
+      "depth": 2,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"
+    },
+    {
+      "url": "https://about.google/advanced_search?hl=en&fg=1",
+      "domain": "about.google",
+      "depth": 2,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"
+    },
+    {
+      "url": "https://about.google/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1&cctld=com",
+      "domain": "about.google",
+      "depth": 2,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"
+    },
+    {
+      "url": "https://about.google/history/optout?hl=en&fg=1",
+      "domain": "about.google",
+      "depth": 2,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"
+    },
+    {
+      "url": "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy1aa,sy1a6,sy1a7,syjq,syg0,syjp,syiu,sy1a5,sy19y,sy19t,syj0,syhn,syfy,syc6,syc3,sybw,sy19u,SMquOb,sy94,sy93,syjh,syjg,syjd,syje,syjc,syks,sykq,sykn,sykm,sykl,syke,syjz,sykg,sykh,syjx,sybs,sybx,sybi,sybl,syjt,syju,syk7,sykc,syk1,syja,syk8,syjv,sybt,syc0,sybq,syjw,syfu,syjk,syjs,syjb,syj4,syj5,syj3,syck,syho,syif,syid,syic,syib,sy9i,sy9l,syi0,syie,syia,sydj,sydp,syc9,sycs,sycr,sycq,sycp,syce,sycn,syco,sydm,syde,sycw,sycx,sydd,syd8,syd7,syd4,sycm,sydc,sycv,syd9,sycg,sych,syci,sycf,sycy,sycj,sydw,syca,syc5,sybz,syc4,sycd,syda,syi8,syi2,sye6,syis,syi9,syij,syik,syi7,syfv,syi1,sye8,sye9,syea,sye1,sye0,sydg,sye3,sydy,sye4,sycc,syd3,sydz,sye7,syi5,syhw,syht,syj2,syj1,syiz,syiw,syiv,syhm,syhk,sy9q,uxMpU,syhb,syet,syeu,syes,syer,syaa,sya7,sya6,sya5,sya4,sya3,Mlhmy,QGR0gd,PoEs9b,Pjplud,OTA3Ae,sy9z,sy9u,A1yn5d,YIZmRd,sy9d,sy9b,sy9a,sy98,sy97,byfTOb,lsjVmc,LEikZe,sy95,kWgXee,ovKuLd,sgY6Zb,qafBPd,ebZ3mb,dowIGb,sy2cj,sy1af,syg2,d5EhJe,sy2da,fCxEDd,sy2cw,sy2cx,sy2d4,sy2cy,syg1,syfz,syfx,sybv,sybu,sybj,syb9,syb7,syfw,syft,sy2d0,sy2cu,syfr,sy2d3,sy2d2,sy1um?cb=121509378&xjs=s4",
+      "domain": "about.google",
+      "depth": 2,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"
+    },
+    {
+      "url": "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2cs,sy1dl,sy1tf,sy1ai,sy1ad,sy1aj,sy1a1,sy1a0,sy1ak,T1HOxc,LFk59d,sy2cp,sy2co,sy2cm,sy2cn,sy2cl,sysb,zx30Y,sy2dc,sy2db,sy19w,sy11d,Wo3n8,ZgGg9b,dIoSBb,sy2qc,b6knsb,sy2q9,sy2q8,sy2k2,sy2ka,sy117,sy2h4,syu9,sysu,syqo,sy19d,sy2k9,sy2dz,sy19b,sygh,syek,syei,syb1,syem,JKoKVe,pXdRYb,sy35n,syb2,syaz,sy9o,O1Gjze,TtcOte,wR5FRb,sygf,sygc,syg8,syg7,sydb,syg6,syed,syg5,syg4,syg3,syfq,syfp,syfd,syfn,syf0,syep,syeq,syfm,syd2,syfb,syfk,syfa,syfi,syf9,syfh,syev,syex,syen,syf8,syff,syf7,syfe,syf6,syf5,syf4,syf2,syf1,syez,syey,syfc,syeo,syeh,syec,syb6,sy8z,zbML3c,gskBEc,sy2bo,s980lf,sy1ar,sy1ap,zGLm3b,sy4dq,sy4do,sy4dn,sy3v8,sy1tj,sy1tk,DhPYme,sy4dz,sy3ur,sy3up,syku,sy3uw,sy3uq,sy3uy,sy3um,sy4dy,KHourd,sy4f8,sy18p,sy11v,oQfbDd,dZKngb,xaJoqe,HLchQe,sy4fi,sy2g8,sy2g6,sy267,sy2g4,sy26j,sy1te,sy26h,sy26e,sy26f,sy26g,sygx,sy26d,sy269,sy26c,sy1wj,sy1i4,sy1i3,sy11o,sy11m,sy11n,sy11l,sy20z,sy210,sy1w9,sy1w8,sy2g7,qmjr3?cb=121509378&xjs=s4",
+      "domain": "about.google",
+      "depth": 2,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"
+    },
+    {
+      "url": "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=qTnoBf,syaj,sOXFj,oGtAuc,NJ1rfe,syas,q0xTif,y05UD,PPhKqf,vECdaf,sy1j1,sy1fj,sy1i7,sy1df,sy1i1,sy1i0,sy1i2,sy1hz,syr0,sysx,sy2c5,sy217,sy1ig,sy1fp,sy1di,sy1dh,sy1dg,sy1de,sy1dc,syh6,sy1if,sy1id,sy1ie,sy1ic,sy1i8,sy1ih,sy1ib,sy2c6,sy2a7,sy2a8,sy1hx,sy1hw,sy1is,sy1i9,sy1i6,sy1g6,sy1it,sy1da,sy1hc,sy1he,sy1hg,sy1hh,epYOx?cb=121509378&xjs=s4",
+      "domain": "about.google",
+      "depth": 2,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"
+    },
+    {
+      "url": "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2eo,P10Owf,sy1ab,gSZvdb,sy19m,sy19k,syp5,sys6,CnSW2d,sy19h,sy199,sy19e,sy198,sy19g,nRwWne,sy19j,fXO0xe?cb=121509378&xjs=s4",
+      "domain": "about.google",
+      "depth": 2,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"
+    },
+    {
+      "url": "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=lOO0Vd,sya0,P6sQOc?cb=121509378&xjs=s4",
+      "domain": "about.google",
+      "depth": 2,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header"
+    },
+    {
+      "url": "https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US",
+      "domain": "store.google.com",
+      "depth": 1,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "https://desmos.com/"
+    },
+    {
+      "url": "https://docs.python.org/",
+      "domain": "docs.python.org",
+      "depth": 0,
+      "status": "pending",
+      "lastVisited": null,
+      "discoveredFrom": "seed"
+    }
+  ],
+  "visited": [
+    "https://desmos.com/",
+    "https://www.gstatic.com/images/branding/searchlogo/ico/favicon.ico",
+    "https://desmos.com/xjs/_/ss/k=xjs.hd.MfEbEy0l1YM.L.B1.O/am=AAAEAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAQFAAgAAAAAAABACAqEEEAEAAAAAAAADCAQAAAAMAAAAAAAAAAAAQAAAAAAAQAAASAAAAAAAAAAAgAAAAAAAAAIAAAAAAgAAQAAUAABAAAAAAAAAAAEAAAAAAAAAAEAICAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgMAAgAAAAQDAAAAAAAAAAAAAAAAAAAAAAAAAIBIABIAAAEAAAAAQAAAAAAAQAAQQhAACFAAAQsCAAAAAAAWAAAAAAAAgAIDQAAAAAAAAAQAAABAABAEQgABAAAACAAAAAIAAgACAAEEABhBAQCQ6AABAIBAAAAAACAAAAAAAAgAAAAAAAAAAABABAAAAAAAAAAAAEsAwAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ/d=1/ed=1/br=1/rs=ACT90oGuRjZ4ts8WXZY2i7ixoOlAgPdXxA/m=cdos,hsm,jsa,mb4ZUb,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl,YV5bee,d,csi?cb=121509378",
+    "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+    "https://mail.google.com/mail/&ogbl",
+    "https://www.google.com/imghp?hl=en&ogbl",
+    "https://www.google.com/intl/en/about/products"
+  ],
+  "graph": [
+    [
+      "chrome-error://chromewebdata/",
+      {
+        "url": "chrome-error://chromewebdata/",
+        "domain": "chromewebdata",
+        "depth": 0,
+        "discoveredFrom": "seed",
+        "status": "failed",
+        "lastVisited": "2026-09-09T22:18:21.371Z",
+        "failedReason": "fetch_error",
+        "failureCount": 2
+      }
+    ],
+    [
+      "https://desmos.com/",
+      {
+        "url": "https://desmos.com/",
+        "domain": "desmos.com",
+        "depth": 0,
+        "discoveredFrom": "seed",
+        "status": "puppeteered",
+        "lastVisited": "2026-09-09T22:22:21.221Z",
+        "failedReason": null,
+        "failureCount": 0,
+        "title": "Google",
+        "textPreview": "About\nStore\nGmailImages\nSign in\nAI Mode\n \nAdvertising\nBusiness\nHow Search works\nBuild, create, and do more with AI tools from Google\nPrivacy\nTerms\nSettings",
+        "textLength": 155,
+        "elementCount": 32,
+        "screenshotAvailable": true,
+        "relevanceScore": 0,
+        "relevanceMatched": [],
+        "relevancePenalties": []
+      }
+    ],
+    [
+      "https://www.gstatic.com/images/branding/searchlogo/ico/favicon.ico",
+      {
+        "url": "https://www.gstatic.com/images/branding/searchlogo/ico/favicon.ico",
+        "domain": "www.gstatic.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "puppeteered",
+        "lastVisited": "2026-09-09T22:22:23.073Z",
+        "failedReason": null,
+        "failureCount": 0,
+        "title": "favicon.ico (32×32)",
+        "textPreview": "",
+        "textLength": 0,
+        "elementCount": 0,
+        "screenshotAvailable": true,
+        "relevanceScore": 0,
+        "relevanceMatched": [],
+        "relevancePenalties": []
+      }
+    ],
+    [
+      "https://desmos.com/xjs/_/ss/k=xjs.hd.MfEbEy0l1YM.L.B1.O/am=AAAEAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAQFAAgAAAAAAABACAqEEEAEAAAAAAAADCAQAAAAMAAAAAAAAAAAAQAAAAAAAQAAASAAAAAAAAAAAgAAAAAAAAAIAAAAAAgAAQAAUAABAAAAAAAAAAAEAAAAAAAAAAEAICAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgMAAgAAAAQDAAAAAAAAAAAAAAAAAAAAAAAAAIBIABIAAAEAAAAAQAAAAAAAQAAQQhAACFAAAQsCAAAAAAAWAAAAAAAAgAIDQAAAAAAAAAQAAABAABAEQgABAAAACAAAAAIAAgACAAEEABhBAQCQ6AABAIBAAAAAACAAAAAAAAgAAAAAAAAAAABABAAAAAAAAAAAAEsAwAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ/d=1/ed=1/br=1/rs=ACT90oGuRjZ4ts8WXZY2i7ixoOlAgPdXxA/m=cdos,hsm,jsa,mb4ZUb,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl,YV5bee,d,csi?cb=121509378",
+      {
+        "url": "https://desmos.com/xjs/_/ss/k=xjs.hd.MfEbEy0l1YM.L.B1.O/am=AAAEAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAQFAAgAAAAAAABACAqEEEAEAAAAAAAADCAQAAAAMAAAAAAAAAAAAQAAAAAAAQAAASAAAAAAAAAAAgAAAAAAAAAIAAAAAAgAAQAAUAABAAAAAAAAAAAEAAAAAAAAAAEAICAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgMAAgAAAAQDAAAAAAAAAAAAAAAAAAAAAAAAAIBIABIAAAEAAAAAQAAAAAAAQAAQQhAACFAAAQsCAAAAAAAWAAAAAAAAgAIDQAAAAAAAAAQAAABAABAEQgABAAAACAAAAAIAAgACAAEEABhBAQCQ6AABAIBAAAAAACAAAAAAAAgAAAAAAAAAAABABAAAAAAAAAAAAEsAwAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ/d=1/ed=1/br=1/rs=ACT90oGuRjZ4ts8WXZY2i7ixoOlAgPdXxA/m=cdos,hsm,jsa,mb4ZUb,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl,YV5bee,d,csi?cb=121509378",
+        "domain": "desmos.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "puppeteered",
+        "lastVisited": "2026-09-09T22:22:29.515Z",
+        "failedReason": null,
+        "failureCount": 0,
+        "title": "Google",
+        "textPreview": "About\nStore\nGmailImages\nSign in\nAI Mode\n \nAdvertising\nBusiness\nHow Search works\nBuild, create, and do more with AI tools from Google\nPrivacy\nTerms\nSettings",
+        "textLength": 155,
+        "elementCount": 32,
+        "screenshotAvailable": true,
+        "relevanceScore": 0,
+        "relevanceMatched": [],
+        "relevancePenalties": []
+      }
+    ],
+    [
+      "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+      {
+        "url": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+        "domain": "about.google",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "puppeteered",
+        "lastVisited": "2026-09-09T22:22:37.616Z",
+        "failedReason": null,
+        "failureCount": 0,
+        "title": "Google",
+        "textPreview": "About\nStore\nGmailImages\nSign in\nAI Mode\n \nAdvertising\nBusiness\nHow Search works\nBuild, create, and do more with AI tools from Google\nPrivacy\nTerms\nSettings",
+        "textLength": 155,
+        "elementCount": 32,
+        "screenshotAvailable": true,
+        "relevanceScore": 0,
+        "relevanceMatched": [],
+        "relevancePenalties": []
+      }
+    ],
+    [
+      "https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US",
+      {
+        "url": "https://store.google.com/US?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US",
+        "domain": "store.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://mail.google.com/mail/&ogbl",
+      {
+        "url": "https://mail.google.com/mail/&ogbl",
+        "domain": "mail.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "puppeteered",
+        "lastVisited": "2026-09-14T22:10:20.689Z",
+        "failedReason": null,
+        "failureCount": 0,
+        "title": "",
+        "textPreview": "",
+        "textLength": 0,
+        "elementCount": 0,
+        "screenshotAvailable": true,
+        "relevanceScore": 8,
+        "relevanceMatched": [],
+        "relevancePenalties": []
+      }
+    ],
+    [
+      "https://www.google.com/imghp?hl=en&ogbl",
+      {
+        "url": "https://www.google.com/imghp?hl=en&ogbl",
+        "domain": "www.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "puppeteered",
+        "lastVisited": "2026-09-14T22:10:26.520Z",
+        "failedReason": null,
+        "failureCount": 0,
+        "title": "",
+        "textPreview": "",
+        "textLength": 0,
+        "elementCount": 0,
+        "screenshotAvailable": true,
+        "relevanceScore": 8,
+        "relevanceMatched": [],
+        "relevancePenalties": []
+      }
+    ],
+    [
+      "https://www.google.com/intl/en/about/products",
+      {
+        "url": "https://www.google.com/intl/en/about/products",
+        "domain": "www.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "visited",
+        "lastVisited": "2026-09-14T22:10:39.734Z",
+        "failedReason": null,
+        "failureCount": 0,
+        "title": "Google's products and services  - About Google",
+        "textPreview": "<iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-WQZB4J\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe> Jump to Content About Products Company Info News Helpful products, built with you in mind Search in new ways Chat with Gemini Try AI tools Explore more products Product support Google Store Google Account Accessibility support Search in new ways Download the Google app Play silent looping video Pause silent looping video Circle to Search Circle, highlight or ",
+        "textLength": 5213,
+        "elementCount": 0,
+        "screenshotAvailable": false,
+        "relevanceScore": 36,
+        "relevanceMatched": [
+          "keyword:the",
+          "keyword:and",
+          "keyword:one"
+        ],
+        "relevancePenalties": []
+      }
+    ],
+    [
+      "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
+      {
+        "url": "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
+        "domain": "accounts.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1",
+      {
+        "url": "https://www.google.com/intl/en_us/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1",
+        "domain": "www.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1",
+      {
+        "url": "https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1",
+        "domain": "www.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://google.com/search/howsearchworks/?fg=1",
+      {
+        "url": "https://google.com/search/howsearchworks/?fg=1",
+        "domain": "google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://ai.google/helpful-tools/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer",
+      {
+        "url": "https://ai.google/helpful-tools/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer",
+        "domain": "ai.google",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://policies.google.com/privacy?hl=en&fg=1",
+      {
+        "url": "https://policies.google.com/privacy?hl=en&fg=1",
+        "domain": "policies.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://policies.google.com/terms?hl=en&fg=1",
+      {
+        "url": "https://policies.google.com/terms?hl=en&fg=1",
+        "domain": "policies.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://www.google.com/preferences?hl=en&fg=1",
+      {
+        "url": "https://www.google.com/preferences?hl=en&fg=1",
+        "domain": "www.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://desmos.com/advanced_search?hl=en&fg=1",
+      {
+        "url": "https://desmos.com/advanced_search?hl=en&fg=1",
+        "domain": "desmos.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://desmos.com/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1&cctld=com",
+      {
+        "url": "https://desmos.com/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1&cctld=com",
+        "domain": "desmos.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://desmos.com/history/optout?hl=en&fg=1",
+      {
+        "url": "https://desmos.com/history/optout?hl=en&fg=1",
+        "domain": "desmos.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://support.google.com/websearch/?p=ws_results_help&hl=en&fg=1",
+      {
+        "url": "https://support.google.com/websearch/?p=ws_results_help&hl=en&fg=1",
+        "domain": "support.google.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://www.gstatic.com/og/_/ss/k=og.asy.rgE7U-O-MoE.L.W.O/m=ll_tdm,adcgm3,ll_fw,abld/excm=/d=1/ed=1/ct=zgms/rs=AA2YrTs8gbyCCJLiqdTVQgamLKyE7-tmqA",
+      {
+        "url": "https://www.gstatic.com/og/_/ss/k=og.asy.rgE7U-O-MoE.L.W.O/m=ll_tdm,adcgm3,ll_fw,abld/excm=/d=1/ed=1/ct=zgms/rs=AA2YrTs8gbyCCJLiqdTVQgamLKyE7-tmqA",
+        "domain": "www.gstatic.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy1aa,sy1a6,sy1a7,syjq,syg0,syjp,syiu,sy1a5,sy19y,sy19t,syj0,syhn,syfy,syc6,syc3,sybw,sy19u,SMquOb,sy94,sy93,syjh,syjg,syjd,syje,syjc,syks,sykq,sykn,sykm,sykl,syke,syjz,sykg,sykh,syjx,sybs,sybx,sybi,sybl,syjt,syju,syk7,sykc,syk1,syja,syk8,syjv,sybt,syc0,sybq,syjw,syfu,syjk,syjs,syjb,syj4,syj5,syj3,syck,syho,syif,syid,syic,syib,sy9i,sy9l,syi0,syie,syia,sydj,sydp,syc9,sycs,sycr,sycq,sycp,syce,sycn,syco,sydm,syde,sycw,sycx,sydd,syd8,syd7,syd4,sycm,sydc,sycv,syd9,sycg,sych,syci,sycf,sycy,sycj,sydw,syca,syc5,sybz,syc4,sycd,syda,syi8,syi2,sye6,syis,syi9,syij,syik,syi7,syfv,syi1,sye8,sye9,syea,sye1,sye0,sydg,sye3,sydy,sye4,sycc,syd3,sydz,sye7,syi5,syhw,syht,syj2,syj1,syiz,syiw,syiv,syhm,syhk,sy9q,uxMpU,syhb,syet,syeu,syes,syer,syaa,sya7,sya6,sya5,sya4,sya3,Mlhmy,QGR0gd,PoEs9b,Pjplud,OTA3Ae,sy9z,sy9u,A1yn5d,YIZmRd,sy9d,sy9b,sy9a,sy98,sy97,byfTOb,lsjVmc,LEikZe,sy95,kWgXee,ovKuLd,sgY6Zb,qafBPd,ebZ3mb,dowIGb,sy2cj,sy1af,syg2,d5EhJe,sy2da,fCxEDd,sy2cw,sy2cx,sy2d4,sy2cy,syg1,syfz,syfx,sybv,sybu,sybj,syb9,syb7,syfw,syft,sy2d0,sy2cu,syfr,sy2d3,sy2d2,sy1um?cb=121509378&xjs=s4",
+      {
+        "url": "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy1aa,sy1a6,sy1a7,syjq,syg0,syjp,syiu,sy1a5,sy19y,sy19t,syj0,syhn,syfy,syc6,syc3,sybw,sy19u,SMquOb,sy94,sy93,syjh,syjg,syjd,syje,syjc,syks,sykq,sykn,sykm,sykl,syke,syjz,sykg,sykh,syjx,sybs,sybx,sybi,sybl,syjt,syju,syk7,sykc,syk1,syja,syk8,syjv,sybt,syc0,sybq,syjw,syfu,syjk,syjs,syjb,syj4,syj5,syj3,syck,syho,syif,syid,syic,syib,sy9i,sy9l,syi0,syie,syia,sydj,sydp,syc9,sycs,sycr,sycq,sycp,syce,sycn,syco,sydm,syde,sycw,sycx,sydd,syd8,syd7,syd4,sycm,sydc,sycv,syd9,sycg,sych,syci,sycf,sycy,sycj,sydw,syca,syc5,sybz,syc4,sycd,syda,syi8,syi2,sye6,syis,syi9,syij,syik,syi7,syfv,syi1,sye8,sye9,syea,sye1,sye0,sydg,sye3,sydy,sye4,sycc,syd3,sydz,sye7,syi5,syhw,syht,syj2,syj1,syiz,syiw,syiv,syhm,syhk,sy9q,uxMpU,syhb,syet,syeu,syes,syer,syaa,sya7,sya6,sya5,sya4,sya3,Mlhmy,QGR0gd,PoEs9b,Pjplud,OTA3Ae,sy9z,sy9u,A1yn5d,YIZmRd,sy9d,sy9b,sy9a,sy98,sy97,byfTOb,lsjVmc,LEikZe,sy95,kWgXee,ovKuLd,sgY6Zb,qafBPd,ebZ3mb,dowIGb,sy2cj,sy1af,syg2,d5EhJe,sy2da,fCxEDd,sy2cw,sy2cx,sy2d4,sy2cy,syg1,syfz,syfx,sybv,sybu,sybj,syb9,syb7,syfw,syft,sy2d0,sy2cu,syfr,sy2d3,sy2d2,sy1um?cb=121509378&xjs=s4",
+        "domain": "desmos.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2cs,sy1dl,sy1tf,sy1ai,sy1ad,sy1aj,sy1a1,sy1a0,sy1ak,T1HOxc,LFk59d,sy2cp,sy2co,sy2cm,sy2cn,sy2cl,sysb,zx30Y,sy2dc,sy2db,sy19w,sy11d,Wo3n8,ZgGg9b,dIoSBb,sy2qc,b6knsb,sy2q9,sy2q8,sy2k2,sy2ka,sy117,sy2h4,syu9,sysu,syqo,sy19d,sy2k9,sy2dz,sy19b,sygh,syek,syei,syb1,syem,JKoKVe,pXdRYb,sy35n,syb2,syaz,sy9o,O1Gjze,TtcOte,wR5FRb,sygf,sygc,syg8,syg7,sydb,syg6,syed,syg5,syg4,syg3,syfq,syfp,syfd,syfn,syf0,syep,syeq,syfm,syd2,syfb,syfk,syfa,syfi,syf9,syfh,syev,syex,syen,syf8,syff,syf7,syfe,syf6,syf5,syf4,syf2,syf1,syez,syey,syfc,syeo,syeh,syec,syb6,sy8z,zbML3c,gskBEc,sy2bo,s980lf,sy1ar,sy1ap,zGLm3b,sy4dq,sy4do,sy4dn,sy3v8,sy1tj,sy1tk,DhPYme,sy4dz,sy3ur,sy3up,syku,sy3uw,sy3uq,sy3uy,sy3um,sy4dy,KHourd,sy4f8,sy18p,sy11v,oQfbDd,dZKngb,xaJoqe,HLchQe,sy4fi,sy2g8,sy2g6,sy267,sy2g4,sy26j,sy1te,sy26h,sy26e,sy26f,sy26g,sygx,sy26d,sy269,sy26c,sy1wj,sy1i4,sy1i3,sy11o,sy11m,sy11n,sy11l,sy20z,sy210,sy1w9,sy1w8,sy2g7,qmjr3?cb=121509378&xjs=s4",
+      {
+        "url": "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2cs,sy1dl,sy1tf,sy1ai,sy1ad,sy1aj,sy1a1,sy1a0,sy1ak,T1HOxc,LFk59d,sy2cp,sy2co,sy2cm,sy2cn,sy2cl,sysb,zx30Y,sy2dc,sy2db,sy19w,sy11d,Wo3n8,ZgGg9b,dIoSBb,sy2qc,b6knsb,sy2q9,sy2q8,sy2k2,sy2ka,sy117,sy2h4,syu9,sysu,syqo,sy19d,sy2k9,sy2dz,sy19b,sygh,syek,syei,syb1,syem,JKoKVe,pXdRYb,sy35n,syb2,syaz,sy9o,O1Gjze,TtcOte,wR5FRb,sygf,sygc,syg8,syg7,sydb,syg6,syed,syg5,syg4,syg3,syfq,syfp,syfd,syfn,syf0,syep,syeq,syfm,syd2,syfb,syfk,syfa,syfi,syf9,syfh,syev,syex,syen,syf8,syff,syf7,syfe,syf6,syf5,syf4,syf2,syf1,syez,syey,syfc,syeo,syeh,syec,syb6,sy8z,zbML3c,gskBEc,sy2bo,s980lf,sy1ar,sy1ap,zGLm3b,sy4dq,sy4do,sy4dn,sy3v8,sy1tj,sy1tk,DhPYme,sy4dz,sy3ur,sy3up,syku,sy3uw,sy3uq,sy3uy,sy3um,sy4dy,KHourd,sy4f8,sy18p,sy11v,oQfbDd,dZKngb,xaJoqe,HLchQe,sy4fi,sy2g8,sy2g6,sy267,sy2g4,sy26j,sy1te,sy26h,sy26e,sy26f,sy26g,sygx,sy26d,sy269,sy26c,sy1wj,sy1i4,sy1i3,sy11o,sy11m,sy11n,sy11l,sy20z,sy210,sy1w9,sy1w8,sy2g7,qmjr3?cb=121509378&xjs=s4",
+        "domain": "desmos.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=qTnoBf,syaj,sOXFj,oGtAuc,NJ1rfe,syas,q0xTif,y05UD,PPhKqf,vECdaf,sy1j1,sy1fj,sy1i7,sy1df,sy1i1,sy1i0,sy1i2,sy1hz,syr0,sysx,sy2c5,sy217,sy1ig,sy1fp,sy1di,sy1dh,sy1dg,sy1de,sy1dc,syh6,sy1if,sy1id,sy1ie,sy1ic,sy1i8,sy1ih,sy1ib,sy2c6,sy2a7,sy2a8,sy1hx,sy1hw,sy1is,sy1i9,sy1i6,sy1g6,sy1it,sy1da,sy1hc,sy1he,sy1hg,sy1hh,epYOx?cb=121509378&xjs=s4",
+      {
+        "url": "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=qTnoBf,syaj,sOXFj,oGtAuc,NJ1rfe,syas,q0xTif,y05UD,PPhKqf,vECdaf,sy1j1,sy1fj,sy1i7,sy1df,sy1i1,sy1i0,sy1i2,sy1hz,syr0,sysx,sy2c5,sy217,sy1ig,sy1fp,sy1di,sy1dh,sy1dg,sy1de,sy1dc,syh6,sy1if,sy1id,sy1ie,sy1ic,sy1i8,sy1ih,sy1ib,sy2c6,sy2a7,sy2a8,sy1hx,sy1hw,sy1is,sy1i9,sy1i6,sy1g6,sy1it,sy1da,sy1hc,sy1he,sy1hg,sy1hh,epYOx?cb=121509378&xjs=s4",
+        "domain": "desmos.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2eo,P10Owf,sy1ab,gSZvdb,sy19m,sy19k,syp5,sys6,CnSW2d,sy19h,sy199,sy19e,sy198,sy19g,nRwWne,sy19j,fXO0xe?cb=121509378&xjs=s4",
+      {
+        "url": "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2eo,P10Owf,sy1ab,gSZvdb,sy19m,sy19k,syp5,sys6,CnSW2d,sy19h,sy199,sy19e,sy198,sy19g,nRwWne,sy19j,fXO0xe?cb=121509378&xjs=s4",
+        "domain": "desmos.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=lOO0Vd,sya0,P6sQOc?cb=121509378&xjs=s4",
+      {
+        "url": "https://desmos.com/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=lOO0Vd,sya0,P6sQOc?cb=121509378&xjs=s4",
+        "domain": "desmos.com",
+        "depth": 1,
+        "discoveredFrom": "https://desmos.com/",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://about.google/xjs/_/ss/k=xjs.hd.MfEbEy0l1YM.L.B1.O/am=AAAEAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAQFAAgAAAAAAABACAqEEEAEAAAAAAAADCAQAAAAMAAAAAAAAAAAAQAAAAAAAQAAASAAAAAAAAAAAgAAAAAAAAAIAAAAAAgAAQAAUAABAAAAAAAAAAAEAAAAAAAAAAEAICAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgMAAgAAAAQDAAAAAAAAAAAAAAAAAAAAAAAAAIBIABIAAAEAAAAAQAAAAAAAQAAQQhAACFAAAQsCAAAAAAAWAAAAAAAAgAIDQAAAAAAAAAQAAABAABAEQgABAAAACAAAAAIAAgACAAEEABhBAQCQ6AABAIBAAAAAACAAAAAAAAgAAAAAAAAAAABABAAAAAAAAAAAAEsAwAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ/d=1/ed=1/br=1/rs=ACT90oGuRjZ4ts8WXZY2i7ixoOlAgPdXxA/m=cdos,hsm,jsa,mb4ZUb,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl,YV5bee,d,csi?cb=121509378",
+      {
+        "url": "https://about.google/xjs/_/ss/k=xjs.hd.MfEbEy0l1YM.L.B1.O/am=AAAEAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEAAAAAAQFAAgAAAAAAABACAqEEEAEAAAAAAAADCAQAAAAMAAAAAAAAAAAAQAAAAAAAQAAASAAAAAAAAAAAgAAAAAAAAAIAAAAAAgAAQAAUAABAAAAAAAAAAAEAAAAAAAAAAEAICAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgMAAgAAAAQDAAAAAAAAAAAAAAAAAAAAAAAAAIBIABIAAAEAAAAAQAAAAAAAQAAQQhAACFAAAQsCAAAAAAAWAAAAAAAAgAIDQAAAAAAAAAQAAABAABAEQgABAAAACAAAAAIAAgACAAEEABhBAQCQ6AABAIBAAAAAACAAAAAAAAgAAAAAAAAAAABABAAAAAAAAAAAAEsAwAAhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ/d=1/ed=1/br=1/rs=ACT90oGuRjZ4ts8WXZY2i7ixoOlAgPdXxA/m=cdos,hsm,jsa,mb4ZUb,cEt90b,SNUn3,qddgKe,sTsDMc,dtl0hd,eHDfl,YV5bee,d,csi?cb=121509378",
+        "domain": "about.google",
+        "depth": 2,
+        "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://about.google/advanced_search?hl=en&fg=1",
+      {
+        "url": "https://about.google/advanced_search?hl=en&fg=1",
+        "domain": "about.google",
+        "depth": 2,
+        "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://about.google/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1&cctld=com",
+      {
+        "url": "https://about.google/history/privacyadvisor/search/unauth?utm_source=googlemenu&fg=1&cctld=com",
+        "domain": "about.google",
+        "depth": 2,
+        "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://about.google/history/optout?hl=en&fg=1",
+      {
+        "url": "https://about.google/history/optout?hl=en&fg=1",
+        "domain": "about.google",
+        "depth": 2,
+        "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy1aa,sy1a6,sy1a7,syjq,syg0,syjp,syiu,sy1a5,sy19y,sy19t,syj0,syhn,syfy,syc6,syc3,sybw,sy19u,SMquOb,sy94,sy93,syjh,syjg,syjd,syje,syjc,syks,sykq,sykn,sykm,sykl,syke,syjz,sykg,sykh,syjx,sybs,sybx,sybi,sybl,syjt,syju,syk7,sykc,syk1,syja,syk8,syjv,sybt,syc0,sybq,syjw,syfu,syjk,syjs,syjb,syj4,syj5,syj3,syck,syho,syif,syid,syic,syib,sy9i,sy9l,syi0,syie,syia,sydj,sydp,syc9,sycs,sycr,sycq,sycp,syce,sycn,syco,sydm,syde,sycw,sycx,sydd,syd8,syd7,syd4,sycm,sydc,sycv,syd9,sycg,sych,syci,sycf,sycy,sycj,sydw,syca,syc5,sybz,syc4,sycd,syda,syi8,syi2,sye6,syis,syi9,syij,syik,syi7,syfv,syi1,sye8,sye9,syea,sye1,sye0,sydg,sye3,sydy,sye4,sycc,syd3,sydz,sye7,syi5,syhw,syht,syj2,syj1,syiz,syiw,syiv,syhm,syhk,sy9q,uxMpU,syhb,syet,syeu,syes,syer,syaa,sya7,sya6,sya5,sya4,sya3,Mlhmy,QGR0gd,PoEs9b,Pjplud,OTA3Ae,sy9z,sy9u,A1yn5d,YIZmRd,sy9d,sy9b,sy9a,sy98,sy97,byfTOb,lsjVmc,LEikZe,sy95,kWgXee,ovKuLd,sgY6Zb,qafBPd,ebZ3mb,dowIGb,sy2cj,sy1af,syg2,d5EhJe,sy2da,fCxEDd,sy2cw,sy2cx,sy2d4,sy2cy,syg1,syfz,syfx,sybv,sybu,sybj,syb9,syb7,syfw,syft,sy2d0,sy2cu,syfr,sy2d3,sy2d2,sy1um?cb=121509378&xjs=s4",
+      {
+        "url": "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy1aa,sy1a6,sy1a7,syjq,syg0,syjp,syiu,sy1a5,sy19y,sy19t,syj0,syhn,syfy,syc6,syc3,sybw,sy19u,SMquOb,sy94,sy93,syjh,syjg,syjd,syje,syjc,syks,sykq,sykn,sykm,sykl,syke,syjz,sykg,sykh,syjx,sybs,sybx,sybi,sybl,syjt,syju,syk7,sykc,syk1,syja,syk8,syjv,sybt,syc0,sybq,syjw,syfu,syjk,syjs,syjb,syj4,syj5,syj3,syck,syho,syif,syid,syic,syib,sy9i,sy9l,syi0,syie,syia,sydj,sydp,syc9,sycs,sycr,sycq,sycp,syce,sycn,syco,sydm,syde,sycw,sycx,sydd,syd8,syd7,syd4,sycm,sydc,sycv,syd9,sycg,sych,syci,sycf,sycy,sycj,sydw,syca,syc5,sybz,syc4,sycd,syda,syi8,syi2,sye6,syis,syi9,syij,syik,syi7,syfv,syi1,sye8,sye9,syea,sye1,sye0,sydg,sye3,sydy,sye4,sycc,syd3,sydz,sye7,syi5,syhw,syht,syj2,syj1,syiz,syiw,syiv,syhm,syhk,sy9q,uxMpU,syhb,syet,syeu,syes,syer,syaa,sya7,sya6,sya5,sya4,sya3,Mlhmy,QGR0gd,PoEs9b,Pjplud,OTA3Ae,sy9z,sy9u,A1yn5d,YIZmRd,sy9d,sy9b,sy9a,sy98,sy97,byfTOb,lsjVmc,LEikZe,sy95,kWgXee,ovKuLd,sgY6Zb,qafBPd,ebZ3mb,dowIGb,sy2cj,sy1af,syg2,d5EhJe,sy2da,fCxEDd,sy2cw,sy2cx,sy2d4,sy2cy,syg1,syfz,syfx,sybv,sybu,sybj,syb9,syb7,syfw,syft,sy2d0,sy2cu,syfr,sy2d3,sy2d2,sy1um?cb=121509378&xjs=s4",
+        "domain": "about.google",
+        "depth": 2,
+        "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2cs,sy1dl,sy1tf,sy1ai,sy1ad,sy1aj,sy1a1,sy1a0,sy1ak,T1HOxc,LFk59d,sy2cp,sy2co,sy2cm,sy2cn,sy2cl,sysb,zx30Y,sy2dc,sy2db,sy19w,sy11d,Wo3n8,ZgGg9b,dIoSBb,sy2qc,b6knsb,sy2q9,sy2q8,sy2k2,sy2ka,sy117,sy2h4,syu9,sysu,syqo,sy19d,sy2k9,sy2dz,sy19b,sygh,syek,syei,syb1,syem,JKoKVe,pXdRYb,sy35n,syb2,syaz,sy9o,O1Gjze,TtcOte,wR5FRb,sygf,sygc,syg8,syg7,sydb,syg6,syed,syg5,syg4,syg3,syfq,syfp,syfd,syfn,syf0,syep,syeq,syfm,syd2,syfb,syfk,syfa,syfi,syf9,syfh,syev,syex,syen,syf8,syff,syf7,syfe,syf6,syf5,syf4,syf2,syf1,syez,syey,syfc,syeo,syeh,syec,syb6,sy8z,zbML3c,gskBEc,sy2bo,s980lf,sy1ar,sy1ap,zGLm3b,sy4dq,sy4do,sy4dn,sy3v8,sy1tj,sy1tk,DhPYme,sy4dz,sy3ur,sy3up,syku,sy3uw,sy3uq,sy3uy,sy3um,sy4dy,KHourd,sy4f8,sy18p,sy11v,oQfbDd,dZKngb,xaJoqe,HLchQe,sy4fi,sy2g8,sy2g6,sy267,sy2g4,sy26j,sy1te,sy26h,sy26e,sy26f,sy26g,sygx,sy26d,sy269,sy26c,sy1wj,sy1i4,sy1i3,sy11o,sy11m,sy11n,sy11l,sy20z,sy210,sy1w9,sy1w8,sy2g7,qmjr3?cb=121509378&xjs=s4",
+      {
+        "url": "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2cs,sy1dl,sy1tf,sy1ai,sy1ad,sy1aj,sy1a1,sy1a0,sy1ak,T1HOxc,LFk59d,sy2cp,sy2co,sy2cm,sy2cn,sy2cl,sysb,zx30Y,sy2dc,sy2db,sy19w,sy11d,Wo3n8,ZgGg9b,dIoSBb,sy2qc,b6knsb,sy2q9,sy2q8,sy2k2,sy2ka,sy117,sy2h4,syu9,sysu,syqo,sy19d,sy2k9,sy2dz,sy19b,sygh,syek,syei,syb1,syem,JKoKVe,pXdRYb,sy35n,syb2,syaz,sy9o,O1Gjze,TtcOte,wR5FRb,sygf,sygc,syg8,syg7,sydb,syg6,syed,syg5,syg4,syg3,syfq,syfp,syfd,syfn,syf0,syep,syeq,syfm,syd2,syfb,syfk,syfa,syfi,syf9,syfh,syev,syex,syen,syf8,syff,syf7,syfe,syf6,syf5,syf4,syf2,syf1,syez,syey,syfc,syeo,syeh,syec,syb6,sy8z,zbML3c,gskBEc,sy2bo,s980lf,sy1ar,sy1ap,zGLm3b,sy4dq,sy4do,sy4dn,sy3v8,sy1tj,sy1tk,DhPYme,sy4dz,sy3ur,sy3up,syku,sy3uw,sy3uq,sy3uy,sy3um,sy4dy,KHourd,sy4f8,sy18p,sy11v,oQfbDd,dZKngb,xaJoqe,HLchQe,sy4fi,sy2g8,sy2g6,sy267,sy2g4,sy26j,sy1te,sy26h,sy26e,sy26f,sy26g,sygx,sy26d,sy269,sy26c,sy1wj,sy1i4,sy1i3,sy11o,sy11m,sy11n,sy11l,sy20z,sy210,sy1w9,sy1w8,sy2g7,qmjr3?cb=121509378&xjs=s4",
+        "domain": "about.google",
+        "depth": 2,
+        "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=qTnoBf,syaj,sOXFj,oGtAuc,NJ1rfe,syas,q0xTif,y05UD,PPhKqf,vECdaf,sy1j1,sy1fj,sy1i7,sy1df,sy1i1,sy1i0,sy1i2,sy1hz,syr0,sysx,sy2c5,sy217,sy1ig,sy1fp,sy1di,sy1dh,sy1dg,sy1de,sy1dc,syh6,sy1if,sy1id,sy1ie,sy1ic,sy1i8,sy1ih,sy1ib,sy2c6,sy2a7,sy2a8,sy1hx,sy1hw,sy1is,sy1i9,sy1i6,sy1g6,sy1it,sy1da,sy1hc,sy1he,sy1hg,sy1hh,epYOx?cb=121509378&xjs=s4",
+      {
+        "url": "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=qTnoBf,syaj,sOXFj,oGtAuc,NJ1rfe,syas,q0xTif,y05UD,PPhKqf,vECdaf,sy1j1,sy1fj,sy1i7,sy1df,sy1i1,sy1i0,sy1i2,sy1hz,syr0,sysx,sy2c5,sy217,sy1ig,sy1fp,sy1di,sy1dh,sy1dg,sy1de,sy1dc,syh6,sy1if,sy1id,sy1ie,sy1ic,sy1i8,sy1ih,sy1ib,sy2c6,sy2a7,sy2a8,sy1hx,sy1hw,sy1is,sy1i9,sy1i6,sy1g6,sy1it,sy1da,sy1hc,sy1he,sy1hg,sy1hh,epYOx?cb=121509378&xjs=s4",
+        "domain": "about.google",
+        "depth": 2,
+        "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2eo,P10Owf,sy1ab,gSZvdb,sy19m,sy19k,syp5,sys6,CnSW2d,sy19h,sy199,sy19e,sy198,sy19g,nRwWne,sy19j,fXO0xe?cb=121509378&xjs=s4",
+      {
+        "url": "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=sy2eo,P10Owf,sy1ab,gSZvdb,sy19m,sy19k,syp5,sys6,CnSW2d,sy19h,sy199,sy19e,sy198,sy19g,nRwWne,sy19j,fXO0xe?cb=121509378&xjs=s4",
+        "domain": "about.google",
+        "depth": 2,
+        "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=lOO0Vd,sya0,P6sQOc?cb=121509378&xjs=s4",
+      {
+        "url": "https://about.google/xjs/_/js/k=xjs.hd.en.GUenxjV5CIA.2019.O/am=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBBAAAAAQAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAQEAAIAASAAAAAAAAAAAgAAAAAAgAAAAAAMAAgAAQAAEAAMAAAAAAAAAAAAAAAAAAAAAAECACAAAAAQAAAOAfDDACAAAAAAAAAAAkAAAAAAAAAAAACwAAAIIAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAFAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACABAAQAAAgCAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAABAAAAAAAABAAAAAABKAAAAAAAAAAAAgAEAAAAAAOgACDzCkoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIogF1IAQEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIPQUAAAAAAIDF/d=0/dg=0/br=1/rs=ACT90oGYD5qnw8x4GQasjsEEvy7PwKUXQA/m=lOO0Vd,sya0,P6sQOc?cb=121509378&xjs=s4",
+        "domain": "about.google",
+        "depth": 2,
+        "discoveredFrom": "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ],
+    [
+      "https://docs.python.org/",
+      {
+        "url": "https://docs.python.org/",
+        "domain": "docs.python.org",
+        "depth": 0,
+        "discoveredFrom": "seed",
+        "status": "queued",
+        "lastVisited": null,
+        "failedReason": null,
+        "failureCount": 0
+      }
+    ]
+  ]
+}

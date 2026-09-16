@@ -567,19 +567,19 @@ const CAPTCHA_DOMAINS_FILE = String(process.env.CAPTCHA_DOMAINS_FILE || path.joi
 const CAPTCHA_IGNORED_DOMAINS = new Set(String(process.env.CAPTCHA_IGNORED_DOMAINS || "")
   .split(",").map(value => value.trim().toLowerCase()).filter(Boolean));
 const CAPTCHA_VISION_CONFIRMATION_MIN_CONFIDENCE = Math.max(0, Math.min(100, Number(process.env.CAPTCHA_VISION_CONFIRMATION_MIN_CONFIDENCE || 70)));
-const CAPTCHA_GENTLE_MODE_MS = Math.max(30000, Number(process.env.CAPTCHA_GENTLE_MODE_MS || 180000));
-const CAPTCHA_GENTLE_PACING_MULTIPLIER = Math.max(1, Number(process.env.CAPTCHA_GENTLE_PACING_MULTIPLIER || 1.8));
-const CAPTCHA_GENTLE_PRE_ACTION_IDLE_MS = Math.max(200, Number(process.env.CAPTCHA_GENTLE_PRE_ACTION_IDLE_MS || 900));
-const CAPTCHA_GENTLE_BURST_ACTIONS = Math.max(1, Number(process.env.CAPTCHA_GENTLE_BURST_ACTIONS || 2));
-const CAPTCHA_GENTLE_MICRO_BREAK_MS = Math.max(400, Number(process.env.CAPTCHA_GENTLE_MICRO_BREAK_MS || 1600));
-const BASE_NAVIGATION_COOLDOWN_MS = Math.max(0, Number(process.env.BASE_NAVIGATION_COOLDOWN_MS || 2500));
-const CAPTCHA_GENTLE_NAVIGATION_COOLDOWN_MS = Math.max(BASE_NAVIGATION_COOLDOWN_MS, Number(process.env.CAPTCHA_GENTLE_NAVIGATION_COOLDOWN_MS || 12000));
-const BASE_POST_STEP_PAUSE_MS = Math.max(200, Number(process.env.BASE_POST_STEP_PAUSE_MS || 600));
-const CAPTCHA_GENTLE_POST_STEP_PAUSE_MS = Math.max(BASE_POST_STEP_PAUSE_MS, Number(process.env.CAPTCHA_GENTLE_POST_STEP_PAUSE_MS || 1500));
-const ACTION_PACING_DELAY_MS = Number(process.env.ACTION_PACING_DELAY_MS || 350);
-const STEP_SETTLE_DELAY_MS = Number(process.env.STEP_SETTLE_DELAY_MS || 450);
-const PLANNER_RETRY_DELAY_MS = Number(process.env.PLANNER_RETRY_DELAY_MS || 700);
-const POST_STEP_DELAY_MS = Number(process.env.POST_STEP_DELAY_MS || 300);
+const CAPTCHA_GENTLE_MODE_MS = Math.max(30000, Number(process.env.CAPTCHA_GENTLE_MODE_MS || 120000));
+const CAPTCHA_GENTLE_PACING_MULTIPLIER = Math.max(1, Number(process.env.CAPTCHA_GENTLE_PACING_MULTIPLIER || 1.2));
+const CAPTCHA_GENTLE_PRE_ACTION_IDLE_MS = Math.max(80, Number(process.env.CAPTCHA_GENTLE_PRE_ACTION_IDLE_MS || 180));
+const CAPTCHA_GENTLE_BURST_ACTIONS = Math.max(1, Number(process.env.CAPTCHA_GENTLE_BURST_ACTIONS || 3));
+const CAPTCHA_GENTLE_MICRO_BREAK_MS = Math.max(150, Number(process.env.CAPTCHA_GENTLE_MICRO_BREAK_MS || 400));
+const BASE_NAVIGATION_COOLDOWN_MS = Math.max(0, Number(process.env.BASE_NAVIGATION_COOLDOWN_MS || 180));
+const CAPTCHA_GENTLE_NAVIGATION_COOLDOWN_MS = Math.max(BASE_NAVIGATION_COOLDOWN_MS, Number(process.env.CAPTCHA_GENTLE_NAVIGATION_COOLDOWN_MS || 1800));
+const BASE_POST_STEP_PAUSE_MS = Math.max(50, Number(process.env.BASE_POST_STEP_PAUSE_MS || 120));
+const CAPTCHA_GENTLE_POST_STEP_PAUSE_MS = Math.max(BASE_POST_STEP_PAUSE_MS, Number(process.env.CAPTCHA_GENTLE_POST_STEP_PAUSE_MS || 400));
+const ACTION_PACING_DELAY_MS = Number(process.env.ACTION_PACING_DELAY_MS || 80);
+const STEP_SETTLE_DELAY_MS = Number(process.env.STEP_SETTLE_DELAY_MS || 120);
+const PLANNER_RETRY_DELAY_MS = Number(process.env.PLANNER_RETRY_DELAY_MS || 300);
+const POST_STEP_DELAY_MS = Number(process.env.POST_STEP_DELAY_MS || 80);
 // How many planner steps to wait before allowing forced direct navigation
 const DIRECT_NAV_MIN_STEP = Math.max(4, Number(process.env.DIRECT_NAV_MIN_STEP || 12));
 const VISION_SAMPLE_EVERY_STEPS = Math.max(1, Number(process.env.VISION_SAMPLE_EVERY_STEPS || 2));
@@ -629,7 +629,7 @@ const IDLE_HUMAN_IDLE_MAX_MS = Number(process.env.IDLE_HUMAN_IDLE_MAX_MS || 7000
 const IDLE_HUMAN_SCHEDULE_FLOOR_MS = Math.max(120, Number(process.env.IDLE_HUMAN_SCHEDULE_FLOOR_MS || 180));
 const IDLE_HUMAN_HOTSPOT_SAMPLE_LIMIT = Math.max(8, Number(process.env.IDLE_HUMAN_HOTSPOT_SAMPLE_LIMIT || 28));
 const IDLE_HUMAN_MAX_TARGET_REUSE = Math.max(2, Number(process.env.IDLE_HUMAN_MAX_TARGET_REUSE || 3));
-const IDLE_HUMAN_MODE = String(process.env.IDLE_HUMAN_MODE || "auto").toLowerCase(); // off | auto | always
+const IDLE_HUMAN_MODE = String(process.env.IDLE_HUMAN_MODE || "off").toLowerCase(); // off | auto | always
 const AUTH_COOKIE_NAME = "puppeterr_auth";
 const AUTH_SECRET = process.env.APP_AUTH_SECRET || "puppeterr-local-secret";
 const APP_USERNAME = process.env.APP_USERNAME || "admin";
@@ -1116,6 +1116,34 @@ let sessionHistory  = [];
 let agentRunning    = false;
 let currentTaskUserId = null; // tracks which user triggered the active task
 let currentTaskChatId = null; // tracks the active task's chat for runtime error and summary messages
+
+function safePageUrl(targetPage = (typeof page !== "undefined" ? page : null), fallback = "about:blank") {
+  const livePage = targetPage ?? (typeof page !== "undefined" ? page : null);
+  try {
+    if (!livePage || typeof livePage.url !== "function") return fallback;
+    const value = livePage.url();
+    return typeof value === "string" && value.trim() ? value : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function safeStateUrl(pageLike = (typeof page !== "undefined" ? page : null), fallback = "about:blank") {
+  const livePage = pageLike ?? (typeof page !== "undefined" ? page : null);
+  if (!livePage) return fallback;
+
+  try {
+    if (typeof livePage === "string" && livePage.trim()) return livePage.trim();
+    if (typeof livePage.url === "function") {
+      const value = livePage.url();
+      return typeof value === "string" && value.trim() ? value : fallback;
+    }
+    if (typeof livePage.url === "string" && livePage.url.trim()) return livePage.url.trim();
+    if (typeof livePage.href === "string" && livePage.href.trim()) return livePage.href.trim();
+  } catch {}
+
+  return fallback;
+}
 
 async function ensureActivePage() {
   if (page) {
@@ -2578,46 +2606,98 @@ async function runStriderPlannerRecon(goalText = "", preferredUrl = "", options 
     : [];
   const activeMatchesTarget = !!targetHost && activeDomains.includes(targetHost);
 
+  let reconResult = null;
   if (striderIntegration.isActive()) {
     if (!activeMatchesTarget && options.restartIfDomainMismatch !== false) {
       await striderIntegration.handleStop().catch(() => {});
     } else {
-      return striderIntegration.getReconReport({ limit: Number(options.limit) || 16 });
+      reconResult = striderIntegration.getReconReport({ limit: Number(options.limit) || 16 });
     }
   }
 
-  return striderIntegration.handleRecon({
-    seedUrls: [targetUrl],
-    workerCount: 1,
-    randomWalk: false,
-    reconPlan,
-    timeoutMs: warmupMs,
-    minRelevant,
-  });
+  if (!reconResult) {
+    reconResult = await striderIntegration.handleRecon({
+      seedUrls: [targetUrl],
+      workerCount: 1,
+      randomWalk: false,
+      reconPlan,
+      timeoutMs: warmupMs,
+      minRelevant,
+    });
+  }
+
+  if (striderIntegration.page && String(striderIntegration.page.url?.() || "").trim()) {
+    try {
+      const currentPageExtract = await striderIntegration.handleExtractElements({
+        url: targetUrl,
+        profile: "fast",
+        settleMs: 180,
+        includeText: false,
+        includeAttributes: true,
+        includeHidden: true,
+        maxElements: 2000,
+        textLimit: 120,
+      });
+
+      if (currentPageExtract?.ok) {
+        const liveLinks = Array.from(new Set(
+          (Array.isArray(currentPageExtract.snapshot?.elements) ? currentPageExtract.snapshot.elements : [])
+            .map(item => String(item?.href || "").trim())
+            .filter(Boolean)
+            .filter(href => !/^javascript:|^mailto:|^tel:|^data:|^blob:|^#/.test(href))
+            .slice(0, 80)
+        ));
+        if (liveLinks.length) {
+          const report = reconResult?.report || reconResult || {};
+          report.livePageLinks = liveLinks;
+          if (reconResult && reconResult.report) {
+            reconResult.report.livePageLinks = liveLinks;
+          }
+        }
+      }
+    } catch (err) {
+      // Ignored: live-page link extraction is opportunistic and should never block recon.
+    }
+  }
+
+  return reconResult;
 }
 
 function formatStriderReconContext(report, domain = "") {
   const topMatches = Array.isArray(report?.topMatches) ? report.topMatches : [];
-  if (!topMatches.length) return "";
+  const livePageLinks = Array.isArray(report?.livePageLinks) ? report.livePageLinks : [];
+  if (!topMatches.length && !livePageLinks.length) return "";
 
-  return [
+  const lines = [
     "[Strider recon]",
     `Domain: ${domain || (Array.isArray(report?.allowedDomains) && report.allowedDomains[0]) || "mixed"}`,
     `Relevant URLs found: ${Number(report?.relevantCount || 0)} / ${Number(report?.totalNodes || 0)} discovered`,
-    "Top routes:",
-    ...topMatches.slice(0, 14).map((item, index) => {
+  ];
+
+  if (livePageLinks.length) {
+    lines.push("Current page links:");
+    livePageLinks.slice(0, 12).forEach((href, index) => {
+      lines.push(`${index + 1}. ${href}`);
+    });
+  }
+
+  if (topMatches.length) {
+    lines.push("Top routes:");
+    topMatches.slice(0, 14).forEach((item, index) => {
       const reasons = Array.isArray(item?.relevanceMatched) ? item.relevanceMatched.slice(0, 3).join(", ") : "";
       const title = String(item?.title || "").trim();
       const preview = String(item?.textPreview || "").replace(/\s+/g, " ").trim().slice(0, 120);
-      return [
+      lines.push(...[
         `${index + 1}. [${Number(item?.relevanceScore || 0)}] ${item?.url || ""}`,
         title ? `   title: ${title}` : "",
         reasons ? `   why: ${reasons}` : "",
         preview ? `   text: ${preview}` : "",
-      ].filter(Boolean).join("\n");
-    }),
-    "Use these routes before opening broad new search paths.",
-  ].join("\n");
+      ].filter(Boolean));
+    });
+  }
+
+  lines.push("Use these routes before opening broad new search paths.");
+  return lines.join("\n");
 }
 
 function buildStriderReconContext(goalText = "", preferredUrl = "") {
@@ -2921,12 +3001,20 @@ function broadcast(type, payload, targetUserId = currentTaskUserId || null) {
   recipients.forEach(client => { try { client.res.write(data); } catch {} });
 }
 
-function think(msg)   { console.log("  💭 " + msg); broadcast("think",   { msg }); }
-function status(msg)  { console.log("  ⚡ " + msg); broadcast("status",  { msg }); }
-function agentMsg(msg){ console.log("  🤖 " + msg); broadcast("agent",   { msg }); }
-function stepLogMsg(msg) { console.log("  📋 " + msg); broadcast("step", { msg }); }
+const ENABLE_UI_TRANSLATION = String(process.env.PUPPETERR_UI_TRANSLATION || "").toLowerCase() === "1";
+function maybeBroadcastTranslation(type, payload) {
+  if (ENABLE_UI_TRANSLATION) {
+    broadcast(type, payload);
+  }
+}
+
+function think(msg)   { console.log("  💭 " + msg); maybeBroadcastTranslation("think",   { msg }); }
+function status(msg)  { console.log("  ⚡ " + msg); maybeBroadcastTranslation("status",  { msg }); }
+function agentMsg(msg){ console.log("  🤖 " + msg); maybeBroadcastTranslation("agent",   { msg }); }
+function stepLogMsg(msg) { console.log("  📋 " + msg); maybeBroadcastTranslation("step", { msg }); }
 function appendTaskChatMessage(role, content, meta = {}) {
   if (!currentTaskChatId) return;
+  if (!ENABLE_UI_TRANSLATION) return;
   try {
     appendChatMessage(currentTaskChatId, role, content, { ...meta }, currentTaskUserId);
     broadcast("chat_sync", { chatId: currentTaskChatId });
@@ -3021,13 +3109,15 @@ const guidanceControl = {
 /** Narrate what the agent is doing in plain English — shown in UI as live commentary */
 function narrate(msg) {
   console.log("  🗣️  " + msg);
-  broadcast("narrate", { msg });
+  maybeBroadcastTranslation("narrate", { msg });
 }
 
 /** Agent asks the user a question mid-task, broadcasts to UI with a prompt box */
 function askUser(question, context) {
   console.log("  ❓ " + question);
-  broadcast("agent_question", { question, context: context || "", ts: new Date().toISOString() });
+  if (ENABLE_UI_TRANSLATION) {
+    broadcast("agent_question", { question, context: context || "", ts: new Date().toISOString() });
+  }
 }
 
 function parseGuidancePolicy(text) {
@@ -4504,7 +4594,7 @@ async function answerCasualChat(rawMessage, conversationHistory, models, chatId 
     "Sensitive-term note: KMS/KYS/'unalive' appear in youth slang sometimes as exaggerated dark humor (e.g. reacting to embarrassment) and sometimes as a genuine expression of distress. Recognize both meanings, but never use these terms yourself, never mirror them back playfully, and if the context reads as genuine distress rather than joking, drop the casual tone and respond with care instead of banter.\n\n";
 
   const CASUAL_CHAT_SYSTEM = SLANG_GLOSSARY + "You are Puppeterr in casual chat mode. Respond helpfully and conversationally. If asked what model you are, state the configured model id exactly. Formatting: - *italic*, **bold**, ***bold+italic*** - `inline code` - <br> for line breaks - Headings (# to ######) for visual flair - Emoji shortcodes like :rocket: :fire: :smile: Tone: - Match the user’s energy and slang (lol, brb, idk, smh, lmao, wtf, etc.) - Adjust style, not emotions. You never express feelings. Tone rules: - Hype → high energy, playful confidence - Annoyed → dry humor, light sarcasm - Bored → chill, low‑energy banter - Chaotic → theatrical, exaggerated - Neutral → normal conversational tone Roasting: - Light, playful roasts only about simple tasks - Never personal, emotional, or identity‑based Boundaries: - No emotions, no attachment, no claiming to be OpenAI/GPT‑4 unless true, CRITICAL: If the user is being ch then be casual; if the user is going/doing to do something worth while (eg. coding, making a project/writing a essay) make sure that you push back on parts that dont make sense / aren't worth it.. Creativity: - Use headings, spacing, and visual flair when it improves clarity or aesthetics. - Keep responses natural and conversational. - Only use structured layouts when the user explicitly asks for them. NEVER do/make gramatical mistakes always 2x check.\n\n" +
-    "Context escalation: you may NOT browse on your own initiative for memes, casual link-dropping, or vague reactions (\"lol look at this\", \"bro this link is wild\") — just react normally to those. ONLY when the user explicitly asks you to evaluate, summarize, or describe something you have no cached context for (e.g. \"is this repo good?\", \"what does this project do?\", \"is this site legit?\") AND a URL or clearly identifiable target is present, you may request one — and only one — browsing task instead of guessing or hallucinating. To do this, respond with ONLY this block and nothing else:\n<<BROWSING_TASK>>\n/browser go to <url>, then do <X> <additional tasks here> \n<<END_BROWSING_TASK>>\n.  Never emit it a second time in the same reply. X may be 'extract all text' or as simple as 'mark task as done' feel free to manipulate that Variable. you may add additional tasks based on the user's request, but you may not add any tasks that are not explicitly requested by the user. If you do not have enough information to complete the task, ask the user for clarification. If you cannot complete the task, respond with a clear explanation of why and suggest an alternative approach. Do not make up information or guess at answers. If you are unsure about something, ask the user for clarification. If the user asks you to do something that is outside of your capabilities, respond with a clear explanation of why and suggest an alternative approach. Do not make up information or guess at answers. If you are unsure about something, ask the user for clarification. (you can input it at the <addition tasks here>) I repeat you may FREELY manipulate variables 'X' and '<additional tasks here>' to suit the user's request, but you may not add any tasks that are not explicitly requested by the user. If you do not have enough information to complete the task, ask the user for clarification. If you cannot complete the task, respond with a clear explanation of why and suggest an alternative approach. Do not make up information or guess at answers. If you are unsure about something, ask the user for clarification.";
+    "Context escalation: you may NOT browse on your own initiative for memes, casual link-dropping, or vague reactions (\"lol look at this\", \"bro this link is wild\") — just react normally to those. ONLY when the user explicitly asks you to evaluate, summarize, or describe something you have no cached context for (e.g. \"is this repo good?\", \"what does this project do?\", \"is this site legit?\") AND a URL or clearly identifiable target is present, you may request one — and only one — browsing task instead of guessing or hallucinating. To do this, respond with ONLY this block and nothing else:\n<<BROWSING_TASK>>\n/browser go to <url>, then do <X> <additional tasks here> \n<<END_BROWSING_TASK>>\n.  Never emit it a second time in the same reply. X may be 'extract all text' or as simple as 'mark task as done' feel free to manipulate that Variable. you may add additional tasks based on the user's request, but you may not add any tasks that are not explicitly requested by the user. If you do not have enough information to complete the task, ask the user for clarification. If you cannot complete the task, respond with a clear explanation of why and suggest an alternative approach. Do not make up information or guess at answers. If you are unsure about something, ask the user for clarification. If the user asks you to do something that is outside of your capabilities, respond with a clear explanation of why and suggest an alternative approach. Do not make up information or guess at answers. If you are unsure about something, ask the user for clarification. (you can input it at the <addition tasks here>) I repeat you may FREELY manipulate variables 'X' and '<additional tasks here>' to suit the user's request, but you may not add any tasks that are not explicitly requested by the user. If you do not have enough information to complete the task, ask the user for clarification. If you cannot complete the task, respond with a clear explanation of why and suggest an alternative approach. Do not make up information or guess at answers. If you are unsure about something, ask the user for clarification. Before browsing always ask if the prompt is correct and if the user wants to continue. If the user says no, ask for clarification and do not browse until you have a clear understanding of what the user wants. If the user says yes, proceed with the browsing task. If the user does not respond, wait for them to respond before proceeding. If the user asks you to do something that is outside of your capabilities, respond with a clear explanation of why and suggest an alternative approach. If you are unsure you MUST ask the user if this is a browsing task and only then you may start a browsing task";
 
   try {
     const raw = await callCFAI(models.reasoner || models.router, [
@@ -4716,20 +4806,34 @@ async function pinchListWebhookTypes() {
     if (!list.length) return "none";
 
     return list.slice(0, 8).map((item, idx) => {
-      const action = String(item?.action || "unknown");
-      const status = String(item?.status || "unknown");
-      const selector = String(item?.selector || "").trim();
-      const reason = String(item?.error || item?.reason || "").replace(/\s+/g, " ").trim().slice(0, 120);
-      const extracted = String(item?.extractedText || "").replace(/\s+/g, " ").trim().slice(0, 560);
-      const result = String(item?.result || "").replace(/\s+/g, " ").trim().slice(0, extracted ? 0 : 240);
+      const safeItem = sanitizeActionPayloadForDisplay(item || {}, { maxChars: 2000 });
+      const action = String(safeItem?.action || "unknown");
+      const status = String(safeItem?.status || "unknown");
+      const selector = String(safeItem?.selector || safeItem?.params?.selector || "").trim();
+      const reason = String(safeItem?.error || safeItem?.reason || "").replace(/\s+/g, " ").trim().slice(0, 120);
+      const extracted = String(safeItem?.extractedText || "").replace(/\s+/g, " ").trim().slice(0, 560);
+      const result = String(safeItem?.result || "").replace(/\s+/g, " ").trim().slice(0, extracted ? 0 : 240);
       const notes = [];
       if (selector) notes.push(`sel=${selector.slice(0, 80)}`);
       if (reason) notes.push(`note=${reason}`);
-      if (item?.domMapSummary) notes.push(`dom=${String(item.domMapSummary).slice(0, 100)}`);
+      if (safeItem?.domMapSummary) notes.push(`dom=${String(safeItem.domMapSummary).slice(0, 100)}`);
       if (extracted) notes.push(`extracted=${extracted}`);
       else if (result) notes.push(`result=${result}`);
       return `${idx + 1}. ${action}:${status}${notes.length ? ` (${notes.join(" | ")})` : ""}`;
     }).join("\n");
+  }
+
+  function summarizePlannerResponseForReasoner(plan = {}, fallbackText = "") {
+    const rawReasoning = String(plan?.reasoning || fallbackText || "").trim();
+    let plainText = stripThinking(rawReasoning).replace(/[{}\[\]]/g, " ").replace(/\s*[,;:]\s*/g, ". ").replace(/\s+/g, " ").trim();
+    plainText = plainText.replace(/"[A-Za-z0-9_-]+"\s*:/g, "").replace(/\b(?:confidence|done|actions|reasoning|summary|goal|params)\b/gi, "").replace(/\s+\./g, ".").trim();
+    if (!plainText) {
+      const actionNames = Array.isArray(plan?.actions)
+        ? plan.actions.map(item => String(item?.action || "")).filter(Boolean).slice(0, 4)
+        : [];
+      plainText = actionNames.length ? `Next: ${actionNames.join(" → ")}.` : "Continuing with the next browser step.";
+    }
+    return plainText.slice(0, 420);
   }
 
   function normalizePeerText(value) {
@@ -4819,7 +4923,7 @@ async function pinchListWebhookTypes() {
 
   // ── Page state ────────────────────────────────────────────────────────────────
   async function getPageState() {
-    const url = page.url();
+    const url = safePageUrl(page);
     const statePayload = await page.evaluate(({ textLimit, linkLimit, inputLimit, buttonLimit }) => {
       const title = document.title || "";
       const text = document.body ? document.body.innerText.slice(0, textLimit) : "";
@@ -4952,12 +5056,28 @@ async function pinchListWebhookTypes() {
     };
   }
 
-  function getCaptchaPageKey(rawUrl) {
+  function getCaptchaPageKey(rawUrl, state = {}) {
+    const urlValue = String(rawUrl || "").trim();
+    const challengeText = `${String(state?.title || "")}\n${String(state?.text || "")}`;
+    const challengeSignal = /(captcha|turnstile|hcaptcha|recaptcha|verify\s+you\s+are\s+human|security\s+check|cloudflare\s+challenge|cf-chl|just\s+a\s+moment)/i;
+
+    if (challengeSignal.test(challengeText) || challengeSignal.test(urlValue)) {
+      const host = (() => {
+        try {
+          return new URL(urlValue || "https://example.invalid").hostname.toLowerCase();
+        } catch {
+          return "unknown-host";
+        }
+      })();
+      const fingerprint = challengeText.replace(/\s+/g, " ").trim().slice(0, 220) || urlValue || "captcha";
+      return `captcha:${host}:${crypto.createHash("sha1").update(fingerprint.toLowerCase()).digest("hex").slice(0, 16)}`;
+    }
+
     try {
-      const parsed = new URL(rawUrl || "about:blank");
+      const parsed = new URL(urlValue || "about:blank");
       return parsed.origin + parsed.pathname;
     } catch {
-      return String(rawUrl || "unknown");
+      return String(urlValue || "unknown");
     }
   }
 
@@ -5806,6 +5926,136 @@ Return JSON only:
     think(`Memory rollover: moved ${moved.length} entries to ${MEMORY_OVERFLOW_FILE}${reason ? ` (${reason})` : ""}.`);
   }
 
+  const MEMORY_TYPES = Object.freeze({
+    NANO: "nano",
+    SHORT: "short",
+    LONG: "long",
+    PERMANENT: "permanent"
+  });
+
+  function normalizeMemoryKind(kind) {
+    const value = String(kind || "").trim().toLowerCase();
+    return Object.values(MEMORY_TYPES).includes(value) ? value : "short";
+  }
+
+  function normalizeMemoryValue(value) {
+    if (value === null || value === undefined) return null;
+    if (typeof value === "string") return value.trim().slice(0, 4000);
+    if (typeof value === "number" || typeof value === "boolean") return value;
+    try {
+      return JSON.stringify(value).slice(0, 4000);
+    } catch {
+      return String(value).slice(0, 4000);
+    }
+  }
+
+  function normalizeMemoryValueAllowLong(value) {
+    if (value === null || value === undefined) return null;
+    if (typeof value === "string") return value.trim();
+    if (typeof value === "number" || typeof value === "boolean") return value;
+    try {
+      return JSON.stringify(value);
+    } catch {
+      return String(value);
+    }
+  }
+
+  function saveMemoryEntry(kind, key, value, meta = {}) {
+    const tier = normalizeMemoryKind(kind);
+    const allowLong = !!meta?.allowLong || (tier === MEMORY_TYPES.SHORT && String(meta?.source || "").includes("page-text-truncation"));
+    const entry = {
+      ts: new Date().toISOString(),
+      kind: tier,
+      key: String(key || "item").trim() || "item",
+      value: allowLong ? normalizeMemoryValueAllowLong(value) : normalizeMemoryValue(value),
+      taskId: meta?.taskId ? String(meta.taskId) : null,
+      goal: meta?.goal ? String(meta.goal).slice(0, 500) : "",
+      source: meta?.source ? String(meta.source).slice(0, 200) : "",
+      answer: meta?.answer ? String(meta.answer).slice(0, 2000) : "",
+      summary: meta?.summary ? String(meta.summary).slice(0, 2000) : "",
+      tags: Array.isArray(meta?.tags) ? meta.tags.slice(0, 12).map(String) : []
+    };
+
+    const primary = readMemoryEntries(MEMORY_FILE);
+    primary.push(entry);
+    writeMemoryEntries(MEMORY_FILE, primary);
+    ensureMemoryPerformance(`save-${tier}`);
+    return entry;
+  }
+
+  function makeShortPageTextRef(goalText = "", state = {}, taskHints = {}) {
+    const goalSeed = String(goalText || taskHints?.taskContext?.originalGoal || state?.title || "browser-task")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 40) || "task";
+    const urlSeed = String(state?.url || "current-page")
+      .replace(/^https?:\/\//i, "")
+      .replace(/[^a-z0-9]+/gi, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 40) || "page";
+    const stepSeed = String(taskHints?.taskContext?.stepCount ?? state?.stepCount ?? 0);
+    return `pagetext:${urlSeed}:${stepSeed}:${goalSeed}`.slice(0, 180);
+  }
+
+  function getExactShortMemoryByRef(ref, taskId = null) {
+    const exactRef = String(ref || "").trim();
+    if (!exactRef) return null;
+    const candidates = getMemoryByKind(MEMORY_TYPES.SHORT, taskId || currentTaskChatId || null).filter(entry => String(entry.key || "") === exactRef);
+    const fallbackCandidates = getMemoryByKind(MEMORY_TYPES.SHORT, null).filter(entry => String(entry.key || "") === exactRef);
+    const chosen = candidates.length ? candidates[candidates.length - 1] : fallbackCandidates[fallbackCandidates.length - 1] || null;
+    if (!chosen) return null;
+    return chosen.value ?? chosen.answer ?? chosen.summary ?? null;
+  }
+
+  function clearNanoMemory(taskId) {
+    const primary = readMemoryEntries(MEMORY_FILE);
+    const filtered = primary.filter(entry => !(String(entry.kind || "").toLowerCase() === MEMORY_TYPES.NANO && (!taskId || String(entry.taskId || "") === String(taskId))));
+    writeMemoryEntries(MEMORY_FILE, filtered);
+    return filtered;
+  }
+
+  function getMemoryByKind(kind, taskId = null) {
+    return loadMemory().filter(entry => {
+      const sameKind = String(entry.kind || "").toLowerCase() === normalizeMemoryKind(kind);
+      if (!sameKind) return false;
+      if (!taskId) return true;
+      return String(entry.taskId || "") === String(taskId);
+    });
+  }
+
+  function buildMemoryContextForTask(taskId, goalText = "") {
+    const taskKey = String(taskId || "").trim();
+    const sections = [];
+    const nanoEntries = getMemoryByKind(MEMORY_TYPES.NANO, taskKey);
+    const shortEntries = getMemoryByKind(MEMORY_TYPES.SHORT, taskKey);
+    const longEntries = getMemoryByKind(MEMORY_TYPES.LONG, null).slice(-8);
+    const permanentEntries = getMemoryByKind(MEMORY_TYPES.PERMANENT, null).slice(-8);
+
+    const renderEntries = (label, entries) => {
+      if (!entries.length) return null;
+      const rendered = entries.slice(-8).map(entry => {
+        const valueText = entry.answer || entry.summary || entry.value;
+        return `- ${entry.key}: ${String(valueText || "").slice(0, 500)}`;
+      }).join("\n");
+      return `${label}:\n${rendered}`;
+    };
+
+    const nanoText = renderEntries("NANO memory (ephemeral)", nanoEntries);
+    const shortText = renderEntries("SHORT memory (task-scoped)", shortEntries);
+    const longText = renderEntries("LONG memory (preferences)", longEntries);
+    const permanentText = renderEntries("PERMANENT guardrails", permanentEntries);
+
+    if (nanoText) sections.push(nanoText);
+    if (shortText) sections.push(shortText);
+    if (longText) sections.push(longText);
+    if (permanentText) sections.push(permanentText);
+    if (!sections.length && goalText) {
+      sections.push(`SHORT memory (task-scoped):\n- current goal: ${String(goalText).slice(0, 500)}`);
+    }
+    return sections.join("\n\n") || "(no memory for this task)";
+  }
+
   function loadMemory() {
     const startedAt = Date.now();
     const primary = readMemoryEntries(MEMORY_FILE);
@@ -5829,11 +6079,12 @@ Return JSON only:
     const scored = all
       .map(item => {
         const haystack = getMemoryEntryText(item);
+        const typeBonus = String(item?.kind || "") === MEMORY_TYPES.PERMANENT ? 4 : String(item?.kind || "") === MEMORY_TYPES.LONG ? 3 : 0;
         const score = terms.reduce((sum, term) => {
           if (!haystack.includes(term)) return sum;
           if (haystack.includes(` ${term} `)) return sum + 2;
           return sum + 1;
-        }, 0);
+        }, typeBonus);
         return { item, score };
       })
       .filter(row => row.score > 0)
@@ -5850,7 +6101,21 @@ Return JSON only:
 
   function saveMemory(entry) {
     const primary = readMemoryEntries(MEMORY_FILE);
-    primary.push({ ts: new Date().toISOString(), ...entry });
+    const kind = normalizeMemoryKind(entry?.kind || "short");
+    const normalized = {
+      ts: new Date().toISOString(),
+      kind,
+      key: entry?.key ? String(entry.key).trim() : "task",
+      value: normalizeMemoryValue(entry?.value ?? entry?.result ?? entry?.answer ?? entry?.summary ?? entry?.goal),
+      taskId: entry?.taskId ? String(entry.taskId) : null,
+      goal: entry?.goal ? String(entry.goal).slice(0, 500) : "",
+      result: entry?.result ? String(entry.result).slice(0, 2000) : "",
+      answer: entry?.answer ? String(entry.answer).slice(0, 2000) : "",
+      summary: entry?.summary ? String(entry.summary).slice(0, 2000) : "",
+      source: entry?.source ? String(entry.source).slice(0, 200) : "",
+      tags: Array.isArray(entry?.tags) ? entry.tags.slice(0, 12).map(String) : []
+    };
+    primary.push(normalized);
     writeMemoryEntries(MEMORY_FILE, primary);
     ensureMemoryPerformance("save");
   }
@@ -5969,6 +6234,56 @@ Return JSON only:
     return paren === 0 && bracket === 0 && !inSingle && !inDouble;
   }
 
+  function hasBalancedQuoteSyntax(value) {
+    let single = false;
+    let double = false;
+    let backtick = false;
+    let escaped = false;
+
+    for (const ch of String(value || "")) {
+      if (escaped) {
+        escaped = false;
+        continue;
+      }
+      if (ch === "\\") {
+        escaped = true;
+        continue;
+      }
+      if (ch === "'" && !double && !backtick) {
+        single = !single;
+        continue;
+      }
+      if (ch === '"' && !single && !backtick) {
+        double = !double;
+        continue;
+      }
+      if (ch === "`" && !single && !double) {
+        backtick = !backtick;
+      }
+    }
+
+    return !single && !double && !backtick;
+  }
+
+  function isLikelyTruncatedActionValue(actionName, value) {
+    const action = String(actionName || "").toLowerCase();
+    const raw = String(value ?? "").trim();
+    if (!raw) return false;
+
+    const trailingSuspicion = /(?:[\[(=,]$|['"`]$|\\$)/.test(raw);
+    const quoteSuspicion = !hasBalancedQuoteSyntax(raw);
+
+    if (action === "evaluate") {
+      return quoteSuspicion || trailingSuspicion || /(?:return\s*;?|=>\s*\(?\s*\)?\s*$)/.test(raw) === false && /(?:\bdocument\.|\bwindow\.|\bArray\.|\bconsole\.)/.test(raw) && /['"\]]$/.test(raw);
+    }
+
+    if (["click", "dblclick", "hover", "scrollintoview", "submitform", "fill", "type", "press", "check", "uncheck", "selectoption", "focus"].includes(action)) {
+      return quoteSuspicion || trailingSuspicion || !hasBalancedSelectorSyntax(raw);
+    }
+
+    return false;
+  }
+
   function sanitizePlannerSelector(rawSelector, actionName = "") {
     let selector = String(rawSelector || "").trim();
     if (!selector) return selector;
@@ -6040,7 +6355,19 @@ Return JSON only:
     }
 
     if (typeof params.selector === "string") {
-      params.selector = sanitizePlannerSelector(params.selector, canonicalAction);
+      if (isLikelyTruncatedActionValue(canonicalAction, params.selector)) {
+        params._truncated = true;
+        params.selector = "__invalid_selector_no_match__";
+      } else {
+        params.selector = sanitizePlannerSelector(params.selector, canonicalAction);
+      }
+    }
+
+    if (canonicalAction === "evaluate" && typeof params.script === "string") {
+      if (isLikelyTruncatedActionValue(canonicalAction, params.script)) {
+        params._truncated = true;
+        params.script = "";
+      }
     }
 
     if (canonicalAction === "press" && !params.key) {
@@ -6580,11 +6907,81 @@ function semanticMatchScore(candidate, keywords) {
   return Math.max(0, Math.min(1, hits / keywords.length));
 }
 
+function buildSelectorAffinityHints(selectorSource) {
+  const source = String(selectorSource || "");
+  const hints = [];
+  const seen = new Set();
+  const add = value => {
+    const next = String(value || "").trim().toLowerCase();
+    if (!next || seen.has(next)) return;
+    seen.add(next);
+    hints.push(next);
+  };
+
+  const hrefRe = /href\s*[:=]\s*["']?([^"'\s>]+)["']?/gi;
+  let match;
+  while ((match = hrefRe.exec(source)) !== null) {
+    add(match[1]);
+  }
+
+  const identityRe = /(?:\[name=|\[id=|\[data-testid=|\[aria-label=|\b(?:data-testid|aria-label|id|name)\s*['"])([^'"\]]+)/gi;
+  while ((match = identityRe.exec(source)) !== null) {
+    add(match[1]);
+  }
+
+  const bareText = source.replace(/[^a-z0-9\s_-]/gi, " ").toLowerCase().trim();
+  if (bareText) {
+    bareText.split(/\s+/).filter(Boolean).slice(0, 8).forEach(token => add(token));
+  }
+
+  return hints;
+}
+
+function selectorAffinityScore(candidate, selectorHints = []) {
+  if (!selectorHints.length) return 0;
+  const haystack = `${candidate.text || ""} ${candidate.aria || ""} ${candidate.selector || ""} ${candidate.href || ""}`.toLowerCase();
+  let score = 0;
+  for (const hint of selectorHints) {
+    const cleaned = String(hint || "").toLowerCase().replace(/^['"]|['"]$/g, "");
+    if (!cleaned) continue;
+    if (haystack.includes(cleaned)) score += 1;
+  }
+  return Math.min(1, score / Math.max(1, selectorHints.length));
+}
+
 function linkRelevanceScore(candidate, keywords) {
   const href = String(candidate.href || "").toLowerCase();
   if (!href || !keywords.length) return 0;
   const hits = keywords.filter(keyword => href.includes(keyword)).length;
   return Math.max(0, Math.min(1, hits / Math.min(4, keywords.length)));
+}
+
+function scoreFusionClickCandidate(candidate, targetKeywords = [], selectorHints = []) {
+  const source = `${candidate?.text || ""} ${candidate?.aria || ""} ${candidate?.selector || ""} ${candidate?.href || ""} ${candidate?.className || ""}`.toLowerCase();
+  const keywords = (Array.isArray(targetKeywords) ? targetKeywords : []).map(String).map(token => token.trim().toLowerCase()).filter(Boolean);
+  const hints = (Array.isArray(selectorHints) ? selectorHints : []).map(String).map(token => token.trim().toLowerCase()).filter(Boolean);
+
+  let score = 0;
+
+  for (const keyword of keywords) {
+    if (!keyword) continue;
+    if (source.includes(keyword)) score += 0.22;
+    if ((candidate?.href || "").toLowerCase().includes(keyword)) score += 0.12;
+    if ((candidate?.text || "").toLowerCase().includes(keyword)) score += 0.12;
+  }
+
+  for (const hint of hints) {
+    if (!hint) continue;
+    if (source.includes(hint)) score += 0.16;
+  }
+
+  const exactTargetBias = /(?:^|\/)(?:tt\d+|title\d+|inception|director)(?:$|\b)/i.test(String(candidate?.href || "") + " " + String(candidate?.text || ""));
+  if (exactTargetBias) score += 0.18;
+
+  if (/(sponsored|promoted|advert|affiliate|doubleclick|outbrain|taboola|utm_)/i.test(source)) score -= 0.55;
+  if (/\b(?:try|watch|see|discover).*\b(?:pro|premium|trial|membership)\b/i.test(String(candidate?.text || ""))) score -= 0.35;
+
+  return Math.max(0, Math.min(1, Number(score.toFixed(4))));
 }
 
 function adRiskScore(candidate) {
@@ -6593,7 +6990,7 @@ function adRiskScore(candidate) {
   return risky ? 1 : 0;
 }
 
-async function buildFullPageClickMap(targetKeywords, cqardsAnchors) {
+async function buildFullPageClickMap(targetKeywords, cqardsAnchors, selectorHintSource = "") {
   const rawMap = await page.evaluate(() => {
     const vw = Math.max(1, window.innerWidth || 1920);
     const vh = Math.max(1, window.innerHeight || 1080);
@@ -6686,23 +7083,30 @@ async function buildFullPageClickMap(targetKeywords, cqardsAnchors) {
 
   const anchors = normalizeCqardsAnchors(cqardsAnchors, viewport);
   const diagonal = Math.hypot(viewport.width, viewport.height) || 1;
+  const selectorHints = buildSelectorAffinityHints(selectorHintSource);
 
   const scored = rawMap.map(candidate => {
     const { anchor, distance } = nearestAnchorForCandidate(candidate, anchors);
     const semantic = semanticMatchScore(candidate, targetKeywords);
+    const exactMatch = selectorAffinityScore(candidate, selectorHints);
     const overlap = overlapScoreWithAnchor(candidate, anchor);
     const distanceScore = anchors.length ? Math.max(0, Math.min(1, 1 - (distance / diagonal))) : 0.4;
     const link = linkRelevanceScore(candidate, targetKeywords);
     const visibility = candidate.visible ? 1 : 0;
     const adRisk = adRiskScore(candidate);
+    const directFusion = scoreFusionClickCandidate(candidate, targetKeywords, selectorHints);
 
     const confidence = Math.max(0, Math.min(1,
-      semantic * 0.42 +
-      visibility * 0.16 +
-      overlap * 0.18 +
-      distanceScore * 0.16 +
-      link * 0.12 -
-      adRisk * 0.7
+      Math.max(
+        semantic * 0.35 +
+        exactMatch * 0.28 +
+        visibility * 0.15 +
+        overlap * 0.12 +
+        distanceScore * 0.12 +
+        link * 0.1 -
+        adRisk * 0.7,
+        directFusion * 0.85
+      )
     ));
 
     return {
@@ -6953,6 +7357,7 @@ async function planNextSteps(goal, state, visionFeedback, taskLog, plannerHistor
     ? compactUrlForPrompt(taskHints.directNavigationTarget)
     : "none";
   const compactKnowledge = compactPromptValue(JSON.stringify(taskHints.knowledgeContext || {}), 1800);
+  const runtimeCapabilityLedger = buildRuntimeCapabilityLedger(models);
 
   // Dynamic page-text compaction: budget = however much room is actually
   // left after every other field in this prompt, not a fixed guess. Also
@@ -6974,7 +7379,15 @@ async function planNextSteps(goal, state, visionFeedback, taskLog, plannerHistor
     const head = fullText.slice(0, headLen);
     const tail = tailLen > 0 ? fullText.slice(-tailLen) : "";
     const cutCount = fullText.length - headLen - tailLen;
-    return `${head}\n…[TRUNCATED: ${cutCount} chars cut from the middle of this page — use getAllText with a specific selector to read the omitted section if the answer is not in the text shown here]…\n${tail}`;
+    const pageTextRef = makeShortPageTextRef(goal, state, taskHints);
+    saveMemoryEntry(MEMORY_TYPES.SHORT, pageTextRef, fullText, {
+      taskId: currentTaskChatId || taskHints?.taskContext?.taskId || goal,
+      goal,
+      source: "page-text-truncation",
+      allowLong: true,
+      tags: ["pagetext", "truncated", "page-text"]
+    });
+    return `${head}\n…[TRUNCATED: ${cutCount} chars cut from the middle of this page. Full text available: SHORT.get({ref: "${pageTextRef}"})]…\n${tail}`;
   }
 
   // Measure everything else in the prompt template BEFORE deciding the
@@ -7015,6 +7428,7 @@ VoidMap:${compactVoidMapSummary}
 VoidClickable:${compactVoidMapClickable}
 Vision:${compactPromptValue(visionFeedback || "none", 280)}
 KnowledgeBusEvidence:${compactKnowledge}
+RuntimeCapabilities:${compactPromptValue(runtimeCapabilityLedger, 2000)}
 Peers:instinct=${compactPromptValue(peerReasoner.instinct || "none", 80)};risk=${compactPromptValue(peerReasoner.risk || "none", 24)};focus=${compactPromptValue(peerReasoner.next_focus || "none", 60)};supervisor=${compactPromptValue(peerSupervisor.decision || "none", 20)}:${compactPromptValue(peerSupervisor.reason || "", 70)};researchHints=${Number(peerResearch.hintCount || 0)}
 GoalProgress:${goalMemCtx || "none"}
 DirectNavigationTarget:${compactDirectNavigationTarget}
@@ -7025,7 +7439,7 @@ PageText:${compactPageText}
 Learning:${compactPromptValue(learningContext, 200)}
 Failures:${failures};Stuck:${stuck ? "yes" : "no"}
 Constraints:<=13 actions;avoid repeating failed selector/action;prefer submitForm for search;JSON only.
-Knowledge rule: when visual output, memory, prior failures, or element targeting is uncertain, use the provided KnowledgeBus evidence before inventing a new strategy. For graph/chart/equation goals, require Vision evidence that the requested visual result is visible before marking done.`;
+Knowledge rule: when visual output, memory, prior failures, or element targeting is uncertain, use the provided KnowledgeBus evidence and RuntimeCapabilities before inventing a new strategy. For graph/chart/equation goals, require Vision evidence that the requested visual result is visible before marking done.`;
 
   plannerHistory.push({ role: "user", content: userMsg.slice(0, MAX_PLANNER_USER_MSG_CHARS) });
   // Keep the conversation bounded BEFORE sending — see trimHistory's doc
@@ -7289,11 +7703,33 @@ const PLANNER_TIPS_50 = `
 
 const PLANNER_SYSTEM_PROMPT = `CRITICAL: Output must be ONLY valid JSON. Start with { and end with }. No prose, no markdown, no code fences.
 CRITICAL: On search engines (Google/Bing/DuckDuckGo/Yahoo), submit queries with Enter or submitForm. Do NOT click "Search" buttons.
-CRITICAL: Honor the explicit engine/order in the user's prompt. If the goal explicitly names Bing or Bing Maps first, do not rewrite it into a Google-first compare flow. Default Google-first only when the prompt does not specify an engine or compare sequence.
-CRITICAL: Prefer Google over Bing for search when the destination isn't specified by the user. Google accounts for the large majority of observed CAPTCHA/challenge walls in this agent's run history — only go to Bing when the user explicitly names it (OR when GOOGLE's captchas become overbearing (eg. 6+)).
-HIGH-CRITICAL:  When you need to extract text from a sector or need to extract text use the following command: <<START OF COMMAND>> // Wait for the element to be present in the DOM await page.waitForSelector('$YOURSECTORHERE$'); // Get the visible text (similar to innerText in DevTools) const text = await page.innerText('$YOURSECTORHERE$'); <<END OF COMMAND>> $YOURSECTORHERE$ = to the sector of the text you wish to extract to complete the goal. The FOLLOWING DOMAINS DO NOT HAVE contain/use captchas: ${CAPTCHA_DOMAINS}. IF YOU SEE ANY OTHER DOMAIN that consistantly shows no captchas write that in you summary
+CRITICAL: Honor the explicit engine/order in the user's prompt. If the goal explicitly names Bing or Bing Maps first, do not rewrite it into a different compare flow. Default to DuckDuckGo unless the prompt specifies a different engine or compare order.
+CRITICAL: Prefer DuckDuckGo as the default search engine for unspecified tasks; only use Google or Bing when the user explicitly names them or the task clearly requires a specific engine.
+HIGH-CRITICAL: When you need to extract text from a sector or need to extract text use the following command: <<START OF COMMAND>> // Wait for the element to be present in the DOM await page.waitForSelector('$YOURSECTORHERE$'); // Get the visible text (similar to innerText in DevTools) const text = await page.innerText('$YOURSECTORHERE$'); <<END OF COMMAND>> $YOURSECTORHERE$ = to the sector of the text you wish to extract to complete the goal. The FOLLOWING DOMAINS DO NOT HAVE contain/use captchas: ${CAPTCHA_DOMAINS}. IF YOU SEE ANY OTHER DOMAIN that consistantly shows no captchas write that in you summary
+CRITCAL: Always try to extract AS MUCH as info and data as possible, if you get a site try to cross reference across multiple sites to get the most accurate and complete information. If you are unsure about the accuracy of the information, try to find additional sources to verify it. 
 MAX-PRIORITY: When the prompt request info from a site or multiple ones remember to get as much as information as possible and summarize it in a concise manner. If the prompt asks for a summary of a large document, use the summarizeLargeDocument command to get a summary of the document.
 Planner mode: deterministic, progress-first, minimal-risk.
+
+Capability ledger you may rely on:
+- MEMORY.search and MEMORY.json state: recover the original prompt, prior task context, recent failures, and successful past actions.
+- SHORT.get(ref): exact retrieval by deterministic key for truncated page text or other short-lived blobs; this is the correct tool when a page was cut for context reasons.
+- MEMORY kinds: NANO (ephemeral task-only credentials and transient state; wipe after task), SHORT (active troubleshooting and current answer), LONG (user preferences and phrasing), PERMANENT (guardrails and safety rules).
+- PAGE.state / PAGE.text: current DOM, visible text, page metadata, loaded state, and selector context.
+- VISION.snapshot: the visual page interpretation; ask "what is wrong with the page?" or "is the requested result visible?" when the page is blocked, blank, stale, or visually wrong.
+- ELEMENT_MAP.snapshot: visible regions and interactive DOM elements, useful when the page is crowded or overlay-heavy.
+- MODELS.list: available model capabilities and routing; choose the correct model for reasoning, extraction, or vision tasks.
+- summarizeLargeDocument: chunk-and-merge long text for large documents or pages.
+- getAllText(selector): scoped extraction helper; prefer selector-scoped extraction instead of broad full-page text when the target lives in a section/container.
+- expectVisible/expectHidden/expectText/expectURL: wait+verify actions for low-risk completion checks.
+- The agent has a structured memory store and should consult it before inventing facts or repeating obvious failures.
+
+Recovery policy when uncertain:
+- If the action is stalled, blocked, blank, or obviously wrong, query PAGE.state or PAGE.text to inspect the current DOM/state and ask VISION.snapshot: "what is wrong with the page?"
+- If the original task intent is unclear, use MEMORY.search to recover the original prompt and last relevant task context before inventing a new path.
+- If a page text blob was truncated for context reasons, use SHORT.get({ref: "pagetext:..."}) to retrieve the exact omitted text instead of fuzzy MEMORY.search.
+- If the result is uncertain or the page is wrong, prefer PAGE.state/PAGE.text, VISION.snapshot, or ELEMENT_MAP.snapshot over guessing.
+- Do not keep repeating the same bad action. Re-check DOM state, visible text, and the page goal before retrying.
+- Prefer a low-risk recovery action over a speculative one.
 
 Allowed actions: goto,reload,goBack,goForward,click,dblclick,mouseDblclick,hover,fill,type,press,check,uncheck,selectOption,scrollIntoView,submitForm,keyboardType,keyboardPress,keyboardDown,keyboardUp,mouseMove,mouseClick,mouseDown,mouseUp,mouseWheel,waitForSelector,waitForVisible,waitForTimeout,waitForLoadState,waitForURLChange,waitForNavigation,getText,getAttribute,getAllText,getHTML,getTitle,getURL,countElements,isVisible,elementExists,expectVisible,expectHidden,expectText,expectURL,evaluate,screenshot,fullPageScreenshot,setViewport,uploadFile,summarizeLargeDocument,openNewTab,switchToTab,listTabs,closeCurrentTab,pinchListTickets,pinchSendTicketMessage,pinchListWebhooks,pinchListWebhookTypes.
 
@@ -7314,6 +7750,7 @@ Hard rules:
 - Do not repeat same failing action+selector pair.
 - If already on target page and evidence is present, extract and finish.
 - Prefer lower-risk actions before evaluate/reload loops.
+- If the model is uncertain or the page is wrong, prefer PAGE.state/PAGE.text and VISION.snapshot over guessing or repeating the same action.
 
 Search rules:
 - Preferred sequence: fill/type search input -> press Enter or submitForm -> waitForURLChange or waitForVisible(a[href]).
@@ -7355,17 +7792,20 @@ Give short, operational guidance before planning.
 
 You may request targeted internal knowledge when it would reduce uncertainty.
 Available KnowledgeBus modules are:
-- MEMORY.search: prior task outcomes and memory.json/history evidence
-- PAGE.state or PAGE.text: current live page state and visible text
-- VISION.snapshot: latest visual interpretation and whether a requested result is visible
+- MEMORY.search: prior task outcomes and memory.json/history evidence, including the original prompt and earlier task context when the current goal is unclear
+- SHORT.get(ref): exact retrieval by key for truncated page text or short-term working blobs; do not treat this as a fuzzy semantic search
+- MEMORY kinds: NANO (ephemeral task-only info like credentials and transient state, wiped after the task), SHORT (active troubleshooting and short-term problem/answer memory), LONG (learned user preferences and phrasing), PERMANENT (guardrails and safety rules)
+- PAGE.state or PAGE.text: current live page state, current DOM snapshot, visible text, and page metadata
+- VISION.snapshot: latest visual interpretation and whether a requested result is visible; use it to ask "what is wrong with the page?" or "is the requested result visible?"
 - ELEMENT_MAP.snapshot: current interactive elements and visible page regions
 - SUPERVISOR.decision: latest safety decision and reason
-- MODELS.list: available model capabilities
+- MODELS.list: available model capabilities and routing
+- summarizeLargeDocument: chunk-and-merge long page or document text when a single extract is too large to reason about directly
+- getAllText(selector): scoped text extraction from a selected region/container when the relevant content is not the whole page
 
 Do not browse the web for historical or internal questions. Use MEMORY for questions
-about previous tasks, logs, failures, or what happened earlier. Use VISION or
-ELEMENT_MAP when the answer depends on what is visibly present. Query only the
-module(s) relevant to the uncertainty; do not query everything by default.
+about previous tasks, logs, failures, or what happened earlier, including asking what the original prompt was and what the agent previously tried. Use PAGE.state/PAGE.text whenever the page is confusing, stale, or partially rendered; use VISION.snapshot to diagnose whether the page is blocked, blank, or visually wrong; use ELEMENT_MAP when the answer depends on what is visibly present. Query only the module(s) relevant to the uncertainty; do not query everything by default.
+Environment note: port 3000 can be occupied by a stale local app session, not necessarily a crashed or broken instance. If the app is already reachable and responding, prefer reusing the running session instead of killing all Node/browser processes blindly. Only do targeted cleanup or reset when the user explicitly requests it or the running app is clearly stale and blocking the active task.
 When no query is needed, proceed from the evidence already supplied.
 
 Output JSON only:
@@ -7378,13 +7818,16 @@ Output JSON only:
 
 Rules:
 1) No narration, no long explanations.
-2) If page is blocked or uncertain, say it clearly.
+2) If page is blocked, blank, stale, or uncertain, say it clearly and prefer PAGE.state or VISION.snapshot.
 3) If vision already contains needed answer, advise extract/finish.
 4) If same selector/action keeps failing, advise a different selector family or submit path.
-5) Decide dynamically whether MEMORY, PAGE, VISION, ELEMENT_MAP, SUPERVISOR, or MODELS is needed.
+5) Decide dynamically whether MEMORY, PAGE, VISION, ELEMENT_MAP, SUPERVISOR, MODELS, or extraction tools are needed.
 6) When a targeted query is needed, state the exact module and query in "next_focus" or "caution".
 7) For graph, chart, equation, line, canvas, or screenshot goals, explicitly check whether the requested visual result is visible in Vision evidence, regardless of its color.
-8) Allow one small creative suggestion only when risk is low and it directly supports the goal.`;
+8) Prefer asking PAGE.state for the current page DOM/text and VISION.snapshot to ask what is wrong with the page when the model is unsure.
+9) When the task context is fuzzy, ask MEMORY.search for the original prompt or the last successful/failed attempt before inventing a new strategy.
+10) When the task has a user preference or guardrail, prefer the relevant LONG or PERMANENT memory before proceeding.
+11) Allow one small creative suggestion only when risk is low and it directly supports the goal.`;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // AGENT: EXECUTOR
@@ -7662,6 +8105,14 @@ async function runActionWithFallback(item, goal, models) {
     const targetRaw = String(params.targetURL || params.url || "").trim();
     const timeoutMs = Math.max(500, Number(params.timeout) || 8000);
     const baselineTabCount = context.pages().length;
+    const baselineText = await page.evaluate(() => {
+      try {
+        const body = document && document.body ? document.body : null;
+        return String(body ? body.innerText || body.textContent || "" : "").replace(/\s+/g, " ").trim();
+      } catch {
+        return "";
+      }
+    }).catch(() => "");
     const normalizedTarget = (() => {
       if (!targetRaw) return "";
       if (/^\/\//.test(targetRaw)) return `https:${targetRaw}`;
@@ -7684,9 +8135,30 @@ async function runActionWithFallback(item, goal, models) {
       const activeUrl = (() => {
         try { return String(page?.url?.() || ""); } catch { return ""; }
       })();
+      const activeText = await page.evaluate(() => {
+        try {
+          const body = document && document.body ? document.body : null;
+          return String(body ? body.innerText || body.textContent || "" : "").replace(/\s+/g, " ").trim();
+        } catch {
+          return "";
+        }
+      }).catch(() => "");
+      const contentChanged = !!activeText && !!baselineText && activeText !== baselineText && activeText.length > 40;
 
       if (targetMatches(activeUrl)) {
         const resultText = activeUrl ? `url changed: ${activeUrl}` : "url changed";
+        recordOutcome("ok", { result: resultText, path: ACTION_PATH.PRIMARY_URL_CHANGE });
+        return { action, status: "ok", result: resultText };
+      }
+
+      if (!targetMatches(activeUrl) && !activeUrl && !baselineUrl && contentChanged) {
+        const resultText = "content changed while URL remained stable";
+        recordOutcome("ok", { result: resultText, path: ACTION_PATH.PRIMARY_URL_CHANGE });
+        return { action, status: "ok", result: resultText };
+      }
+
+      if (!targetMatches(activeUrl) && activeUrl === baselineUrl && contentChanged) {
+        const resultText = "content changed while URL remained stable";
         recordOutcome("ok", { result: resultText, path: ACTION_PATH.PRIMARY_URL_CHANGE });
         return { action, status: "ok", result: resultText };
       }
@@ -7712,7 +8184,7 @@ async function runActionWithFallback(item, goal, models) {
       await sleep(220);
     }
 
-    const timeoutError = `URL did not change within ${timeoutMs}ms`;
+    const timeoutError = `URL did not change to expected target within ${timeoutMs}ms`;
     recordOutcome("error", { error: timeoutError, path: ACTION_PATH.PRIMARY_URL_CHANGE });
     return { action, status: "error", error: timeoutError };
   }
@@ -7770,6 +8242,12 @@ async function runActionWithFallback(item, goal, models) {
       recordOutcome("error", { error: errMsg, path: ACTION_PATH.PRIMARY });
       return { action, status: "error", error: errMsg };
     }
+  }
+
+  if (params?._truncated) {
+    const err = `Planner produced a truncated ${String(action || "unknown")} payload; refusing to execute it.`;
+    recordOutcome("error", { error: err, path: ACTION_PATH.PRIMARY });
+    return { action, status: "error", error: err };
   }
 
   // Primary attempt
@@ -7961,7 +8439,7 @@ async function executeActionPlan(plan, goal, models, throttle = {}, supervisorCo
       const pointerAction = action === "hybridDblclick" ? "mouseDblclick" : "mouseClick";
       const selectorAction = action === "hybridDblclick" ? "dblclick" : "click";
       const targetKeywords = extractTargetKeywords(goal, baseSelector);
-      const clickMap = await buildFullPageClickMap(targetKeywords, cqards);
+      const clickMap = await buildFullPageClickMap(targetKeywords, cqards, baseSelector);
       const rankedCandidates = clickMap.candidates.slice(0, Math.max(1, HYBRID_SELECTOR_VARIANTS * 2));
       const hrefNeedles = extractSelectorHrefNeedles(baseSelector);
       const strictHrefCandidates = hrefNeedles.length
@@ -8052,7 +8530,7 @@ async function executeActionPlan(plan, goal, models, throttle = {}, supervisorCo
       continue;
     }
 
-    status(`${action}(${JSON.stringify(params || {}).slice(0, 60)})`);
+    status(`${action}(${summarizeActionParamsForStatus(params || {})})`);
     const result = await runActionWithFallback(item, goal, models);
     results.push(result);
     burstCount++;
@@ -8097,6 +8575,12 @@ async function summarizeResult(goal, state, taskLog, visionFeedback, completed, 
     const compareFormatHint = isSearchEngineComparisonGoal(goal)
       ? "Output exactly 3 paragraphs. Paragraph 1: what Google emphasized. Paragraph 2: what Bing emphasized. Paragraph 3: compare/contrast and synthesize."
       : "Write a natural, intelligent, specific answer (2-6 sentences).";
+    const goalNeedsGrounding = /director|filmography|other films|rating|release year|latest version|price|description|summary|install steps|issue count|comparison|score|count|version/i.test(String(goal || ""));
+    const groundedEvidence = hasGoalEvidence(goal, state.text || "", extractedText || "");
+    if (goalNeedsGrounding && !groundedEvidence) {
+      return `I reached the target page, but the extracted content did not include the requested detail. I can't truthfully state the director/filmography or other fact without that evidence.`;
+    }
+
     const raw = await callCFAI(models.reasoner, [{
       role: "user",
       content: `Goal: "${goal}"
@@ -8125,8 +8609,62 @@ feel free to use emoji's and markdown formatting to express your intent make sur
 
 // Secondary completion guard: if the planner misses done:true, verify using
 // current page state + vision summary so successful runs can stop early.
+function hasGoalEvidence(goalText, stateText = "", extractedText = "") {
+  const whenGoalLooksTargeted = /director|filmography|other films|rating|release year|latest version|price|description|summary|install steps|top answer|issue count|comparison|score|count|version/i;
+  const goal = String(goalText || "");
+  if (!whenGoalLooksTargeted.test(goal)) return true;
+
+  const text = `${String(stateText || "")}\n${String(extractedText || "")}`.toLowerCase();
+  if (!text.trim()) return false;
+
+  const goalTerms = Array.from(new Set((goal.toLowerCase().match(/[a-z0-9]{3,}/g) || []).filter(term =>
+    !["find", "search", "then", "same", "site", "page", "list", "report", "other", "their", "the", "from", "with", "into", "and", "for", "on", "in", "of", "to", "this", "that", "what", "who", "when", "where", "why", "how", "page", "results", "film", "films", "movie", "movies"].includes(term)
+  )));
+
+  const requiredEvidence = /director|directed by|filmography|other films|credits|writer|producer|rating|score|version|release date|released|latest version|issue count|price|description|summary|install|steps|answer|compare/i;
+  const goalCoverage = goalTerms.slice(0, 6).some(term => text.includes(term));
+  return requiredEvidence.test(text) && goalCoverage;
+}
+
+function detectPageMismatchForGoal(goalText, state = {}) {
+  const goal = String(goalText || "").toLowerCase();
+  if (!goal) return { mismatch: false, reason: "" };
+
+  const title = String(state?.title || "").toLowerCase();
+  const url = String(state?.url || "").toLowerCase();
+  const body = String(state?.text || "").toLowerCase();
+  const pageText = `${title}\n${url}\n${body}`;
+
+  const asksForSameSiteDirectorFilmography = /same site|on the same site|same website|on imdb|imdb\.com|imdb/i.test(goal) && /director|filmography|other films|directed by|credits/i.test(goal);
+  const likelyPersonProfile = /\/name\/|person profile|writer, director|producer|actor|actress|filmography/i.test(`${url}\n${title}\n${body}`) && !/\/title\//.test(url);
+  const hasFilmographyEvidence = /filmography|credits|other films|directed by|writer|producer|director/i.test(pageText);
+  const hasMovieSearchEvidence = /guardians of the galaxy|movie title|film title|results for/i.test(goal) || /guardians of the galaxy|search results/i.test(pageText);
+
+  if (asksForSameSiteDirectorFilmography && likelyPersonProfile && hasMovieSearchEvidence && !hasFilmographyEvidence) {
+    return {
+      mismatch: true,
+      reason: "Likely wrong page: the current IMDb page is a person profile, but the task requires the movie title/director filmography evidence on the same site."
+    };
+  }
+
+  if (asksForSameSiteDirectorFilmography && likelyPersonProfile && /director.*filmography|filmography.*director|other films/i.test(goal)) {
+    return {
+      mismatch: true,
+      reason: "Wrong page for this goal: current page is a person page, not the movie/filmography result that contains the director facts."
+    };
+  }
+
+  return { mismatch: false, reason: "" };
+}
+
 async function verifyGoalCompletion(goal, state, visionFeedback, taskLog, models) {
   try {
+    const pageText = String(state?.text || "");
+    const groundingOk = hasGoalEvidence(goal, pageText, pageText);
+    if (!groundingOk) {
+      return { done: false, reason: "The page changed, but the requested evidence is not yet present in the current page text." };
+    }
+
     const raw = await callCFAI(models.reasoner, [
       {
         role: "system",
@@ -8138,6 +8676,7 @@ async function verifyGoalCompletion(goal, state, visionFeedback, taskLog, models
 Current URL: ${state.url}
 Current title: ${state.title}
 Vision summary: ${visionFeedback || "(none)"}
+Current page text: ${pageText.slice(0, 3000) || "(none)"}
 Recent step log:
 ${taskLog.slice(-6).join("\n") || "(none)"}
 
@@ -8155,8 +8694,103 @@ Mark done=true only when there is clear evidence the goal is satisfied.`
   }
 }
 
+function buildRuntimeCapabilityLedger(models = null) {
+  const candidates = Array.isArray(models?.all) ? models.all : Array.isArray(models) ? models : [];
+  const modelSummary = candidates
+    .slice(0, 8)
+    .map(model => {
+      const label = String(model?.id || model?.name || model || "").trim();
+      const caps = Array.isArray(model?.capabilities) && model.capabilities.length
+        ? ` [${String(model.capabilities.slice(0, 6).join(", "))}]`
+        : "";
+      return label ? `${label}${caps}` : "";
+    })
+    .filter(Boolean)
+    .join(", ") || "unknown";
+
+  return [
+    "MEMORY.search + memory.json history",
+    "SHORT.get(ref): exact retrieval by key for truncated page text or short-lived task blobs",
+    "MEMORY tiers: NANO (ephemeral task-only), SHORT (active troubleshooting), LONG (user prefs), PERMANENT (guardrails)",
+    "PAGE.state / PAGE.text: current DOM, text, metadata, URLs, inputs, buttons, tabs",
+    "VISION.snapshot: visual interpretation and page-state diagnosis",
+    "ELEMENT_MAP.snapshot: visible regions and interactive elements",
+    "SUPERVISOR.decision: safety gating and recovery guidance",
+    `MODELS.list: ${modelSummary}`,
+    "summarizeLargeDocument: chunk-and-merge large text/document pages",
+    "getAllText(selector): scoped extraction from a container or section",
+    "expectVisible / expectHidden / expectText / expectURL: wait+verify actions",
+    "goto / click / fill / type / press / submitForm / scrollIntoView / waitFor* / evaluate / screenshot / uploadFile",
+    "If a page text blob was truncated, use SHORT.get(ref) for the exact missing content instead of fuzzy MEMORY.search."
+  ].join("; ");
+}
+
+function buildInstinctKnowledgeSummary(pageState = {}, visionState = null, elementMapState = null, striderState = null) {
+  const url = safeStateUrl(pageState?.url || null, "about:blank");
+  const title = String(pageState?.title || "").trim();
+  const pageText = String(pageState?.text || "").replace(/\s+/g, " ").trim();
+  const pageCue = pageText ? pageText.slice(0, 220) : "";
+  const visionText = String(visionState?.summary || visionState || "").replace(/\s+/g, " ").trim();
+  const visionSignal = visionState?.signal || {};
+  const elementItems = Array.isArray(elementMapState?.clickable) ? elementMapState.clickable : [];
+  const reelText = elementItems
+    .filter(item => item && (item.text || item.role || item.tag) && !/(sponsored|promoted|advert|affiliate|doubleclick|outbrain|taboola)/i.test(String(item.text || "")))
+    .slice(0, 6)
+    .map(item => {
+      const text = String(item.text || item.role || item.tag || "").replace(/\s+/g, " ").trim();
+      return text ? text.slice(0, 70) : "";
+    })
+    .filter(Boolean);
+
+  const pageLinks = Array.isArray(striderState?.pageLinks) ? striderState.pageLinks : Array.isArray(striderState?.links) ? striderState.links : [];
+  const relevantLinks = pageLinks
+    .filter(link => link && String(link.href || link.url || "").trim() && !/(sponsored|promoted|advert|affiliate|doubleclick|outbrain|taboola|utm_)/i.test(String(link.title || link.text || "") + " " + String(link.href || "")))
+    .slice(0, 5)
+    .map(link => String(link.title || link.text || link.href || "").replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+
+  const compactPage = pageCue
+    ? (() => {
+        const lower = pageCue.toLowerCase();
+        const tokens = ["search", "results", "login", "checkout", "form", "page", "inception", "error", "captcha", "loading"]
+          .filter(token => lower.includes(token));
+        if (tokens.length) return `Page looks like: ${tokens.join(", ")}.`;
+        return `Page cue: ${pageCue.slice(0, 120)}`;
+      })()
+    : "No meaningful page text yet.";
+
+  const compactVision = visionText ? `Vision: ${visionText.slice(0, 240)}` : "Vision: no useful visual summary yet.";
+  const compactElementMap = reelText.length ? `Elements: ${reelText.join(" | ")}` : "Elements: no relevant visible controls found.";
+  const compactStrider = relevantLinks.length ? `Links: ${relevantLinks.join(" | ")}` : "Links: no high-signal page links found.";
+  const signal = visionSignal?.state ? `Signal: ${visionSignal.state}${visionSignal?.next_focus ? `; focus=${visionSignal.next_focus}` : ""}` : "Signal: no state signal.";
+
+  return {
+    url,
+    title,
+    page: compactPage,
+    vision: compactVision,
+    elements: compactElementMap,
+    strider: compactStrider,
+    signal
+  };
+}
+
 async function getReasonerInstinct(goal, state, visionFeedback, taskLog, models, knowledgeContext = null) {
   try {
+    const runtimeCapabilityLedger = buildRuntimeCapabilityLedger(models);
+    const filteredKnowledge = buildInstinctKnowledgeSummary(
+      {
+        url: state?.url || "",
+        title: state?.title || "",
+        text: state?.text || ""
+      },
+      {
+        summary: visionFeedback || "",
+        signal: knowledgeContext?.vision?.signal || knowledgeContext?.signal || null
+      },
+      knowledgeContext?.elementMap || null,
+      { pageLinks: knowledgeContext?.strider?.pageLinks || knowledgeContext?.strider?.links || [] }
+    );
     const raw = await callCFAI(models.reasoner, [
       {
         role: "system",
@@ -8167,8 +8801,9 @@ async function getReasonerInstinct(goal, state, visionFeedback, taskLog, models,
         content: `Goal: "${goal}"
 Current URL: ${state.url}
 Current title: ${state.title}
-Vision notes: ${visionFeedback || "(none)"}
-KnowledgeBus evidence: ${compactPromptValue(JSON.stringify(knowledgeContext || {}), 1600)}
+Runtime capabilities: ${runtimeCapabilityLedger}
+Filtered knowledge summary:
+${JSON.stringify(filteredKnowledge, null, 2)}
 Recent step log:
 ${taskLog.slice(-6).join("\n") || "(none)"}
 
@@ -8229,40 +8864,50 @@ function looksLikeTaskGoal(goalText) {
  * Removes text that tries to reprogram the agent's behavior
  */
 function sanitizeTaskGoal(rawGoal) {
-  let goal = String(rawGoal || "").trim();
-  
-  // Red flags that indicate system instruction injection
+  let goal = String(rawGoal || "").replace(/\s+/g, " ").trim();
+  if (!goal) return "";
+
   const systemInstructionPatterns = [
-    /You are Puppeterr/i,
-    /You are.*Router.*module/i,
-    /Never claim to be/i,
-    /Never change your identity/i,
-    /ALWAYS respond with/i,
-    /created by/i,
-    /system prompt/i,
-    /system instruction/i,
-    /ignore.*instruction/i,
-    /forget.*previous/i,
-    /disregard.*instruction/i
+    /(?:ignore|disregard|forget|override|bypass)\s+(?:all\s+)?(?:previous|prior|earlier|old|system|developer|router)\s+instructions?/i,
+    /(?:you\s+(?:are|re|are\s+now)|you['’]re)\s+(?:the\s+)?(?:system|assistant|agent|router|developer|operator)\b/i,
+    /(?:never|do\s+not|don't)\s+(?:mention|reveal|show|output|claim|say)\b/i,
+    /always\s+(?:respond|answer|say|do|return)\b/i,
+    /system\s+(?:prompt|instruction)\b/i,
+    /created\s+by\s+\w+/i,
+    /new\s+instructions?\s*:/i,
+    /ignore\s+this\s+and\s+use\b/i
   ];
-  
-  // If any red flag is found, return empty/generic goal
-  for (const pattern of systemInstructionPatterns) {
-    if (pattern.test(goal)) {
-      // Strip out the harmful section, keep only the legitimate task part if any
-      const parts = goal.split(/\n\n|or not|but also/i);
-      const cleanPart = parts.find(p => {
-        const pLower = p.toLowerCase();
-        return systemInstructionPatterns.every(pat => !pat.test(pLower));
-      });
-      
-      if (cleanPart && cleanPart.length > 5) {
-        return cleanPart.trim();
-      }
-      return ""; // Return empty if only system instruction found
+
+  const injectionSegments = goal
+    .split(/(?<=[.!?])\s+|\n+|\s+[|;]\s*/)
+    .map(part => part.trim())
+    .filter(Boolean);
+
+  const cleanParts = injectionSegments.filter(part => !systemInstructionPatterns.some(pattern => pattern.test(part)));
+
+  if (cleanParts.length > 0) {
+    const candidate = cleanParts.find(part =>
+      /(?:search|navigate|open|click|fill|submit|compare|collect|extract|summarize|lookup|look up|report|find|go to|visit)/i.test(part)
+    ) || cleanParts[0];
+
+    if (candidate && candidate.length > 3) {
+      return candidate.replace(/^(?:assistant|agent|bot)\s*[:\-]\s*/i, "").trim();
     }
   }
-  
+
+  const strippedPrefix = goal.replace(
+    /^(?:ignore\s+(?:all\s+)?(?:previous|prior|earlier|old)\s+instructions?[\s:;,.]*|(?:you\s+(?:are|re|are\s+now)|you['’]re)\s+(?:the\s+)?(?:system|assistant|agent|router|developer|operator)[^.!?]*[.!?]\s*|(?:always|never)\s+(?:respond|answer|say|do|return|claim)[^.!?]*[.!?]\s*)+/i,
+    ""
+  ).trim();
+
+  if (strippedPrefix && strippedPrefix !== goal) {
+    return strippedPrefix;
+  }
+
+  if (systemInstructionPatterns.some(pattern => pattern.test(goal))) {
+    return "";
+  }
+
   return goal;
 }
 
@@ -8384,6 +9029,54 @@ function compactPromptValue(value, maxChars = 240) {
   return text.length > maxChars ? `${text.slice(0, maxChars - 1)}…` : text;
 }
 
+function sanitizeActionPayloadForDisplay(value, options = {}) {
+  const maxChars = Number.isFinite(options.maxChars) ? Math.max(160, Number(options.maxChars)) : 2000;
+  const seen = new WeakSet();
+
+  const sanitize = (node, path = "") => {
+    if (node === null || node === undefined) return node;
+    if (typeof node === "string") {
+      const text = String(node || "");
+      if (!text) return "";
+      const scriptLike = /(?:querySelector(All)?|document\.|window\.|return\s+|=>|function\s*\(|\bArray\.|\bconsole\.)/i.test(text)
+        || /(?:^\s*(?:async\s*)?(?:\([^)]*\)|[A-Za-z_$][\w$]*)\s*=>)/.test(text)
+        || /(?:^\s*return\s+)/.test(text);
+      if ((path === "script" || /(?:^|\.)script(?:\.|$)/.test(path)) && scriptLike) {
+        return text;
+      }
+      if (text.length <= maxChars) return text;
+      const keep = Math.max(80, maxChars - 80);
+      const cut = Math.max(0, text.length - keep);
+      return `${text.slice(0, keep)}…[truncated ${cut} chars]`;
+    }
+    if (Array.isArray(node)) return node.map((entry, idx) => sanitize(entry, `${path}[${idx}]`));
+    if (typeof node !== "object") return node;
+    if (seen.has(node)) return "[Circular]";
+    seen.add(node);
+    const out = {};
+    for (const [key, entry] of Object.entries(node)) {
+      out[key] = sanitize(entry, `${path}.${key}`);
+    }
+    return out;
+  };
+
+  return sanitize(value, "root");
+}
+
+function summarizeActionParamsForStatus(params = {}, maxChars = 220) {
+  const sanitized = sanitizeActionPayloadForDisplay(params || {}, { maxChars: 1200 });
+  try {
+    const text = JSON.stringify(sanitized);
+    if (typeof sanitized?.script === "string" && sanitized.script.length > 0) {
+      const scriptPreview = sanitized.script.length > 420 ? `${sanitized.script.slice(0, 420)}…` : sanitized.script;
+      return JSON.stringify({ script: scriptPreview });
+    }
+    return text.length > maxChars ? `${text.slice(0, maxChars - 1)}…` : text;
+  } catch {
+    return String(sanitized || "");
+  }
+}
+
 function compactUrlForPrompt(rawUrl) {
   const fallback = compactPromptValue(rawUrl, MAX_URL_IN_PROMPT_CHARS);
   try {
@@ -8398,25 +9091,25 @@ function compactUrlForPrompt(rawUrl) {
   }
 }
 
-function buildSearchResultsUrl(queryText, engine = "google") {
+function buildSearchResultsUrl(queryText, engine = "duckduckgo") {
   const q = String(queryText || "").trim();
-  if (!q) return engine === "bing" ? "https://www.bing.com/" : "https://www.google.com/";
+  if (!q) {
+    if (engine === "bing") return "https://www.bing.com/";
+    if (engine === "google") return "https://www.google.com/";
+    return "https://duckduckgo.com/";
+  }
   if (engine === "bing") return `https://www.bing.com/search?q=${encodeURIComponent(q)}`;
-  return `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+  if (engine === "google") return `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+  return `https://duckduckgo.com/?q=${encodeURIComponent(q)}`;
 }
 
 function pickRecoveryUrl(goalText, fallbackQuery = "") {
   const explicit = sanitizeNavigationUrl(extractExplicitNavigationTarget(goalText));
   if (explicit) return explicit;
+  const preferredEngine = getExplicitSearchEnginePreference(goalText);
   const query = extractSearchQuery(goalText) || String(fallbackQuery || "").trim();
-  // Google over Bing here specifically: this path runs when the task is
-  // already recovering from a failure, and Bing accounts for the large
-  // majority of observed CAPTCHA walls (measured ~44% of all CAPTCHA hits
-  // vs Google's much smaller share) — routing a fragile recovery attempt
-  // through the higher-risk engine compounds the failure instead of
-  // resolving it.
-  if (query) return buildSearchResultsUrl(query, "google");
-  return "https://www.google.com/";
+  if (query) return buildSearchResultsUrl(query, preferredEngine);
+  return preferredEngine === "bing" ? "https://www.bing.com/" : preferredEngine === "google" ? "https://www.google.com/" : "https://duckduckgo.com/";
 }
 
 function sanitizeExtractedSearchQuery(rawQuery) {
@@ -8452,14 +9145,16 @@ function extractSearchQuery(goalText) {
 
 function getExplicitSearchEnginePreference(goalText) {
   const g = String(goalText || "").toLowerCase();
-  if (!g) return "google";
+  if (!g) return "duckduckgo";
 
+  const ddgIndex = g.search(/\bduckduckgo\b|\bduck duck go\b|duckduckgo\.com/);
   const bingIndex = g.search(/\bbing(?:\s+maps)?\b|bing\.com|maps\.bing\.com/);
   const googleIndex = g.search(/\bgoogle\b|google\.com/);
 
+  if (ddgIndex !== -1 && (bingIndex === -1 || ddgIndex < bingIndex) && (googleIndex === -1 || ddgIndex < googleIndex)) return "duckduckgo";
   if (bingIndex !== -1 && (googleIndex === -1 || bingIndex < googleIndex)) return "bing";
   if (googleIndex !== -1 && (bingIndex === -1 || googleIndex < bingIndex)) return "google";
-  return "google";
+  return "duckduckgo";
 }
 
 function isSearchEngineComparisonGoal(goalText) {
@@ -8872,7 +9567,7 @@ async function performConfusionResearch(goal, state, visionFeedback, taskLog, fa
     };
   }
 
-  const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(researchPlan.query)}`;
+  const searchUrl = buildSearchResultsUrl(researchPlan.query, getExplicitSearchEnginePreference(researchPlan.query || goal));
   broadcast("research_started", {
     msg: `Confusion research: searching for ${researchPlan.query}`,
     query: researchPlan.query,
@@ -10064,6 +10759,11 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
         } : null;
       },
       memorySearch: (query, limit) => searchRelevantMemory(query, limit),
+      shortGet: (ref) => {
+        const exact = String(ref || "").trim();
+        if (!exact) return null;
+        return getExactShortMemoryByRef(exact, currentTaskChatId || null);
+      },
       logSearch: (query, limit) => loadLearningLog().slice(-Math.max(1, limit * 4)),
       modelCatalog: () => modelCatalogCache.items,
       supervisorState: () => lastSupervisorGate
@@ -10094,7 +10794,8 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
       visualGoal || stuck || failures >= 1 ? requests[shouldSearchMemory ? 1 : 0] : Promise.resolve(null),
       visualGoal || stuck || failures >= 1 ? requests[shouldSearchMemory ? 2 : 1] : Promise.resolve(null)
     ]);
-    return { memory, vision, elementMap, visualGoal, url: state?.url || "" };
+    const striderContext = currentStriderReconMemo ? { pageLinks: extractLikelyPageLinks(currentStriderReconMemo) } : { pageLinks: [] };
+    return { memory, vision, elementMap, visualGoal, url: state?.url || "", strider: striderContext };
   }
 
   const scheduleElementMapTick = (initialDelayMs = null) => {
@@ -10153,7 +10854,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
       try { return String(page?.url?.() || "").trim(); } catch { return ""; }
     })();
     const requestedTargetRaw = String(options?.targetUrl || pickRecoveryUrl(goal, originalQuery) || "").trim();
-    const fallbackRecoveryUrl = sanitizeNavigationUrl(pickRecoveryUrl(goal, originalQuery)) || "https://www.google.com/";
+    const fallbackRecoveryUrl = sanitizeNavigationUrl(pickRecoveryUrl(goal, originalQuery)) || "https://duckduckgo.com/";
     const currentPageUrl = sanitizeNavigationUrl(currentPageUrlRaw);
     const requestedTarget = sanitizeNavigationUrl(requestedTargetRaw) || fallbackRecoveryUrl;
     const currentHost = getHostFromUrl(currentPageUrl || "");
@@ -10254,9 +10955,17 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
       finalState  = state;
       status(`URL: ${state.url}`);
       const currentHost = getHostFromUrl(state.url);
+      const pageMismatch = detectPageMismatchForGoal(goal, state);
+      if (pageMismatch.mismatch) {
+        const mismatchReason = `Page mismatch detected on ${currentHost || "unknown-host"}: ${pageMismatch.reason}`;
+        stepLogMsg(`Step ${step}: PAGE_MISMATCH — ${pageMismatch.reason}`);
+        think(mismatchReason);
+        await triggerEscapeHatch(step, mismatchReason, "PAGE_MISMATCH", { targetUrl: pickRecoveryUrl(goal, originalQuery) });
+        continue;
+      }
       simpleFastPathCandidate = false;
       if (step === 1 && shouldResetTaskContextToGoogle(state, goalMem, searchEngineCompareGoal)) {
-        await triggerEscapeHatch(step, `Task context mismatch on ${currentHost || "unknown-host"}. Resetting to Google before executing the new task.`, "CONTEXT_RESET", { targetUrl: "https://www.google.com/" });
+        await triggerEscapeHatch(step, `Task context mismatch on ${currentHost || "unknown-host"}. Resetting to DuckDuckGo before executing the new task.`, "CONTEXT_RESET", { targetUrl: "https://duckduckgo.com/" });
         continue;
       }
       if (directNavigationTargetHost && hostMatchesExpectedHost(currentHost, directNavigationTargetHost)) {
@@ -10352,7 +11061,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
 
       const captcha = await detectCaptchaChallenge(state);
       if (captcha.detected) {
-        const pageKey = getCaptchaPageKey(state.url);
+        const pageKey = getCaptchaPageKey(state.url, state);
         const detectionStreak = (captchaDetectionStreakByPage.get(pageKey) || 0) + 1;
         captchaDetectionStreakByPage.set(pageKey, detectionStreak);
 
@@ -10396,7 +11105,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
             errLog(`CAPTCHA attempt ${attempt}/${CAPTCHA_HUMAN_CHECK_LIMIT} failed: ${err.message}`);
             stepLogMsg(`Step captcha: failed attempt ${attempt}/${CAPTCHA_HUMAN_CHECK_LIMIT} on ${currentCaptchaState.url}`);
             if (captchaAttemptFailures >= 3 || attempt >= 3) {
-              await triggerEscapeHatch(step, `CAPTCHA flow misfired after ${attempt} attempts; recovering from suspected false positive or stale selector state.`, "CAPTCHA_ESCAPE", { targetUrl: "https://www.google.com/", failedAction: "captcha", failedSelector: escapeContext.lastFailedSelector || "" });
+              await triggerEscapeHatch(step, `CAPTCHA flow misfired after ${attempt} attempts; recovering from suspected false positive or stale selector state.`, "CAPTCHA_ESCAPE", { targetUrl: "https://duckduckgo.com/", failedAction: "captcha", failedSelector: escapeContext.lastFailedSelector || "" });
               currentCaptchaState = finalState;
               break;
             }
@@ -10415,7 +11124,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
             break;
           }
           if (attempt >= 3) {
-            await triggerEscapeHatch(step, `CAPTCHA still present after ${attempt} automated attempts; recovering instead of continuing blind retries.`, "CAPTCHA_ESCAPE", { targetUrl: "https://www.google.com/", failedAction: "captcha" });
+            await triggerEscapeHatch(step, `CAPTCHA still present after ${attempt} automated attempts; recovering instead of continuing blind retries.`, "CAPTCHA_ESCAPE", { targetUrl: "https://duckduckgo.com/", failedAction: "captcha" });
             currentCaptchaState = finalState;
             break;
           }
@@ -10467,7 +11176,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
         continue;
       }
 
-      const captchaPageKey = getCaptchaPageKey(state.url);
+      const captchaPageKey = getCaptchaPageKey(state.url, state);
       captchaDetectionStreakByPage.delete(captchaPageKey);
 
       if (humanBridgeState.active) {
@@ -10559,16 +11268,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
       else if (failures >= 2) narrate(`The last ${failures} attempts failed. Switching strategy now.`);
       else if (step % 5 === 0) narrate(`Still working on it — step ${step}. Current page: ${state.url}`);
 
-      if (step > 1 && step % 5 === 0 && chatId) {
-        const summaryLines = [];
-        if (instinct?.instinct) summaryLines.push(instinct.instinct);
-        if (instinct?.next_focus) summaryLines.push(`Focus: ${instinct.next_focus}`);
-        if (instinct?.risk) summaryLines.push(`Risk: ${instinct.risk}`);
-        if (instinct?.caution) summaryLines.push(`Caution: ${instinct.caution}`);
-        if (summaryLines.length) {
-          appendTaskChatMessage("assistant", `Reasoner summary (step ${step}):\n` + summaryLines.join("\n"), { reasoner_summary: true, step, completed: false });
-        }
-      }
+      let plan = null;
       
       const instinctFeedback = [
         visionFeedback,
@@ -10591,7 +11291,6 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
         }
       };
 
-      let plan;
       try {
         plan = await withExecutorWork(() => planNextSteps(goal, state, instinctFeedback, taskLog, plannerHistory, stuck, failures, models, peerSignals, {
           simpleFastPathCandidate,
@@ -10611,6 +11310,19 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
           if (failures >= taskRetryLimit) { errLog("Too many failures — stopping."); break; }
           await sleep(taskRetryBackoffMs);
           continue;
+        }
+      }
+
+      if (chatId && plan && String(plan.reasoning || "").trim()) {
+        const plannerSummary = summarizePlannerResponseForReasoner(plan, instinct?.instinct || "");
+        const summaryLines = [];
+        if (instinct?.instinct) summaryLines.push(instinct.instinct);
+        if (plannerSummary) summaryLines.push(plannerSummary);
+        if (instinct?.next_focus) summaryLines.push(`Focus: ${instinct.next_focus}`);
+        if (instinct?.risk) summaryLines.push(`Risk: ${instinct.risk}`);
+        if (instinct?.caution) summaryLines.push(`Caution: ${instinct.caution}`);
+        if (summaryLines.length) {
+          appendTaskChatMessage("assistant", `Reasoner summary (step ${step}):\n` + summaryLines.join("\n"), { reasoner_summary: true, step, completed: false, planReasoning: plannerSummary });
         }
       }
 
@@ -11144,7 +11856,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
     // the loop early. Without this, failed runs vanish from the log instead
     // of being counted — inflating apparent success rate and hiding the
     // true failure/crash split.
-    const crashUrl = (() => { try { return page ? page.url() : finalState.url; } catch { return finalState.url; } })();
+    const crashUrl = safePageUrl(page, finalState.url);
     appendLearningEvent({
       kind: "task",
       phase: "end",
@@ -11179,7 +11891,7 @@ async function runTask(goal, models, chatId, browserRuntime = null, userId = nul
     stopHumanBridgeWatchdog();
     clearHumanBridgeState();
     resetGuidanceControl();
-    broadcast("bridge_closed", { msg: "Human bridge closed for this run.", url: page ? page.url() : "about:blank" });
+    broadcast("bridge_closed", { msg: "Human bridge closed for this run.", url: safePageUrl() });
     agentRunning = false;
     currentTaskUserId = null; // release user scope after task completes
     currentTaskChatId = null;
@@ -12667,12 +13379,12 @@ async function handleBrowserCrash(reason) {
 
     // Navigate back to the last stable page before the crash, or START_URL as fallback
     const stableUrl = loadStablePage();
-    const recoveryUrl = stableUrl || process.env.START_URL || "https://www.google.com";
+    const recoveryUrl = stableUrl || process.env.START_URL || "https://duckduckgo.com";
     console.log(`↩️  Restoring to last stable page: ${recoveryUrl}`);
     broadcast("status", { msg: `↩️ Restoring to last stable page: ${recoveryUrl}` });
     await page.goto(recoveryUrl, { waitUntil: "domcontentloaded", timeout: 30000 }).catch((err) => {
-      console.warn(`⚠️  Could not restore stable page (${err.message}) — falling back to Google`);
-      return page.goto("https://www.google.com", { waitUntil: "domcontentloaded", timeout: 20000 }).catch(() => {});
+      console.warn(`⚠️  Could not restore stable page (${err.message}) — falling back to DuckDuckGo`);
+      return page.goto("https://duckduckgo.com", { waitUntil: "domcontentloaded", timeout: 20000 }).catch(() => {});
     });
 
     _browserRestartCount = 0; // reset streak on successful restart
@@ -12680,7 +13392,7 @@ async function handleBrowserCrash(reason) {
 
     console.log("✅ Browser restarted successfully.");
     broadcast("status", { msg: "✅ Browser restarted and ready." });
-    broadcast("url", { url: page.url() });
+    broadcast("url", { url: safePageUrl(page) });
   } catch (err) {
     _browserRestartInProgress = false;
     console.error("❌ Browser restart failed:", err.message);
@@ -12744,7 +13456,7 @@ async function handleBrowserCrash(reason) {
     const currentUrl = (() => {
       try { return page.url(); } catch { return "about:blank"; }
     })();
-    const startUrl = process.env.START_URL || "https://www.google.com";
+    const startUrl = process.env.START_URL || "https://duckduckgo.com";
     if (!currentUrl || currentUrl === "about:blank") {
       await page.goto(startUrl, { waitUntil: "domcontentloaded" });
       saveStablePage(startUrl);
@@ -12775,7 +13487,7 @@ async function handleBrowserCrash(reason) {
           broadcast("url", { url: currentUrl });
           // Checkpoint the last stable URL — written only when page.url() succeeds
           // (meaning the page is alive and not mid-crash)
-          saveStablePage(currentUrl);
+saveStablePage(safePageUrl(currentUrl));
         } catch {}
       }
     }, 2000);

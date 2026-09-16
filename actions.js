@@ -35,6 +35,85 @@ function sanitizeLoadState(raw) {
   return VALID_LOAD_STATES.has(s) ? s : "load";
 }
 
+function hasBalancedQuoteSyntax(value) {
+  let single = false;
+  let double = false;
+  let backtick = false;
+  let escaped = false;
+
+  for (const ch of String(value || "")) {
+    if (escaped) {
+      escaped = false;
+      continue;
+    }
+    if (ch === "\\") {
+      escaped = true;
+      continue;
+    }
+    if (ch === "'" && !double && !backtick) {
+      single = !single;
+      continue;
+    }
+    if (ch === '"' && !single && !backtick) {
+      double = !double;
+      continue;
+    }
+    if (ch === "`" && !single && !double) {
+      backtick = !backtick;
+    }
+  }
+
+  return !single && !double && !backtick;
+}
+
+function isLikelyTruncatedEvaluateScript(script) {
+  const source = String(script ?? "").trim();
+  if (!source) return false;
+
+  const trailingSuspicion = /(?:[\[(=,]$|['"`]$|\\$)/.test(source);
+  const quoteSuspicion = !hasBalancedQuoteSyntax(source);
+  const likelyExpression = /(?:\b(?:document|window|Array|console)\.)/.test(source);
+
+  return quoteSuspicion || trailingSuspicion || (likelyExpression && /['"\]]$/.test(source));
+}
+
+function emitWaitStatus(message) {
+  const text = String(message || "").trim();
+  if (!text) return;
+  try {
+    if (typeof globalThis.status === "function") {
+      globalThis.status(text);
+      return;
+    }
+  } catch {}
+  console.log(`  ⚡ ${text}`);
+}
+
+async function waitWithProgress(label, timeoutMs, task) {
+  const deadline = Date.now() + Math.max(250, Number(timeoutMs) || 0);
+  const intervalMs = 1000;
+  let lastRemaining = null;
+
+  const interval = setInterval(() => {
+    const remainingMs = Math.max(0, deadline - Date.now());
+    const remainingSec = (remainingMs / 1000).toFixed(1);
+    const rounded = Math.ceil(remainingMs / 1000);
+    const bucket = Number.isFinite(rounded) && rounded >= 0 ? rounded : 0;
+    if (lastRemaining === null || bucket !== lastRemaining) {
+      emitWaitStatus(`${label}: waiting (${remainingSec}s remaining before abort)`);
+      lastRemaining = bucket;
+    }
+  }, intervalMs);
+
+  try {
+    emitWaitStatus(`${label}: waiting for up to ${Math.max(0, Math.ceil((deadline - Date.now()) / 1000))}s before abort`);
+    return await task();
+  } finally {
+    clearInterval(interval);
+    emitWaitStatus(`${label}: wait resolved or timed out`);
+  }
+}
+
 const actions = {
   // 🧭 NAVIGATION
   goto: async ({ page, url }) => page.goto(url, { waitUntil: "domcontentloaded" }),
@@ -312,21 +391,34 @@ const actions = {
   // 🕒 WAITING — note: "complete" is NOT a valid Playwright load state (sanitized → "load")
   waitForSelector: async ({ page, selector, timeout = 8000 }) => withTransientRetry(async () => {
     const locator = page.locator(selector).first();
-    await locator.waitFor({ state: "attached", timeout });
-    return "selector-attached";
+    return await waitWithProgress(`Waiting for selector ${selector}`, timeout, () => locator.waitFor({ state: "attached", timeout }));
   }, { retries: 2, delayMs: 150 }),
   waitForVisible: async ({ page, selector, timeout = 8000 }) => withTransientRetry(async () => {
     const locator = page.locator(selector).first();
-    await locator.waitFor({ state: "visible", timeout });
-    return "selector-visible";
+    return await waitWithProgress(`Waiting for visible selector ${selector}`, timeout, () => locator.waitFor({ state: "visible", timeout }));
   }, { retries: 2, delayMs: 170 }),
-  waitForTimeout: async ({ page, ms }) => page.waitForTimeout(Math.min(Number(ms) || 500, 8000)),
-  waitForLoadState: async ({ page, state = "load" }) => page.waitForLoadState(sanitizeLoadState(state), { timeout: 12000 }),
+  waitForTimeout: async ({ page, ms }) => {
+    const timeoutMs = Math.min(Number(ms) || 500, 8000);
+    return await waitWithProgress(`Waiting for timeout window`, timeoutMs, () => page.waitForTimeout(timeoutMs));
+  },
+  waitForLoadState: async ({ page, state = "load" }) => {
+    const timeoutMs = 12000;
+    return await waitWithProgress(`Waiting for page load state: ${sanitizeLoadState(state)}`, timeoutMs, () => page.waitForLoadState(sanitizeLoadState(state), { timeout: timeoutMs }));
+  },
   waitForURLChange: async ({ page, currentURL, targetURL, url, timeout = 8000 }) => {
     const baseline = String(currentURL || page.url() || "");
     if (!baseline) {
       throw new Error("waitForURLChange requires a currentURL baseline");
     }
+
+    const baselineText = await page.evaluate(() => {
+      try {
+        const body = document && document.body ? document.body : null;
+        return String(body ? body.innerText || body.textContent || "" : "").replace(/\s+/g, " ").trim();
+      } catch {
+        return "";
+      }
+    }).catch(() => "");
 
     const targetRaw = String(targetURL || url || "").trim();
     const targetHost = (() => {
@@ -340,9 +432,24 @@ const actions = {
     })();
 
     const start = Date.now();
-    while (Date.now() - start < timeout) {
+    const deadline = start + timeout;
+    while (Date.now() < deadline) {
+      const remainingMs = Math.max(0, deadline - Date.now());
+      emitWaitStatus(`Waiting for URL change (${(remainingMs / 1000).toFixed(1)}s remaining before abort)`);
       const current = String(page.url() || "");
-      if (current !== baseline) {
+      const currentText = await page.evaluate(() => {
+        try {
+          const body = document && document.body ? document.body : null;
+          return String(body ? body.innerText || body.textContent || "" : "").replace(/\s+/g, " ").trim();
+        } catch {
+          return "";
+        }
+      }).catch(() => "");
+
+      const urlChanged = current !== baseline;
+      const contentChanged = !!currentText && !!baselineText && currentText !== baselineText && Math.max(currentText.length, baselineText.length) > 12;
+
+      if (urlChanged) {
         if (!targetRaw) return "url-changed";
 
         if (targetHost) {
@@ -354,9 +461,18 @@ const actions = {
           return "url-changed:target-match";
         }
       }
+
+      if (!targetRaw && contentChanged) {
+        return "content-changed:page-hydrated";
+      }
+
+      if (targetRaw && current === baseline && contentChanged) {
+        return "content-changed:page-hydrated";
+      }
+
       await page.waitForTimeout(250);
-     }
-   throw new Error(`URL did not change to expected target within ${timeout}ms (baseline ${baseline}, now ${page.url()}, target ${targetRaw || "<any>"})`);
+    }
+    throw new Error(`URL did not change to expected target within ${timeout}ms (baseline ${baseline}, now ${page.url()}, target ${targetRaw || "<any>"})`);
   },
 
   // 🪟 PAGE INFO
@@ -368,23 +484,39 @@ const actions = {
   uploadFile: async ({ page, selector, filePath }) => page.setInputFiles(selector, filePath),
 
   // 🧩 JS EXECUTION
-  // Wrap in new Function() rather than passing the raw string to
-  // page.evaluate() directly. The planner frequently generates scripts like
-  // "return document.title;" — a bare top-level return, which is a
-  // SyntaxError ("Illegal return statement") when evaluated as a raw
-  // string/expression, since a return statement is only valid inside a
-  // function body. new Function(script) makes the script text INTO a
-  // function body, so bare returns become valid; scripts that already
-  // wrap themselves in an IIFE, or that are just a plain expression with
-  // no return at all, continue to work unchanged either way.
+  // Keep evaluate permissive across the three common forms:
+  // 1) bare expression: document.title
+  // 2) body script: return document.title;
+  // 3) function expression: () => document.title
+  // A raw string passed directly to page.evaluate() is parsed by the page as
+  // a function body/expression, and bare `return` statements are the classic
+  // source of "Illegal return statement". Wrapping it in new Function() lets
+  // the body remain valid while still allowing expression-style output.
   evaluate: async ({ page, script }) => {
-    let fn;
-    try {
-      fn = new Function(String(script || ""));
-    } catch (err) {
-      throw new Error(`evaluate script has a syntax error: ${err.message}`);
+    const source = String(script || "").trim();
+    if (!source) {
+      throw new Error("evaluate requires a non-empty script");
     }
-    return page.evaluate(fn);
+
+    if (isLikelyTruncatedEvaluateScript(source)) {
+      throw new Error("evaluate script appears truncated or malformed; refusing to execute it.");
+    }
+
+    const buildExpressionWrapper = () => new Function(`return (${source});`);
+    const buildBodyWrapper = () => new Function(source);
+
+    try {
+      if (/^(?:async\s*)?(?:\([^)]*\)|[A-Za-z_$][\w$]*)\s*=>/.test(source)) {
+        return page.evaluate(new Function(`return (${source})();`));
+      }
+      return page.evaluate(buildExpressionWrapper());
+    } catch (exprErr) {
+      try {
+        return page.evaluate(buildBodyWrapper());
+      } catch (bodyErr) {
+        throw new Error(`evaluate script has a syntax error: ${bodyErr.message || exprErr.message}`);
+      }
+    }
   },
 
   // 🧪 ASSERTIONS
@@ -411,3 +543,4 @@ const actions = {
 };
 
 module.exports = actions;
+module.exports.isLikelyTruncatedEvaluateScript = isLikelyTruncatedEvaluateScript;
